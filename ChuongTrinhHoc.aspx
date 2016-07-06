@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="ChuongTrinhHoc.aspx.cs" Inherits="ChuongTrinhHoc" %>
+﻿<%@ Page Title="Học Tiếng Anh" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="ChuongTrinhHoc.aspx.cs" Inherits="ChuongTrinhHoc" %>
 
 <%@ Register Src="~/user_control/SidebarPostHorizontal.ascx" TagPrefix="uc1" TagName="SidebarPostHorizontal" %>
 

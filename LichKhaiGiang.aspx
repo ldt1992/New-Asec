@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="LichKhaiGiang.aspx.cs" Inherits="LichKhaiGiang" %>
+﻿<%@ Page Title="Lịch Khai Giảng" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="LichKhaiGiang.aspx.cs" Inherits="LichKhaiGiang" %>
 
 <%@ Register Src="~/user_control/SidebarPostBig.ascx" TagPrefix="uc1" TagName="SidebarPostBig" %>
 

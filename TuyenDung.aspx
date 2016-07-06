@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="TuyenDung.aspx.cs" Inherits="TuyenDung" %>
+﻿<%@ Page Title="Tuyển Dụng" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="TuyenDung.aspx.cs" Inherits="TuyenDung" %>
 
 <%@ Register Src="~/user_control/PostBig2Col.ascx" TagPrefix="uc1" TagName="PostBig2Col" %>
 <%@ Register Src="~/user_control/SidebarPostHorizontal.ascx" TagPrefix="uc1" TagName="SidebarPostHorizontal" %>

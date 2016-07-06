@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="TinTuc2.aspx.cs" Inherits="TinTuc2" %>
+﻿<%@ Page Title="Tin Tức" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="TinTuc2.aspx.cs" Inherits="TinTuc2" %>
 
 <%@ Register Src="~/user_control/SidebarPostBig.ascx" TagPrefix="uc1" TagName="SidebarPostBig" %>
 <%@ Register Src="~/user_control/MainPostHorizontal.ascx" TagPrefix="uc1" TagName="MainPostHorizontal" %>
