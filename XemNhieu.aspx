@@ -34,7 +34,28 @@
                     <%-- Main --%>
                     <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8 main">
                         <h2 class="bg-sky"><span class="title-part">XEM NHIỀU</span></h2>
-                        <uc1:PostBig2Col runat="server" ID="PostBig2Col" />
+
+                        <div class="row">
+                            <asp:Repeater ID="rpXemNhieu" runat="server">
+                                <ItemTemplate>
+                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                        <div class="post-big">
+                                            <a href="ChiTiet.aspx?post=<%# Eval("PostID") %>">
+                                                <div class="preview">
+                                                    <img src="<%# HomeUrl + Eval("ImagesUrl") %>" class="img-responsive" />
+                                                </div>
+
+                                                <div class="caption">
+                                                    <h3 class="post-title"><%# Eval("PostTitle") %></h3>
+                                                    <p class="post-date"><%# Eval("DateOfCreate", "{0: dd-MM-yyyy}") %></p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </ItemTemplate>
+                            </asp:Repeater>
+                        </div>
+
 
                         <nav>
                             <ul class="pagination">
@@ -51,7 +72,7 @@
 
                     <%-- Sidebar --%>
                     <div class="hidden-xs col-sm-6 col-md-4 col-lg-4 sidebar">
-                        <uc1:SidebarPostHorizontal runat="server" id="SidebarPostHorizontal" />
+                        <uc1:SidebarPostHorizontal runat="server" ID="SidebarPostHorizontal" />
                     </div>
                     <%-- End Sidebar --%>
                 </div>

@@ -39,4 +39,13 @@ public partial class MasterPage : System.Web.UI.MasterPage
         rpChuyenMuc.DataSource = this._chuyenmuc.GetAllSubItemChuyenMuc();
         rpChuyenMuc.DataBind();
     }
+
+    protected void txtSearch_TextChanged(object sender, EventArgs e)
+    {
+        string kw = txtSearch.Text;
+        if (kw == "")
+            Response.Redirect("Default.aspx");
+        else
+            Response.Redirect("KetQuaTimKiem.aspx?keyword=" + kw);
+    }
 }

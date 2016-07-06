@@ -2,6 +2,8 @@
 
 <%@ Register Src="~/user_control/SidebarPostHorizontal.ascx" TagPrefix="uc1" TagName="SidebarPostHorizontal" %>
 
+<%@ Register TagPrefix="phantrang" Namespace="SiteUtils" Assembly="CollectionPager" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div id="KetQuaTimKiem">
         <%-- Bg Img --%>
@@ -31,62 +33,45 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-6 col-sm-8 col-lg-8 main">
                         <h2 class="bg-sky"><span class="title-part">KẾT QUẢ TÌM KIẾM</span></h2>
-                        <h3 class="alert alert-info">Từ khóa: What is this ?</h3>
-                        <%--<h3 class="alert alert-danger" id="NoResult" runat="server"></h3>--%>
+                        <h3 class="alert alert-info">Từ khóa: <%=kw %></h3>
+                        <span id="NoResult" runat="server"></span>
 
                         <div class="row">
-                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                                <div class="post-vertical">
-                                    <a href="#" title="What is Lorem Ipsum?">
-                                        <img src="images/portfolio/port-1.jpg" class="img-responsive" />
-                                        <h3 class="post-title">What is Lorem Ipsum?</h3>
-                                    </a>
-                                    <p class="post-date">25-06-2016</p>
-                                    <p class="post-meta">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                                <div class="post-vertical">
-                                    <a href="#" title="What is Lorem Ipsum?">
-                                        <img src="images/portfolio/port-1.jpg" class="img-responsive" />
-                                        <h3 class="post-title">What is Lorem Ipsum?</h3>
-                                    </a>
-                                    <p class="post-date">25-06-2016</p>
-                                    <p class="post-meta">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                                <div class="post-vertical">
-                                    <a href="#" title="What is Lorem Ipsum?">
-                                        <img src="images/portfolio/port-1.jpg" class="img-responsive" />
-                                        <h3 class="post-title">What is Lorem Ipsum?</h3>
-                                    </a>
-                                    <p class="post-date">25-06-2016</p>
-                                    <p class="post-meta">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                                <div class="post-vertical">
-                                    <a href="#" title="What is Lorem Ipsum?">
-                                        <img src="images/portfolio/port-1.jpg" class="img-responsive" />
-                                        <h3 class="post-title">What is Lorem Ipsum?</h3>
-                                    </a>
-                                    <p class="post-date">25-06-2016</p>
-                                    <p class="post-meta">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                                <div class="post-vertical">
-                                    <a href="#" title="What is Lorem Ipsum?">
-                                        <img src="images/portfolio/port-1.jpg" class="img-responsive" />
-                                        <h3 class="post-title">What is Lorem Ipsum?</h3>
-                                    </a>
-                                    <p class="post-date">25-06-2016</p>
-                                    <p class="post-meta">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
-                                </div>
-                            </div>
+                            <asp:Repeater ID="rpKetQuaTimKiem" runat="server">
+                                <ItemTemplate>
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                        <div class="post-vertical">
+                                            <a href="ChiTiet.aspx?post=<%# Eval("PostID") %>" title="<%# Eval("PostTitle") %>">
+                                                <div class="preview">
+                                                    <img src="<%# HomeUrl + Eval("ImagesUrl") %>" class="img-responsive" />
+                                                </div>
+                                                <h3 class="post-title"><%# Eval("PostTitle") %></h3>
+                                            </a>
+                                            <p class="post-date"><%# Eval("DateOfCreate","{0: dd-MM-yyyy}") %></p>
+                                            <p class="post-meta"><%# Eval("MetaDescription") %></p>
+                                        </div>
+                                    </div>
+                                </ItemTemplate>
+                            </asp:Repeater>
                         </div>
 
+
+                        <!-- Start Pagination -->
+                        <div class="pager">
+                            <phantrang:CollectionPager ID="pager1"
+                                FirstText="First"
+                                BackText="«"
+                                LabelText=""
+                                LastText="Last"
+                                NextText="»"
+                                ShowFirstLast="True"
+                                SliderSize="5" PagingMode="QueryString"
+                                runat="server" BackNextLinkSeparator="" BackNextLocation="Split"
+                                PageNumbersDisplay="Numbers" ResultsLocation="None"
+                                BackNextDisplay="Buttons" QueryStringKey="page">
+                            </phantrang:CollectionPager>
+                        </div>
+                        <!-- End Pagination -->
 
 
                         <nav>
@@ -103,7 +88,7 @@
 
                     </div>
                     <div class="hidden-xs col-sm-6 col-sm-4 col-lg-4 sidebar">
-                        <uc1:SidebarPostHorizontal runat="server" id="SidebarPostHorizontal" />
+                        <uc1:SidebarPostHorizontal runat="server" ID="SidebarPostHorizontal" />
                     </div>
                 </div>
             </div>

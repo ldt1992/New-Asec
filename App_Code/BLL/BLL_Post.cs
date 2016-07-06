@@ -127,4 +127,28 @@ public class BLL_Post
         this.CloseConnect();
         return result;
     }
+
+    //Get All Post xem nhiều (tin tức & sự kiện)
+    public DataTable GetAllXemNhieu()
+    {
+        this.OpenConnect();
+
+        string query = "select P.PostID, p.PostTitle, p.MetaDescription, p.DateOfCreate, p.ViewCount, img.ImagesUrl, img.ImagesName from POST p join Post_Category_relationships p_ct on p_ct.PostID = p.PostID join Category ct on ct.CategoryID = p_ct.CategoryID join Images img on p.PostImage = img.ImagesID where ct.CategoryName like N'Tin Tức' or ct.CategoryName like N'Sự kiện' order by ViewCount desc";
+        DataTable result = this._connect.GetDataTable(query);
+
+        this.CloseConnect();
+        return result;
+    }
+
+    //Get kết quả tìm kiếm
+    public DataTable GetResultSearch(string keyword)
+    {
+        this.OpenConnect();
+
+        string query = "select p.PostID, p.PostTitle, p.MetaDescription, p.DateOfCreate, p.ViewCount, img.ImagesUrl, img.ImagesName from POST p join Images img on p.PostImage = img.ImagesID where p.PostTitle like N'%" + keyword + "%'";
+        DataTable result = this._connect.GetDataTable(query);
+
+        this.CloseConnect();
+        return result;
+    }
 }
