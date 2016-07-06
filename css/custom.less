@@ -1,0 +1,629 @@
+﻿//Transition
+.transition(@property, @duration, @timing-function) {
+    transition: @property @duration @timing-function;
+    -moz-transition: @property @duration @timing-function;
+    -o-transition: @property @duration @timing-function;
+    -webkit-transition: @property @duration @timing-function;
+}
+
+//Transform
+.transform(@method, @value) {
+    transform: @method (@value);
+    -moz-transform: @method (@value);
+    -o-transform: @method (@value);
+    -webkit-transform: @method (@value);
+}
+
+//Border-radius
+.border-radius(@value) {
+    border-radius: @value;
+    -moz-border-radius: @value;
+    -webkit-border-radius: @value;
+}
+
+//Arrow_box
+.arrow_box(@size, @color, @border-width, @border-color) {
+    .arrow_box {
+        position: relative;
+        background: @color;
+        border: @border-width solid @border-color;
+    }
+
+    .arrow_box:after, .arrow_box:before {
+        top: 100%;
+        left: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+
+    .arrow_box:after {
+        border-color: rgba(136, 183, 213, 0);
+        border-top-color: @color;
+        border-width: @size;
+        margin-left: -@size;
+    }
+
+    .arrow_box:before {
+        border-color: rgba(194, 225, 245, 0);
+        border-top-color: #c2e1f5;
+        border-width: (@size + 6);
+        margin-left: -(@size + 6);
+    }
+}
+
+//.title, .head-line
+.title {
+    position: relative;
+    text-transform: uppercase;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    color: black;
+
+    .head-line {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 50px;
+        height: 3px;
+        margin: 0;
+        background-color: #e74c3c;
+    }
+}
+
+.back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 15px;
+
+    i {
+        display: block;
+        width: 36px;
+        height: 36px;
+        color: #fff;
+        text-align: center;
+        background-color: #444;
+        .transition(all, 0.2s, linear);
+    }
+}
+
+/********************** Post Horizontal & Vertical *******************/
+/* Post Horizontal */
+.post-horizontal {
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ecf0f1;
+    margin-bottom: 20px;
+
+    .post-thumbnail {
+        float: left;
+        width: 30%;
+    }
+
+    .post-content {
+        float: left;
+        width: 70%;
+        padding: 0 1% 0 15px;
+
+        .post-title {
+            margin-bottom: 10px;
+
+            a {
+                color: black;
+                line-height: 26px;
+
+                &:hover {
+                    .transition(all, 0.2s, linear);
+                    color: orangered;
+                }
+            }
+        }
+
+        .post-date {
+            color: gray;
+            font-size: 14px;
+            margin: 3px 0;
+        }
+
+        .post-meta {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+    }
+}
+
+/* Post Vertical */
+.post-vertical {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 40px;
+
+    a {
+        .preview {
+            height: 150px;
+            width: auto;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+
+        .post-title {
+            margin-top: 10px;
+        }
+
+        color: black;
+        .transition(all, 0.2s, linear);
+
+        &:hover {
+            .post-title {
+                .transition(all, 0.2s, linear);
+                color: orangered;
+            }
+        }
+    }
+
+
+
+    .post-date {
+        color: gray !important;
+        font-size: 14px;
+        margin: 2px 0;
+    }
+
+    .post-meta {
+        font-size: 15px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        line-height: 20px;
+    }
+}
+/********************** End .post *******************/
+
+
+/********************** Chuyên Mục - Trang Chủ *************************************/
+.ChuyenMuc {
+
+    .thumbnail {
+        position: relative;
+        overflow: hidden;
+
+        img {
+            .transition(all, 0.4s, linear);
+        }
+
+        .caption {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: orangered;
+            opacity: 0;
+            z-index: 1;
+            .transition(all, 0.2s, linear);
+        }
+
+        &:hover {
+            img {
+                .transition(all, 0.4s, linear);
+                transform: scale(1.3, 1.3);
+            }
+
+            .caption {
+                .transition(all, 0.3s, linear);
+                opacity: 0.85;
+
+                a {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 30%;
+                    padding: 0 10%;
+                    z-index: 10;
+
+                    h3 {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+
+    .post-big {
+        a {
+            .preview {
+                width: 100%;
+                height: 250px;
+            }
+
+            .caption {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                .transition(all, 0.2s, linear);
+
+                .post-title {
+                    position: absolute;
+                    top: 45%;
+                    left: 35%;
+                    z-index: 22;
+                    color: red;
+                    font-size: 200%;
+                }
+            }
+
+            &:hover {
+                .caption {
+                    .transition(all, 0.2s, linear);
+                    background-color: orangered;
+                    opacity: 0.8;
+
+                    .post-title {
+                        color: white;
+                        z-index: 999;
+                    }
+                }
+            }
+        }
+    }
+}
+/********************** End Chuyên Mục - Trang Chủ *************************************/
+
+
+
+/********************** Chương Trình Học ***********************************/
+.HocTiengAnh {
+    .thumbnail {
+        padding: 5% 10%;
+        .transition(all, 0.3s, linear);
+
+        &:hover {
+            .transition(all, 0.3s, linear);
+            background-color: orange;
+        }
+    }
+}
+/********************** End Chương Trình Học ***********************************/
+
+
+
+/*********************** Footer *************************************/
+footer {
+    background-color: #d10000;
+    padding: 60px 0 20px 0;
+
+
+    .footer-widgets {
+        .title {
+            color: white !important;
+        }
+
+        .head-line {
+            background-color: white;
+        }
+    }
+
+    .widget-news {
+        a {
+            color: white !important;
+        }
+    }
+
+    .widget-contact {
+        p {
+            color: white;
+        }
+    }
+
+
+    .copyright {
+        color: white;
+        margin-top: 60px;
+    }
+}
+/*********************** End Footer *************************************/
+
+
+
+/*********************** Google Maps **************************/
+#LienHe {
+    #Map {
+        height: 350px;
+        margin-bottom: 30px;
+
+        .embed-responsive {
+            height: 350px;
+        }
+
+        iframe {
+            height: 350px;
+        }
+    }
+}
+/*********************** End Google Maps **********************/
+
+
+/************************ Background Title ***************************/
+/* bg orange */
+.bg-orange {
+    border-bottom: 2px solid orangered;
+    margin-bottom: 20px;
+
+    .title-part {
+        color: white;
+        background-color: orangered;
+        padding: 5px 13px 0 13px;
+    }
+}
+
+/* bg black */
+.bg-black {
+    border-bottom: 2px solid black;
+    margin-bottom: 20px;
+
+    .title-part {
+        color: white;
+        background-color: black;
+        padding: 5px 13px 0 13px;
+    }
+}
+
+/* bg green */
+.bg-green {
+    border-bottom: 2px solid #2ecc71;
+    margin-bottom: 20px;
+
+    .title-part {
+        color: white;
+        background-color: #2ecc71;
+        padding: 5px 13px 0 13px;
+    }
+}
+
+/* bg red */
+.bg-red {
+    border-bottom: 2px solid #e74c3c;
+    margin-bottom: 20px;
+
+    .title-part {
+        color: white;
+        background-color: #e74c3c;
+        padding: 5px 13px 0 13px;
+    }
+}
+
+/* bg sky */
+.bg-sky {
+    border-bottom: 2px solid #3498db;
+    margin-bottom: 20px;
+
+    .title-part {
+        color: white;
+        background-color: #3498db;
+        padding: 5px 13px 0 13px;
+    }
+}
+
+/************************ End Background Title ***************************/
+
+
+/* Post Big */
+.post-big {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+
+    a {
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+
+        .preview {
+            width: 100%;
+            height: 250px;
+        }
+
+        .caption {
+            position: absolute;
+            z-index: 10;
+            bottom: 10px;
+            left: 20px;
+
+            .post-title, .post-date {
+                color: white;
+            }
+
+            .post-date {
+                font-size: 14px;
+            }
+        }
+
+        img {
+            .transition(all, 0.3s, linear);
+            opacity: 1;
+        }
+
+        &:hover {
+
+            img {
+                .transition(all, 0.3s, linear);
+                transform: scale(1.1,1.1);
+            }
+        }
+    }
+}
+/* End Post Big */
+
+
+/* Breadcrums */
+.breadcrumb {
+    background-color: white;
+    padding: 0;
+}
+/* End Breadcrums */
+
+
+/* Sidebar */
+.sidebar-widgets {
+    margin-bottom: 60px;
+}
+
+/* Bài viết chi tiết */
+.post-detail {
+    .post-title {
+        margin-bottom: 10px;
+    }
+
+    .share-buttons {
+        margin: 10px 0;
+    }
+
+    .post-content {
+        line-height: 26px;
+    }
+
+    .fb-comments {
+        margin: 30px 0;
+    }
+}
+
+/* Albums */
+#owl-album-1 {
+    .item {
+        position: relative;
+        margin: 3px;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        a {
+            width: 100%;
+            height: 100%;
+            .transition(all, 0.3s, linear);
+
+            i {
+                position: absolute;
+                top: 40%;
+                left: 40%;
+                opacity: 0;
+            }
+
+            &:hover {
+
+                i {
+                    .transition(all, 0.2s, linear);
+                    opacity: 1;
+                    color: white;
+                }
+
+                img {
+                    .transition(all, 0.2s, linear);
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+}
+
+/* error-page */
+.error-page {
+    padding: 180px 0;
+
+    .txt-number {
+        font-size: 160px;
+        line-height: 140px;
+        font-weight: 700;
+        color: #333;
+    }
+
+    .txt-notfound {
+        font-size: 64px;
+        line-height: 70px;
+        font-weight: 300;
+    }
+
+    .txt-sorry {
+        font-size: 22px;
+        line-height: 28px;
+        color: #666;
+        margin-bottom: 25px;
+    }
+}
+
+#TrangChu section {
+    margin-bottom: 30px;
+}
+
+.notes {
+    color: red;
+}
+
+#Tintuc {
+    img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .caption {
+        h4 {
+            height: 50px;
+        }
+    }
+}
+
+.text-white {
+    color: white;
+}
+
+#owl-album-1 {
+    .item {
+        .preview {
+            width: 100%;
+            height: 130px;
+
+            img {
+                width: 100%;
+                height: 130px;
+            }
+        }
+    }
+}
+
+.post-detail {
+    .post-content{
+        font-family:'Roboto', sans-serif;
+    }
+}
+
+.post-related{
+    .post-vertical{
+        .preview{
+            width:100%;
+            height:150px;
+
+            img{
+                width:100%;
+                height:150px;
+            }
+        }
+    }
+}

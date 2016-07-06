@@ -1,0 +1,370 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>ASEC | Trung Tâm Ngoại Ngữ Chân Trời Mới</title>
+    <!-- Define Charset -->
+    <meta charset="utf-8" />
+    <!-- Responsive Metatag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <!-- Page Description and Author -->
+    <meta name="description" content="ASEC | Trung Tâm Ngoại Ngữ Chân Trời Mới" />
+    <meta name="author" content="Tai" />
+
+    <!-- Normalize CSS -->
+    <link href="css/normalize.css" rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+
+    <!-- Bootstrap Theme -->
+    <link href="css/bootstrap-theme.css" rel="stylesheet" />
+
+    <!-- Yamm CSS -->
+    <link href="css/yamm.css" rel="stylesheet" />
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" media="screen" />
+
+    <!-- PrettyPhoto -->
+    <link href="css/prettyPhoto.css" rel="stylesheet" />
+
+    <!-- Animate -->
+    <link href="css/animate.css" rel="stylesheet" />
+
+    <!-- Owl Carousel -->
+    <link href="css/owl.carousel.css" rel="stylesheet" />
+
+    <!-- Owl Carousel Theme -->
+    <link href="css/owl.theme.css" rel="stylesheet" />
+
+    <!-- Owl Carousel Transitions -->
+    <link href="css/owl.transitions.css" rel="stylesheet" />
+
+    <!-- Reset CSS -->
+    <link href="css/reset.css" rel="stylesheet" />
+
+    <!-- Styles CSS -->
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/custom.css" rel="stylesheet" />
+
+    <!-- Responsive -->
+    <link href="css/responsive.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="container">
+            <header>
+                <div class="navbar yamm navbar-default navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" data-toggle="collapse" data-target="#navbar-collapse-1" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                            <a href="Default.aspx" class="navbar-brand">Yamm Megamenu</a>
+                        </div>
+                        <div id="navbar-collapse-1" class="navbar-collapse collapse navbar-right">
+                            <ul class="nav navbar-nav">
+                                <li><a href="Default.aspx"><i class="fa fa-home"></i></a></li>
+                                <!-- Classic list -->
+                                <asp:Repeater ID="rpMainMenus" runat="server">
+                                    <ItemTemplate>
+                                        <li class="dropdown">
+                                            <a href="<%# Eval("Permalink") %>" data-toggle="dropdown" class="dropdown-toggle"><%# Eval("ItemName") %></a>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <!-- Content container to add padding -->
+                                                    <div class="yamm-content">
+                                                        <div class="row">
+                                                            <% for (int i = 1; i <= 2; i++)
+                                                                { %>
+                                                            <ul class="col-md-6 list-unstyled">
+                                                                <asp:Repeater ID="rpSubMenu" runat="server" DataSource='<%# GetSubMenu(Eval("MenuID").ToString()) %>'>
+                                                                    <ItemTemplate>
+                                                                        <li><a href="<%# Eval("linkMenuCon") %>"><%# Eval("CategoryName") %></a></li>
+                                                                    </ItemTemplate>
+                                                                </asp:Repeater>
+                                                            </ul>
+                                                            <% } %>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ItemTemplate>
+                                </asp:Repeater>
+
+                                <!-- Accordion demo -->
+                                <%--<li class="dropdown">
+                                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Accordion<b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <div class="yamm-content">
+                                                <div class="row">
+                                                    <div id="accordion" class="panel-group">
+                                                        <div class="panel panel-default">
+                                                            <div class="panel-heading">
+                                                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Collapsible Group Item #1</a></h4>
+                                                            </div>
+                                                            <div id="collapseOne" class="panel-collapse collapse in">
+                                                                <div class="panel-body">Ut consectetur ullamcorper purus a rutrum. Etiam dui nisi, hendrerit feugiat scelerisque et, cursus eu magna. </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="panel panel-default">
+                                                            <div class="panel-heading">
+                                                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Collapsible Group Item #2</a></h4>
+                                                            </div>
+                                                            <div id="collapseTwo" class="panel-collapse collapse">
+                                                                <div class="panel-body">Nullam pretium fermentum sapien ut convallis. Suspendisse vehicula, magna non tristique tincidunt, massa nisi luctus tellus, vel laoreet sem lectus ut nibh. </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="panel panel-default">
+                                                            <div class="panel-heading">
+                                                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Collapsible Group Item #3</a></h4>
+                                                            </div>
+                                                            <div id="collapseThree" class="panel-collapse collapse">
+                                                                <div class="panel-body">Praesent leo quam, faucibus at facilisis id, rhoncus sit amet metus. Sed vitae ipsum non nibh mattis congue eget id augue. </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <!-- Classic dropdown -->
+                                <li class="dropdown">
+                                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Classic<b class="caret"></b></a>
+                                    <ul role="menu" class="dropdown-menu">
+                                        <li><a tabindex="-1" href="#">Action </a></li>
+                                        <li><a tabindex="-1" href="#">Another action </a></li>
+                                        <li><a tabindex="-1" href="#">Something else here </a></li>
+                                        <li class="divider"></li>
+                                        <li><a tabindex="-1" href="#">Separated link </a></li>
+                                    </ul>
+                                </li>
+                                <!-- Pictures -->
+                                <li class="dropdown yamm-fw">
+                                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Pictures<b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <div class="yamm-content">
+                                                <div class="row">
+                                                    <div class="col-xs-6 col-sm-2">
+                                                        <a href="#" class="thumbnail">
+                                                            <img alt="150x190" src="demo/img/190.jpg" /></a>
+                                                    </div>
+                                                    <div class="col-xs-6 col-sm-2">
+                                                        <a href="#" class="thumbnail">
+                                                            <img alt="150x190" src="demo/img/190.jpg" /></a>
+                                                    </div>
+                                                    <div class="col-xs-6 col-sm-2">
+                                                        <a href="#" class="thumbnail">
+                                                            <img alt="150x190" src="demo/img/190.jpg" /></a>
+                                                    </div>
+                                                    <div class="col-xs-6 col-sm-2">
+                                                        <a href="#" class="thumbnail">
+                                                            <img alt="150x190" src="demo/img/190.jpg" /></a>
+                                                    </div>
+                                                    <div class="col-xs-6 col-sm-2">
+                                                        <a href="#" class="thumbnail">
+                                                            <img alt="150x190" src="demo/img/190.jpg" /></a>
+                                                    </div>
+                                                    <div class="col-xs-6 col-sm-2">
+                                                        <a href="#" class="thumbnail">
+                                                            <img alt="150x190" src="demo/img/190.jpg" /></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>--%>
+                            </ul>
+                            <%-- Search Form --%>
+                            <div class="navbar-form navbar-right">
+                                <div class="input-group">
+                                    <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control"></asp:TextBox>
+                                    <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <%-- Footer --%>
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <%-- Fanpage --%>
+                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                            <div class="footer-widgets widget-fanpage">
+                                <h4 class="title">FANPAGE<span class="head-line"></span></h4>
+                                <!-- Fanpage FB-->
+                                <div class="fb-page"
+                                    data-href="https://www.facebook.com/asecenglish/"
+                                    data-width="380"
+                                    data-hide-cover="false"
+                                    data-show-facepile="true"
+                                    data-show-posts="false">
+                                </div>
+                                <!-- End Fanpage FB-->
+                            </div>
+                        </div>
+                        <%-- End Fanpage --%>
+
+                        <%-- News --%>
+                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                            <div class="footer-widgets widget-news">
+                                <h4 class="title">CHUYÊN MỤC<span class="head-line"></span></h4>
+                                <asp:Repeater ID="rpChuyenMuc" runat="server">
+                                    <ItemTemplate>
+                                        <p><i class="fa fa-check text-white"></i>&nbsp;<a href="<%# Eval("Permalink") %>"><%# Eval("CategoryName") %></a></p>
+                                        <br />
+                                    </ItemTemplate>
+                                </asp:Repeater>
+                            </div>
+                        </div>
+                        <%-- End News --%>
+
+                        <%-- Contact --%>
+                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                            <div class="footer-widgets widget-contact">
+                                <h4 class="title">THÔNG TIN LIÊN HỆ<span class="head-line"></span></h4>
+                                <h2 class="title">Trung Tâm Ngoại Ngữ ASEC</h2>
+                                <p><strong>Điện thoại:</strong> 086 267 6949</p>
+                                <p><strong>Email:</strong> info@americantop.edu.vn</p>
+                                <p><strong>Website:</strong> <a href="asec.edu.vn" style="color: white">www.asec.edu.vn</a></p>
+                                <p><strong>Giờ làm việc:</strong> Thứ 2 - Chủ nhật: Từ 7h30 đến 21h</p>
+                            </div>
+                        </div>
+                        <%-- End Contact --%>
+                    </div>
+                    <p class="text-left copyright">&copy; COPYRIGHT 2016 - ASEC.EDU.VN. ALL RIGHTS RESERVED.</p>
+                </div>
+            </footer>
+            <%-- End Footer --%>
+        </div>
+
+        <!-- Go To Top Link -->
+        <a href="#" class="back-to-top"><i class="fa fa-2x fa-angle-up"></i></a>
+    </form>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/57738e83299ab05f483a59f8/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+    <!-- FB Fanpage Script-->
+    <div id="fb-root"></div>
+    <script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.6&appId=1585669778363631";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    <!-- End FB Fanpage -->
+
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54537d5126e05bc3"></script>
+
+    <%-- JS --%>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            /*----------------------------------------------------*/
+            /*	Owl carousel = Học tiếng anh
+            /*----------------------------------------------------*/
+
+            $("#owl-hoctienganh, #owl-album-1").owlCarousel({
+
+                autoPlay: 2000, //Set AutoPlay to 3 seconds
+
+                items: 4,
+                itemsDesktop: [1199, 3],
+                itemsDesktopSmall: [979, 3]
+
+            });
+
+            /*----------------------------------------------------*/
+            /*	Yamm
+            /*----------------------------------------------------*/
+
+            $(function () {
+                window.prettyPrint && prettyPrint()
+                $(document).on('click', '.yamm .dropdown-menu', function (e) {
+                    e.stopPropagation()
+                })
+            });
+
+            /*----------------------------------------------------*/
+            /*	Hover Dropdown Menu
+            /*----------------------------------------------------*/
+
+            $('ul.nav li.dropdown').hover(function () {
+                $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeIn(500);
+            }, function () {
+                $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeOut(500);
+            });
+
+            /*----------------------------------------------------*/
+            /*	Sự kiện
+            /*----------------------------------------------------*/
+
+            $("#Sukien, #Tintuc").carousel({
+                interval: 3000
+            });
+
+            /*----------------------------------------------------*/
+            /*	Back Top, Sticky Menu
+            /*----------------------------------------------------*/
+
+            var offset = 100;
+            var duration = 500;
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > offset) {
+                    $('.back-to-top').fadeIn(400);
+                    $('.navbar').addClass("navbar-fixed-top");
+                }
+                else {
+                    $('.back-to-top').fadeOut(400);
+                    $('.navbar').removeClass("navbar-fixed-top");
+                }
+            });
+
+            $('.back-to-top').click(function (event) {
+                event.preventDefault();
+                $('html, body').animate({ scrollTop: 0 }, 800);
+            });
+
+            /*----------------------------------------------------*/
+            /*	Albums
+            /*----------------------------------------------------*/
+            $('[rel="prettyPhoto[album1]"], [rel="prettyPhoto[intro]"]').prettyPhoto();
+
+            /*----------------------------------------------------*/
+            /*	Sự kiện & Tin Tức
+            /*----------------------------------------------------*/
+            $("#Tintuc > .carousel-inner > .item:first").addClass("active");
+        });
+    </script>
+</body>
+</html>
