@@ -121,9 +121,44 @@
 }
 /********************** End .post *******************/
 /********************** Chuyên Mục - Trang Chủ *************************************/
+.ChuyenMuc .thumbnail {
+  position: relative;
+  padding: 0;
+}
+.ChuyenMuc .thumbnail a .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 999;
+  opacity: 0;
+}
+.ChuyenMuc .thumbnail a .overlay .fa {
+  position: absolute;
+  top: 45%;
+  left: 47%;
+  color: white;
+}
+.ChuyenMuc .thumbnail a .preview {
+  height: 260px;
+}
+.ChuyenMuc .thumbnail a .preview img {
+  width: 100%;
+  height: 250px;
+}
+.ChuyenMuc .thumbnail a:hover .overlay {
+  opacity: 0.6;
+  transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+}
 /********************** End Chuyên Mục - Trang Chủ *************************************/
 /********************** Chương Trình Học ***********************************/
 .HocTiengAnh .thumbnail {
+  min-height: 450px;
   padding: 5% 10%;
   transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
@@ -136,6 +171,26 @@
   -o-transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
   background-color: orange;
+}
+.HocTiengAnh .thumbnail .preview {
+  overflow: hidden;
+  width: 100%;
+  height: 170px;
+}
+.HocTiengAnh .thumbnail .preview img {
+  width: 100%;
+  height: 170px;
+}
+.HocTiengAnh .thumbnail .meta {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 100px;
+}
+.HocTiengAnh .thumbnail .tieude {
+  height: 50px;
+  color: #0D47A1;
 }
 /********************** End Chương Trình Học ***********************************/
 /*********************** Footer *************************************/
@@ -387,6 +442,47 @@ footer .copyright {
   height: 150px;
 }
 /***************** Menu **************************/
+div.navbar.navbar-fixed-top {
+  background-color: white;
+}
+div.navbar.navbar-fixed-top .navbar-collapse {
+  margin-top: 1%;
+}
+div.navbar.navbar-fixed-top ul.nav li .fa-home {
+  margin-top: -35%;
+}
+div.navbar.navbar-fixed-top ul.nav li > a {
+  color: black;
+  font-size: 15px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+div.navbar.navbar-fixed-top ul.nav li:hover > a {
+  transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  color: orangered;
+}
+div.navbar.navbar-fixed-top ul.nav li.dropdown > ul.dropdown-menu li a {
+  color: black;
+  font-size: 17px;
+  transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  border-bottom: 1px solid #ECEFF1;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+div.navbar.navbar-fixed-top ul.nav li.dropdown > ul.dropdown-menu li a:hover {
+  transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  color: white !important;
+  background-color: orangered !important;
+}
 .navbar .navbar-collapse {
   margin-top: 1%;
 }
@@ -395,8 +491,9 @@ footer .copyright {
 }
 .navbar ul.nav li > a {
   color: black;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
+  text-transform: uppercase;
 }
 .navbar ul.nav li:hover > a {
   transition: all 0.2s linear;
@@ -405,7 +502,43 @@ footer .copyright {
   -webkit-transition: all 0.2s linear;
   color: orangered;
 }
-.navbar ul.nav li.dropdown ul.dropdown-menu > li > a:hover,
-.navbar ul.nav li.dropdown ul.dropdown-menu > li > a:focus {
-  color: deepskyblue;
+.navbar ul.nav li.dropdown > ul.dropdown-menu li a {
+  color: black;
+  font-size: 17px;
+  transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  border-bottom: 1px solid #ECEFF1;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
+.navbar ul.nav li.dropdown > ul.dropdown-menu li a:hover {
+  transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  color: white !important;
+  background-color: orangered !important;
+}
+/***************** End Menu **************************/
+/********************** Pop Up ********************************/
+.modal-lg {
+  width: 1200px !important;
+}
+.modal-content {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.modal-content .img-responsive {
+  padding-right: 50px;
+}
+a.close img {
+  background-color: black !important;
+  opacity: 1 !important;
+  margin-bottom: 50px;
+  width: 35px;
+  height: 35px;
+}
+/********************** End Pop Up ********************************/

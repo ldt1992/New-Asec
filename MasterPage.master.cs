@@ -10,12 +10,14 @@ public partial class MasterPage : System.Web.UI.MasterPage
 {
     private BLL_Menus _menu = new BLL_Menus();
     private BLL_ChuyenMuc _chuyenmuc = new BLL_ChuyenMuc();
+    private BLL_ChuongTrinhHoc _chuongtrinhhoc = new BLL_ChuongTrinhHoc();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!Page.IsPostBack)
         {
             GetMainMenu();
             GetChuyenMuc();
+            GetHocTiengAnh();
         }
     }
 
@@ -40,6 +42,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
         rpChuyenMuc.DataBind();
     }
 
+    //Search
     protected void txtSearch_TextChanged(object sender, EventArgs e)
     {
         string kw = txtSearch.Text;
@@ -47,5 +50,12 @@ public partial class MasterPage : System.Web.UI.MasterPage
             Response.Redirect("Default.aspx");
         else
             Response.Redirect("KetQuaTimKiem.aspx?keyword=" + kw);
+    }
+
+    //Get Học Tiếng Anh
+    private void GetHocTiengAnh()
+    {
+        rpHocTiengAnh.DataSource = this._chuongtrinhhoc.GetAll_ChuongTrinhHoc();
+        rpHocTiengAnh.DataBind();
     }
 }

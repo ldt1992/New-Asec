@@ -1,6 +1,21 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <!-- Popup modal-->
+    <div class="modal fade" id="myModal" tabindex="-1" data-replace="true" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <a class="close" data-dismiss="modal">
+                        <img src="images/icon/close-button.png" /></a>
+                    <a href="#">
+                        <img src="images/banner/TUAN-LE-VANG.png" class="img-responsive" /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Popup Modal-->
+
     <div id="TrangChu">
         <%-- Slider --%>
         <section class="Slider">
@@ -62,12 +77,15 @@
                             <div class="item">
                                 <div class="thumbnail">
                                     <a href="#">
-                                        <img src="<%# HomeUrl + Eval("ImagesUrl") %>" alt="Owl Image" class="img-circle img-responsive" /></a>
-                                    <div class="caption">
-                                        <h3><a href="#"><%# Eval("CategoryName") %></a></h3>
-                                        <p><%# Eval("Descriptions") %></p>
-                                        <p><a href="#" class="btn btn-danger">Đọc tiếp</a></p>
-                                    </div>
+                                        <div class="preview">
+                                            <img src="<%# HomeUrl + Eval("ImagesUrl") %>" alt="Owl Image" class="img-circle img-responsive" />
+                                        </div>
+
+                                        <div class="caption">
+                                            <h3 class="tieude"><%# Eval("CategoryName") %></h3>
+                                            <p class="meta"><%# Eval("Descriptions") %></p>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </ItemTemplate>
@@ -97,7 +115,10 @@
                             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                                 <div class="thumbnail">
                                     <a href="#">
-                                        <img src="<%# HomeUrl + Eval("ImagesUrl") %>" class="img-responsive" />
+                                        <div class="overlay"><i class="fa fa-2x fa-arrows"></i></div>
+                                        <div class="preview">
+                                            <img src="<%# HomeUrl + Eval("ImagesUrl") %>" class="img-responsive" />
+                                        </div>
                                         <div class="caption text-center">
                                             <h2 class="post-title"><%# Eval("CategoryName") %></h2>
                                         </div>

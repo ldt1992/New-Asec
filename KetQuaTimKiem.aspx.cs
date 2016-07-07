@@ -36,7 +36,7 @@ public partial class KetQuaTimKiem : System.Web.UI.Page
         }
         else
         {
-            NoResult.InnerText = "<h3 class='alert alert-danger'>Không tìm thấy kết quả phù hợp</h3>";
+            NoResult.InnerHtml = "<h3 class='alert alert-danger'>Không tìm thấy kết quả phù hợp</h3>";
         }
     }
 }
