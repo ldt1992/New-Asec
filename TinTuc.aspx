@@ -41,7 +41,7 @@
                                 <ItemTemplate>
                                     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                                         <div class="post-vertical">
-                                            <a href="ChiTiet.aspx?post=<%# Eval("PostID") %>" title="<%# Eval("PostTitle") %>">
+                                            <a href="<%# ConvertToUnsign(Eval("PostTitle").ToString()) + "-" + Eval("PostID") %>" title="<%# Eval("PostTitle") %>">
                                                 <div class="preview">
                                                     <img src="<%# HomeUrl + Eval("ImagesUrl") %>" class="img-responsive" />
                                                 </div>

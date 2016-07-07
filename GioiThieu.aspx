@@ -79,94 +79,21 @@
                 <section class="HocTiengAnh">
                     <h2 class="title text-center">Chương Trình Học Tại Anh Ngữ <span class="notes">ASEC</span></h2>
                     <div id="owl-hoctienganh">
-                        <div class="item">
-                            <div class="thumbnail">
-                                <a href="#">
-                                    <img src="images/owlcarousel/owl1.jpg" alt="Owl Image" class="img-circle" /></a>
-                                <div class="caption">
-                                    <h3><a href="#">Thumbnail label</a></h3>
-                                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                    <p><a href="#" class="btn btn-danger">Đọc tiếp</a></p>
+                        <asp:Repeater ID="rpChuongTrinhHoc" runat="server">
+                            <ItemTemplate>
+                                <div class="item">
+                                    <div class="thumbnail">
+                                        <a href="#">
+                                            <img src="<%# HomeUrl + Eval("ImagesUrl") %>" alt="Owl Image" class="img-circle img-responsive" /></a>
+                                        <div class="caption">
+                                            <h3><a href="#"><%# Eval("CategoryName") %></a></h3>
+                                            <p><%# Eval("Descriptions") %></p>
+                                            <p><a href="#" class="btn btn-danger">Đọc tiếp</a></p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="thumbnail">
-                                <a href="#">
-                                    <img src="images/owlcarousel/owl2.jpg" alt="Owl Image" class="img-circle" /></a>
-                                <div class="caption">
-                                    <h3><a href="#">Thumbnail label</a></h3>
-                                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                    <p><a href="#" class="btn btn-danger">Đọc tiếp</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="thumbnail">
-                                <a href="#">
-                                    <img src="images/owlcarousel/owl3.jpg" alt="Owl Image" class="img-circle" /></a>
-                                <div class="caption">
-                                    <h3><a href="#">Thumbnail label</a></h3>
-                                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                    <p><a href="#" class="btn btn-danger">Đọc tiếp</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="thumbnail">
-                                <a href="#">
-                                    <img src="images/owlcarousel/owl4.jpg" alt="Owl Image" class="img-circle" /></a>
-                                <div class="caption">
-                                    <h3><a href="#">Thumbnail label</a></h3>
-                                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                    <p><a href="#" class="btn btn-danger">Đọc tiếp</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="thumbnail">
-                                <a href="#">
-                                    <img src="images/owlcarousel/owl5.jpg" alt="Owl Image" class="img-circle" /></a>
-                                <div class="caption">
-                                    <h3><a href="#">Thumbnail label</a></h3>
-                                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                    <p><a href="#" class="btn btn-danger">Đọc tiếp</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="thumbnail">
-                                <a href="#">
-                                    <img src="images/owlcarousel/owl6.jpg" alt="Owl Image" class="img-circle" /></a>
-                                <div class="caption">
-                                    <h3><a href="#">Thumbnail label</a></h3>
-                                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                    <p><a href="#" class="btn btn-danger">Đọc tiếp</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="thumbnail">
-                                <a href="#">
-                                    <img src="images/owlcarousel/owl7.jpg" alt="Owl Image" class="img-circle" /></a>
-                                <div class="caption">
-                                    <h3><a href="#">Thumbnail label</a></h3>
-                                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                    <p><a href="#" class="btn btn-danger">Đọc tiếp</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="thumbnail">
-                                <a href="#">
-                                    <img src="images/owlcarousel/owl8.jpg" alt="Owl Image" class="img-circle" /></a>
-                                <div class="caption">
-                                    <h3><a href="#">Thumbnail label</a></h3>
-                                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                    <p><a href="#" class="btn btn-danger">Đọc tiếp</a></p>
-                                </div>
-                            </div>
-                        </div>
+                            </ItemTemplate>
+                        </asp:Repeater>
                     </div>
                 </section>
                 <%-- End Chương Trình Học --%>

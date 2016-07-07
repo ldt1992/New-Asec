@@ -20,33 +20,33 @@
                         <div class="form-group-lg has-error">
                             <h3 class="control-label">Họ Tên *
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Bạn vui lòng nhập họ tên"
-                                    ControlToValidate="TextBox1" Display="Static" ValidationGroup="Error"></asp:RequiredFieldValidator>
+                                    ControlToValidate="txtHoten" Display="Static" ValidationGroup="Error"></asp:RequiredFieldValidator>
                             </h3>
-                            <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control"></asp:TextBox>
+                            <asp:TextBox ID="txtHoten" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
                         <br />
                         <div class="form-group-lg has-error">
                             <h3 class="control-label">Email *
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Bạn vui lòng nhập email"
-                                    ControlToValidate="TextBox2" Display="Static" ValidationGroup="Error"></asp:RequiredFieldValidator>
+                                    ControlToValidate="txtEmail" Display="Static" ValidationGroup="Error"></asp:RequiredFieldValidator>
                             </h3>
-                            <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control"></asp:TextBox>
+                            <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
                         <br />
                         <div class="form-group-lg has-error">
                             <h3 class="control-label">Điện thoại *
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Bạn vui lòng nhập điện thoại"
-                                    ControlToValidate="TextBox3" Display="Static" ValidationGroup="Error"></asp:RequiredFieldValidator>
+                                    ControlToValidate="txtDienthoai" Display="Static" ValidationGroup="Error"></asp:RequiredFieldValidator>
                             </h3>
-                            <asp:TextBox ID="TextBox3" runat="server" CssClass="form-control"></asp:TextBox>
+                            <asp:TextBox ID="txtDienthoai" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
                         <br />
                         <div class="form-group-lg has-error">
                             <h3 class="control-label">Ghi Chú</h3>
-                            <asp:TextBox ID="TextBox4" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="5"></asp:TextBox>
+                            <asp:TextBox ID="txtNoidung" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="5"></asp:TextBox>
                         </div>
                         <br />
-                        <asp:Button ID="Button1" runat="server" Text="GỬI THÔNG TIN" CssClass="btn btn-lg btn-danger" ValidationGroup="Error" />
+                        <asp:Button ID="btnGui" runat="server" Text="GỬI THÔNG TIN" CssClass="btn btn-lg btn-danger" OnClick="btnGui_Click" ValidationGroup="Error" />
                     </div>
 
                     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">

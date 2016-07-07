@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using System.Text.RegularExpressions;
+using System.Text;
 
 public partial class ChiTiet : System.Web.UI.Page
 {
@@ -26,7 +28,7 @@ public partial class ChiTiet : System.Web.UI.Page
     //Get Post Detail
     private void GetDetailPost()
     {
-        string postId = Request.QueryString["post"];
+        string postId = RouteData.Values["id"].ToString();
         rpPostDetail.DataSource = this._post.GetPostDetail(postId);
         rpPostDetail.DataBind();
     }
@@ -34,7 +36,7 @@ public partial class ChiTiet : System.Web.UI.Page
     //Get Post Related
     private void GetPostRelated()
     {
-        string postId = Request.QueryString["post"];
+        string postId = RouteData.Values["id"].ToString();
         rpPostRelated.DataSource = this._post.GetPostRelated(postId, 3);
         rpPostRelated.DataBind();
     }
@@ -54,8 +56,26 @@ public partial class ChiTiet : System.Web.UI.Page
     //Increase View
     private void IncreaseViewPost()
     {
-        string postId = Request.QueryString["post"];
+        string postId = RouteData.Values["id"].ToString();
         this._post.IncreaseView(postId, GetFirstView(postId));
     }
 
+    //ConvertToUnsign
+    public string ConvertToUnsign(string str)
+    {
+        string title_url = "";
+        str = str.Replace(" ", "-");
+        str = str.Replace(".", "-");
+        str = str.Replace(",", "-");
+        str = str.Replace(";", "-");
+        str = str.Replace(":", "-");
+        str = str.Replace("%", "");
+        str = str.Replace("/", "-");
+        str = str.Replace("(", "-");
+        str = str.Replace(")", "-");
+        Regex regex = new Regex("\\p{IsCombiningDiacriticalMarks}+");
+        string temp = str.Normalize(NormalizationForm.FormD);
+        title_url = regex.Replace(temp, String.Empty).Replace('\u0111', 'd').Replace('\u0110', 'D');
+        return title_url;
+    }
 }

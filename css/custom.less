@@ -195,92 +195,6 @@
 /********************** Chuyên Mục - Trang Chủ *************************************/
 .ChuyenMuc {
 
-    .thumbnail {
-        position: relative;
-        overflow: hidden;
-
-        img {
-            .transition(all, 0.4s, linear);
-        }
-
-        .caption {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: orangered;
-            opacity: 0;
-            z-index: 1;
-            .transition(all, 0.2s, linear);
-        }
-
-        &:hover {
-            img {
-                .transition(all, 0.4s, linear);
-                transform: scale(1.3, 1.3);
-            }
-
-            .caption {
-                .transition(all, 0.3s, linear);
-                opacity: 0.85;
-
-                a {
-                    width: 100%;
-                    height: 100%;
-                    position: absolute;
-                    top: 30%;
-                    padding: 0 10%;
-                    z-index: 10;
-
-                    h3 {
-                        color: white;
-                    }
-                }
-            }
-        }
-    }
-
-    .post-big {
-        a {
-            .preview {
-                width: 100%;
-                height: 250px;
-            }
-
-            .caption {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                z-index: 1;
-                .transition(all, 0.2s, linear);
-
-                .post-title {
-                    position: absolute;
-                    top: 45%;
-                    left: 35%;
-                    z-index: 22;
-                    color: red;
-                    font-size: 200%;
-                }
-            }
-
-            &:hover {
-                .caption {
-                    .transition(all, 0.2s, linear);
-                    background-color: orangered;
-                    opacity: 0.8;
-
-                    .post-title {
-                        color: white;
-                        z-index: 999;
-                    }
-                }
-            }
-        }
-    }
 }
 /********************** End Chuyên Mục - Trang Chủ *************************************/
 
@@ -609,20 +523,56 @@ footer {
 }
 
 .post-detail {
-    .post-content{
-        font-family:'Roboto', sans-serif;
+    .post-content {
+        font-family: 'Roboto', sans-serif;
     }
 }
 
-.post-related{
-    .post-vertical{
-        .preview{
-            width:100%;
-            height:150px;
+.post-related {
+    .post-vertical {
+        .preview {
+            width: 100%;
+            height: 150px;
 
-            img{
-                width:100%;
-                height:150px;
+            img {
+                width: 100%;
+                height: 150px;
+            }
+        }
+    }
+}
+
+/***************** Menu **************************/
+.navbar {
+    .navbar-collapse {
+        margin-top: 1%;
+    }
+
+    ul.nav {
+        li {
+            .fa-home {
+                margin-top: -35%;
+            }
+
+            > a {
+                color: black;
+                font-size: 16px;
+                font-weight: 400;
+            }
+
+            &:hover {
+                > a {
+                    .transition(all, 0.2s, linear);
+                    color: orangered;
+                }
+            }
+        }
+
+        li.dropdown ul.dropdown-menu > li {
+            > a {
+                &:hover, &:focus {
+                    color: deepskyblue;
+                }
             }
         }
     }

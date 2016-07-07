@@ -11,6 +11,7 @@ public partial class _Default : System.Web.UI.Page
     private BLL_ChuyenMuc _chuyenmuc = new BLL_ChuyenMuc();
     private BLL_Post _post = new BLL_Post();
     public string HomeUrl = "http://inside.kus.edu.vn/";
+    private BLL_PhieuTuVan _phieutuvan = new BLL_PhieuTuVan();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!Page.IsPostBack)
@@ -40,5 +41,28 @@ public partial class _Default : System.Web.UI.Page
     {
         rpTinTuc.DataSource = this._post.GetTop3TinTuc();
         rpTinTuc.DataBind();
+    }
+
+    protected void btnGui_Click(object sender, EventArgs e)
+    {
+        string fname = "";
+        string email = "";
+        string phone = "";
+        string message = "";
+
+        fname = txtHoten.Text;
+        email = txtEmail.Text;
+        phone = txtDienthoai.Text;
+        message = txtNoidung.Text;
+
+        int result = this._phieutuvan.ThemPhieuTuVan(fname, email, phone, message);
+        if (result == 1)
+        {
+            Response.Write("<script>alert('Gửi thông tin thành công. Công ty sẽ cố gắng liên hệ sớm nhất có thể với bạn. Cảm ơn bạn. Chúc bạn một ngày làm việc vui vẻ. Have Fun !')</script>");
+        }
+        else
+        {
+            Response.Write("<script>alert('Gửi thông tin thất bại. Cảm phiền bạn nhập lại thông tin. Chúng tôi rất tiếc về sự cố này')</script>");
+        }
     }
 }

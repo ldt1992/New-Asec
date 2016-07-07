@@ -5,13 +5,19 @@
 
     void RegisterRoutes(RouteCollection routes)
     {
-
+        routes.MapPageRoute("TrangChu", "trang-chu", "~/Default.aspx");
+        routes.MapPageRoute("GioiThieu", "gioi-thieu", "~/GioiThieu.aspx");
+        routes.MapPageRoute("LienHe", "lien-he", "~/LienHe.aspx");
+        routes.MapPageRoute("LichKhaiGiang", "lich-khai-giang", "~/LichKhaiGiang.aspx");
+        routes.MapPageRoute("ChuyenMuc", "chuyen-muc", "~/ChuyenMuc.aspx");
+        routes.MapPageRoute("HocTiengAnh", "hoc-tieng-anh", "~/ChuongTrinhHoc.aspx");
+        routes.MapPageRoute("Detail Post", "{title}-{id}", "~/ChiTiet.aspx");
     }
 
     void Application_Start(object sender, EventArgs e)
     {
         // Code that runs on application startup
-
+        RegisterRoutes(RouteTable.Routes);
     }
 
     void Application_End(object sender, EventArgs e)
