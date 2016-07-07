@@ -32,7 +32,7 @@ public class BLL_ChuyenMuc
     {
         this.OpenConnect();
 
-        string query = "select ct.CategoryID, ct.CategoryName, ct.Permalink, img.ImagesUrl, img.DateOfStart from Category ct join Menu_Category m_ct on ct.CategoryID = m_ct.CategoryID join MainMenu m on m_ct.MenuID = m.MenuID join Images img on ct.CateogryImage = img.ImagesID where m.ItemName like N'Chuyên Mục' and m.ItemIndex > 8";
+        string query = "select ct.CategoryID, ct.CategoryName, ct.Descriptions, ct.Permalink, img.ImagesUrl, img.DateOfStart from Category ct join Menu_Category m_ct on ct.CategoryID = m_ct.CategoryID join MainMenu m on m_ct.MenuID = m.MenuID join Images img on ct.CateogryImage = img.ImagesID where m.ItemName like N'Chuyên Mục' and m.ItemIndex > 8";
         DataTable result = this._connect.GetDataTable(query);
 
         this.CloseConnect();

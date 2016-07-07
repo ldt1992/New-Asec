@@ -39,17 +39,13 @@
                             <asp:Repeater ID="rpXemNhieu" runat="server">
                                 <ItemTemplate>
                                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                                        <div class="post-big">
-                                            <a href="ChiTiet.aspx?post=<%# Eval("PostID") %>">
-                                                <div class="preview">
-                                                    <img src="<%# HomeUrl + Eval("ImagesUrl") %>" class="img-responsive" />
-                                                </div>
-
-                                                <div class="caption">
-                                                    <h3 class="post-title"><%# Eval("PostTitle") %></h3>
-                                                    <p class="post-date"><%# Eval("DateOfCreate", "{0: dd-MM-yyyy}") %></p>
-                                                </div>
+                                        <div class="post-vertical">
+                                            <a href="ChiTiet.aspx?post=<%# Eval("PostID") %>" title="<%# HomeUrl + Eval("ImagesUrl") %>">
+                                                <img src="<%# HomeUrl + Eval("ImagesUrl") %>" class="img-responsive" />
+                                                <h3 class="post-title"><%# Eval("PostTitle") %></h3>
                                             </a>
+                                            <p class="post-date"><%# Eval("DateOfCreate", "{0: dd-MM-yyyy}") %></p>
+                                            <p class="post-meta"><%# Eval("MetaDescription") %></p>
                                         </div>
                                     </div>
                                 </ItemTemplate>

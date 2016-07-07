@@ -13,8 +13,12 @@
 .yamm .container {
   position: relative;
 }
+.yamm .dropdown{
+    /*position:relative;*/
+}
 .yamm .dropdown-menu {
-  left: auto;
+  /*position:absolute;*/
+  left:0;
 }
 .yamm .yamm-content {
   padding: 20px 30px;

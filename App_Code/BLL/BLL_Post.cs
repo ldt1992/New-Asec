@@ -151,4 +151,16 @@ public class BLL_Post
         this.CloseConnect();
         return result;
     }
+
+    //Get Danh sách khai giảng
+    public DataTable GetListKhaiGiang()
+    {
+        this.OpenConnect();
+
+        string query = "select ct.CategoryID, ct.CategoryName, ct.Descriptions, ct.Permalink, img.ImagesName, img.ImagesUrl, img.DateOfStart from Category ct join Images img on ct.CateogryImage = img.ImagesID where Parent = 3121";
+        DataTable result = this._connect.GetDataTable(query);
+
+        this.CloseConnect();
+        return result;
+    }
 }

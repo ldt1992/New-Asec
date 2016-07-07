@@ -23,9 +23,6 @@
     <!-- Bootstrap Theme -->
     <link href="css/bootstrap-theme.css" rel="stylesheet" />
 
-    <!-- Yamm CSS -->
-    <link href="css/yamm.css" rel="stylesheet" />
-
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" media="screen" />
 
@@ -58,7 +55,8 @@
     <form id="form1" runat="server">
         <div id="container">
             <header>
-                <div class="navbar yamm navbar-default navbar-static-top">
+                <%-- add yamm into class --%>
+                <div class="navbar navbar-default navbar-static-top">
                     <div class="container">
                         <div class="navbar-header">
                             <button type="button" data-toggle="collapse" data-target="#navbar-collapse-1" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
@@ -72,24 +70,12 @@
                                     <ItemTemplate>
                                         <li class="dropdown">
                                             <a href="<%# Eval("Permalink") %>" data-toggle="dropdown" class="dropdown-toggle"><%# Eval("ItemName") %></a>
-                                            <ul class="dropdown-menu">
-                                                <li>
-                                                    <!-- Content container to add padding -->
-                                                    <div class="yamm-content">
-                                                        <div class="row">
-                                                            <% for (int i = 1; i <= 2; i++)
-                                                                { %>
-                                                            <ul class="col-md-6 list-unstyled">
-                                                                <asp:Repeater ID="rpSubMenu" runat="server" DataSource='<%# GetSubMenu(Eval("MenuID").ToString()) %>'>
-                                                                    <ItemTemplate>
-                                                                        <li><a href="<%# Eval("linkMenuCon") %>"><%# Eval("CategoryName") %></a></li>
-                                                                    </ItemTemplate>
-                                                                </asp:Repeater>
-                                                            </ul>
-                                                            <% } %>
-                                                        </div>
-                                                    </div>
-                                                </li>
+                                            <ul class="dropdown-menu dropdown-menu-left">
+                                                <asp:Repeater ID="rpSubMenu" runat="server" DataSource='<%# GetSubMenu(Eval("MenuID").ToString()) %>'>
+                                                    <ItemTemplate>
+                                                        <li><a href="<%# Eval("linkMenuCon") %>"><%# Eval("CategoryName") %></a></li>
+                                                    </ItemTemplate>
+                                                </asp:Repeater>
                                             </ul>
                                         </li>
                                     </ItemTemplate>
@@ -216,17 +202,6 @@
                 itemsDesktop: [1199, 3],
                 itemsDesktopSmall: [979, 3]
 
-            });
-
-            /*----------------------------------------------------*/
-            /*	Yamm
-            /*----------------------------------------------------*/
-
-            $(function () {
-                window.prettyPrint && prettyPrint()
-                $(document).on('click', '.yamm .dropdown-menu', function (e) {
-                    e.stopPropagation()
-                })
             });
 
             /*----------------------------------------------------*/
