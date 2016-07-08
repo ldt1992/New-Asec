@@ -1,1 +1,206 @@
-﻿
+@media screen and (min-width: 768px) {
+  /*----------------------------------------------------*/
+  /*	General Class
+    /*----------------------------------------------------*/
+  .title {
+    font-size: 130%;
+  }
+  .path {
+    margin-top: 1%;
+  }
+  .widget-viewest .post-horizontal .post-title a {
+    font-size: 60%;
+    line-height: 110%;
+  }
+  .post-vertical {
+    max-height: 200%;
+  }
+  .post-vertical .post-title {
+    font-size: 100%;
+    line-height: 160%;
+  }
+  /*----------------------------------------------------*/
+  /*	Menu & Footer
+    /*----------------------------------------------------*/
+  div.navbar {
+    background-color: white;
+    /*border: 1px solid black;*/
+  }
+  div.navbar .navbar-header {
+    /*border: 1px solid green;
+            background-color: green;*/
+    width: 15%;
+    /*width:100px;*/
+    float: left;
+  }
+  div.navbar .navbar-header .navbar-header {
+    /*border: 1px solid red;*/
+  }
+  div.navbar .navbar-header .logo {
+    width: 100%;
+    /*border: 1px solid yellow;*/
+  }
+  div.navbar .navbar-collapse {
+    margin-top: 1%;
+  }
+  div.navbar ul.nav li .fa-home {
+    margin-top: -20%;
+  }
+  div.navbar ul.nav li > a {
+    font-size: 60%;
+    font-weight: 400;
+    padding-left: 2px;
+    padding-right: 2px;
+    text-transform: uppercase;
+  }
+  div.navbar ul.nav li.dropdown > ul.dropdown-menu {
+    margin-top: -12%;
+  }
+  div.navbar ul.nav li.dropdown > ul.dropdown-menu li {
+    width: 100%;
+  }
+  div.navbar ul.nav li.dropdown > ul.dropdown-menu li a {
+    width: 100%;
+    padding-left: 5%;
+    font-size: 80%;
+  }
+  div.navbar.navbar-fixed-top {
+    background-color: white;
+    /*border: 1px solid black;*/
+  }
+  div.navbar.navbar-fixed-top .navbar-header {
+    /*border: 1px solid green;
+            background-color: green;*/
+    width: 15%;
+    /*width:100px;*/
+    float: left;
+  }
+  div.navbar.navbar-fixed-top .navbar-header .navbar-header {
+    /*border: 1px solid red;*/
+  }
+  div.navbar.navbar-fixed-top .navbar-header .logo {
+    width: 100%;
+    /*border: 1px solid yellow;*/
+  }
+  div.navbar.navbar-fixed-top .navbar-collapse {
+    margin-top: 1%;
+  }
+  div.navbar.navbar-fixed-top ul.nav li .fa-home {
+    margin-top: -20%;
+  }
+  div.navbar.navbar-fixed-top ul.nav li > a {
+    font-size: 60%;
+    font-weight: 400;
+    padding-left: 2px;
+    padding-right: 2px;
+    text-transform: uppercase;
+  }
+  div.navbar.navbar-fixed-top ul.nav li.dropdown > ul.dropdown-menu {
+    margin-top: -12%;
+  }
+  div.navbar.navbar-fixed-top ul.nav li.dropdown > ul.dropdown-menu li {
+    width: 100%;
+  }
+  div.navbar.navbar-fixed-top ul.nav li.dropdown > ul.dropdown-menu li a {
+    width: 100%;
+    padding-left: 5%;
+    font-size: 80%;
+  }
+  footer .widget-fanpage .fb-page {
+    width: 250px;
+  }
+  /*----------------------------------------------------*/
+  /*	Trang Chủ
+    /*----------------------------------------------------*/
+  #TrangChu .HocTiengAnh .thumbnail {
+    min-height: 200%;
+  }
+  #TrangChu .ChuyenMuc .thumbnail .preview {
+    height: 80% !important;
+  }
+  #TrangChu .ChuyenMuc .thumbnail .preview img {
+    height: 200px !important;
+    width: auto;
+  }
+  #TrangChu .ChuyenMuc .thumbnail .fa {
+    left: 45% !important;
+  }
+  #TrangChu .ChuyenMuc .thumbnail .post-title {
+    font-size: 120%;
+  }
+  #TrangChu #Tintuc img {
+    width: 100%;
+    height: auto;
+  }
+  #TrangChu #Tintuc .caption h4 {
+    height: 100%;
+  }
+  #TrangChu #Nhanqua .khauhieu {
+    font-size: 150%;
+  }
+  /*----------------------------------------------------*/
+  /*	Giới Thiệu
+    /*----------------------------------------------------*/
+  #GioiThieu [class^="col"] {
+    margin-bottom: 1%;
+  }
+  #GioiThieu .HocTiengAnh {
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+  #GioiThieu .HocTiengAnh .thumbnail {
+    min-height: 400px;
+  }
+  #GioiThieu .HocTiengAnh .thumbnail .tieude {
+    height: 50px;
+    color: #0D47A1;
+  }
+  #GioiThieu .HocTiengAnh .thumbnail .meta {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 100px;
+  }
+  /*----------------------------------------------------*/
+  /*	Tin Tức
+    /*----------------------------------------------------*/
+  #TinTuc [class^="col"] {
+    margin-bottom: 2%;
+  }
+  #TinTuc .post-vertical {
+    max-height: 200%;
+  }
+  #TinTuc .post-vertical .post-title {
+    font-size: 100%;
+  }
+  /*----------------------------------------------------*/
+  /*	Albums
+    /*----------------------------------------------------*/
+  #Albums .widget-viewest .post-title a {
+    font-size: 80%;
+    line-height: 80%;
+  }
+  /*----------------------------------------------------*/
+  /*	Xem Nhiều
+    /*----------------------------------------------------*/
+  #XemNhieu [class^="col"] {
+    margin-bottom: 2%;
+  }
+  /*----------------------------------------------------*/
+  /*	Chuyên Mục
+    /*----------------------------------------------------*/
+  #ChuyenMuc .post-vertical {
+    max-height: 100% !important;
+  }
+  #ChuyenMuc .post-vertical img {
+    height: 50% !important;
+    width: 100%;
+  }
+  /*----------------------------------------------------*/
+  /*	Chi Tiết
+    /*----------------------------------------------------*/
+  footer .widget-fanpage .fb-page {
+    width: 700px !important;
+  }
+}

@@ -11,6 +11,8 @@
         routes.MapPageRoute("LichKhaiGiang", "lich-khai-giang", "~/LichKhaiGiang.aspx");
         routes.MapPageRoute("ChuyenMuc", "chuyen-muc", "~/ChuyenMuc.aspx");
         routes.MapPageRoute("HocTiengAnh", "hoc-tieng-anh", "~/ChuongTrinhHoc.aspx");
+        routes.MapPageRoute("TuyenDung", "tuyen-dung", "~/TuyenDung.aspx");
+        routes.MapPageRoute("TinTuc", "tin-tuc", "~/TinTuc.aspx");
         routes.MapPageRoute("Detail Post", "{title}-{id}", "~/ChiTiet.aspx");
     }
 

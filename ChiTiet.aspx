@@ -31,7 +31,7 @@
             <div class="container">
                 <div class="row">
                     <%-- Main --%>
-                    <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8 main">
+                    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 main">
                         <asp:Repeater ID="rpPostDetail" runat="server">
                             <ItemTemplate>
                                 <div class="post-detail">
@@ -90,7 +90,7 @@
                     <%-- End Main --%>
 
                     <%-- Sidebar --%>
-                    <div class="hidden-xs col-sm-6 col-md-4 col-lg-4 sidebar">
+                    <div class="hidden-xs col-sm-4 col-md-4 col-lg-4 sidebar">
                         <uc1:SidebarPostBig runat="server" ID="SidebarPostBig" />
                     </div>
                     <%-- End Sidebar --%>

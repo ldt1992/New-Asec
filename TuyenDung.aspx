@@ -31,7 +31,7 @@
         <section class="content">
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8 main">
+                    <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8 main">
                         <h2 class="bg-sky"><span class="title-part">TUYỂN DỤNG</span></h2>
 
                         <div class="row">
@@ -52,7 +52,7 @@
                         </div>
 
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 sidebar">
+                    <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 sidebar">
                         <uc1:SidebarPostHorizontal runat="server" ID="SidebarPostHorizontal" />
                     </div>
                 </div>

@@ -141,106 +141,31 @@
                         <a href="Events.aspx">
                             <h1 class="title text-left">Sự Kiện<span class="head-line"></span></h1>
                         </a>
-                        <div id="Sukien" class="carousel slide" data-ride="carousel">
-
-                            <ol class="carousel-indicators">
-                                <li data-target="#Sukien" data-slide-to="0" class="active"></li>
-                                <li data-target="#Sukien" data-slide-to="1"></li>
-                                <li data-target="#Sukien" data-slide-to="2"></li>
-                            </ol>
-
-                            <div class="carousel-inner">
-                                <div class="item active">
-                                    <div class="row">
-                                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                                            <div class="thumbnail post">
-                                                <a href="#">
-                                                    <img class="img-responsive" src="http://placehold.it/250x160" alt="Thumb11" /></a>
-                                                <div class="caption">
-                                                    <h3 class="post-title"><a href="#">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</a></h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                                            <div class="thumbnail post">
-                                                <a href="#">
-                                                    <img class="img-responsive" src="http://placehold.it/250x160" alt="Thumb11" /></a>
-                                                <div class="caption">
-                                                    <h3 class="post-title"><a href="#">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</a></h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                                            <div class="thumbnail post">
-                                                <a href="#">
-                                                    <img class="img-responsive" src="http://placehold.it/250x160" alt="Thumb11" /></a>
-                                                <div class="caption">
-                                                    <h3 class="post-title"><a href="#">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</a></h3>
-                                                </div>
-                                            </div>
-                                        </div>
+                        <div id="Sukien">
+                            <div class="item">
+                                <div class="thumbnail post">
+                                    <a href="#">
+                                        <img class="img-responsive" src="http://placehold.it/250x160" alt="Thumb11" /></a>
+                                    <div class="caption">
+                                        <h3 class="post-title"><a href="#">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</a></h3>
                                     </div>
                                 </div>
-                                <div class="item">
-                                    <div class="row">
-                                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                                            <div class="thumbnail post">
-                                                <a href="#">
-                                                    <img class="img-responsive" src="http://placehold.it/250x160" alt="Thumb11" /></a>
-                                                <div class="caption">
-                                                    <h3 class="post-title"><a href="#">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</a></h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                                            <div class="thumbnail post">
-                                                <a href="#">
-                                                    <img class="img-responsive" src="http://placehold.it/250x160" alt="Thumb11" /></a>
-                                                <div class="caption">
-                                                    <h3 class="post-title"><a href="#">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</a></h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                                            <div class="thumbnail post">
-                                                <a href="#">
-                                                    <img class="img-responsive" src="http://placehold.it/250x160" alt="Thumb11" /></a>
-                                                <div class="caption">
-                                                    <h3 class="post-title"><a href="#">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</a></h3>
-                                                </div>
-                                            </div>
-                                        </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumbnail post">
+                                    <a href="#">
+                                        <img class="img-responsive" src="http://placehold.it/250x160" alt="Thumb11" /></a>
+                                    <div class="caption">
+                                        <h3 class="post-title"><a href="#">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</a></h3>
                                     </div>
                                 </div>
-                                <div class="item">
-                                    <div class="row">
-                                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                                            <div class="thumbnail post">
-                                                <a href="#">
-                                                    <img class="img-responsive" src="http://placehold.it/250x160" alt="Thumb11" /></a>
-                                                <div class="caption">
-                                                    <h3 class="post-title"><a href="#">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</a></h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                                            <div class="thumbnail post">
-                                                <a href="#">
-                                                    <img class="img-responsive" src="http://placehold.it/250x160" alt="Thumb11" /></a>
-                                                <div class="caption">
-                                                    <h3 class="post-title"><a href="#">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</a></h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                                            <div class="thumbnail post">
-                                                <a href="#">
-                                                    <img class="img-responsive" src="http://placehold.it/250x160" alt="Thumb11" /></a>
-                                                <div class="caption">
-                                                    <h3 class="post-title"><a href="#">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</a></h3>
-                                                </div>
-                                            </div>
-                                        </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumbnail post">
+                                    <a href="#">
+                                        <img class="img-responsive" src="http://placehold.it/250x160" alt="Thumb11" /></a>
+                                    <div class="caption">
+                                        <h3 class="post-title"><a href="#">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</a></h3>
                                     </div>
                                 </div>
                             </div>
@@ -286,7 +211,7 @@
         <section class="LayThongTin">
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                         <div id="Thongtin">
                             <h2 class="title">Thông Tin<span class="head-line"></span></h2>
                             <div class="form-group-lg has-error">
@@ -321,10 +246,10 @@
                             <asp:Button ID="btnGui" runat="server" Text="GỬI THÔNG TIN" CssClass="btn btn-lg btn-danger" OnClick="btnGui_Click" ValidationGroup="Error" />
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-                        <div id="Nhanqua">
+                    <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8">
+                        <div id="Nhanqua" class="margin-left-10">
                             <h2 class="title">Nhanh Tay Nhận Quà <span class="head-line"></span></h2>
-                            <h2 style="line-height: 150%; font-weight: 500; margin-left: 15%; font-size: 200%;">Hãy gọi cho chúng tôi <strong class="text-danger">086 267 6949</strong><br />
+                            <h2 class="khauhieu">Hãy gọi cho chúng tôi <strong class="text-danger">086 267 6949</strong><br />
                                 hoặc để chúng tôi <strong class="text-info">gọi lại bạn</strong>
                             </h2>
                             <img src="images/banner/hoc-thu-min.jpg" alt="banner" class="img-responsive" />

@@ -34,7 +34,7 @@
             <div class="container">
                 <div class="row">
                     <%-- Main --%>
-                    <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8 main">
+                    <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8 main">
                         <h2 class="bg-orange"><span class="title-part">SỰ KIỆN</span></h2>
                         <uc1:MainPostVertical runat="server" ID="MainPostVertical" />
 
@@ -52,7 +52,7 @@
                     <%-- End Main --%>
 
                     <%-- Sidebar --%>
-                    <div class="hidden-xs col-sm-6 col-md-4 col-lg-4 sidebar">
+                    <div class="hidden-xs col-sm-5 col-md-4 col-lg-4 sidebar">
                         <uc1:SidebarPostHorizontal runat="server" ID="SidebarPostHorizontal" />
                     </div>
                     <%-- End Sidebar --%>

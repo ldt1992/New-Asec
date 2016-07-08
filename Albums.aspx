@@ -31,7 +31,7 @@
             <div class="container">
                 <div class="row">
                     <%-- Main --%>
-                    <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8 main">
+                    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 main">
                         <h1 class="title text-left"><%=AlbumName %><span class="head-line"></span></h1>
                         <div id="owl-album-1">
                             <asp:Repeater ID="rpAlbum1" runat="server">
@@ -39,7 +39,7 @@
                                     <div class="item">
                                         <a href="<%# HomeUrl + Eval("ImagesUrl") %>" rel="prettyPhoto[album1]">
                                             <div class="preview">
-                                                <img src="<%# HomeUrl + Eval("ImagesUrl") %>" alt="Owl Image" />
+                                                <img src="<%# HomeUrl + Eval("ImagesUrl") %>" alt="<%=AlbumName %>" />
                                                 <i class="fa fa-2x fa-arrows"></i>
                                             </div>
                                         </a>
@@ -51,7 +51,7 @@
                     <%-- End Main --%>
 
                     <%-- Sidebar --%>
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 sidebar">
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 sidebar">
                         <uc1:SidebarPostBig runat="server" ID="SidebarPostBig" />
                     </div>
                     <%-- End Sidebar --%>

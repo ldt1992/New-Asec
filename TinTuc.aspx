@@ -34,7 +34,7 @@
             <div class="container">
                 <div class="row">
                     <%-- Main --%>
-                    <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8 main">
+                    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 main">
                         <h2 class="bg-orange"><span class="title-part">TIN TỨC</span></h2>
                         <div class="row">
                             <asp:Repeater ID="rpTinTuc" runat="server">
@@ -77,7 +77,7 @@
                     <%-- End Main --%>
 
                     <%-- Sidebar --%>
-                    <div class="hidden-xs col-sm-6 col-md-4 col-lg-4 sidebar">
+                    <div class="hidden-xs col-sm-4 col-md-4 col-lg-4 sidebar">
                         <uc1:SidebarPostHorizontal runat="server" ID="SidebarPostHorizontal" />
                     </div>
                     <%-- End Sidebar --%>

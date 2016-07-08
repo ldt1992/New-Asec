@@ -27,14 +27,14 @@
         <section class="content">
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7">
+                    <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
                         <h1 class="title text-left">Vài nét về Anh Ngữ ASEC<span class="head-line"></span></h1>
                         <p>Sau hơn 10 năm kinh doanh trong lĩnh vực tư vấn du học, Công ty Đỉnh Cao Châu Mỹ nhận ra được việc học tiếng Anh đã trở thành một nhu cầu thiết yếu của người dân Việt Nam, đặc biệt là đối với thế hệ trẻ và thiếu nhi. Sau một thời gian tìm hiểu thị trường và tìm ra một hướng đi khác biệt so với rất nhiều các trung tâm Anh ngữ hiện nay, chúng tôi đã quyết định thành lập Trung tâm Anh ngữ ASEC.</p>
                         <p>Đến nay, Trung tâm Anh ngữ Chân Trời Mới - ASEC là một địa chỉ đào tạo ngoại ngữ uy tín, đáp ứng tối đa nhu cầu học tiếng Anh của học viên bằng cách không ngừng nâng cao chất lượng giảng dạy và dịch vụ.</p>
                         <p>Với mục tiêu đạo tạo thế hệ học viên Việt Nam phát triển toàn diện không chỉ về ngôn ngữ mà còn các kĩ năng khác như giao tiếp, thuyết trình, làm việc nhóm… ASEC trang bị cho mình những giáo trình hiện đại theo tiêu chuẩn quốc tế, đội ngũ giáo viên giỏi chuyên môn và cơ sở vật chất hiện đại.</p>
                         <p>Đến với ASEC là các bạn đã đến với một môi trường học tập thoải mái, gần gũi nhưng cũng không kém phần chuyên nghiệp. Chúng tôi luôn mong muốn không chỉ đem lại sự tự tin cho học viên trên con đường chinh phục ngôn ngữ mà còn tạo những nền tảng vững chắc cho những thành công của các bạn trong cuộc sống.</p>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-5 col-lg-5">
+                    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
                         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                             <!-- Indicators -->
                             <ol class="carousel-indicators">
@@ -84,12 +84,14 @@
                                 <div class="item">
                                     <div class="thumbnail">
                                         <a href="#">
-                                            <img src="<%# HomeUrl + Eval("ImagesUrl") %>" alt="Owl Image" class="img-circle img-responsive" /></a>
-                                        <div class="caption">
-                                            <h3><a href="#"><%# Eval("CategoryName") %></a></h3>
-                                            <p><%# Eval("Descriptions") %></p>
-                                            <p><a href="#" class="btn btn-danger">Đọc tiếp</a></p>
-                                        </div>
+                                            <div class="preview">
+                                                <img src="<%# HomeUrl + Eval("ImagesUrl") %>" alt="Owl Image" class="img-circle img-responsive" />
+                                            </div>
+                                            <div class="caption">
+                                                <h3 class="tieude"><%# Eval("CategoryName") %></h3>
+                                                <p class="meta"><%# Eval("Descriptions") %></p>
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
                             </ItemTemplate>

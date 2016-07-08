@@ -55,6 +55,221 @@
     }
 }
 
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,900italic,900,700italic,700,500italic&subset=latin,vietnamese);
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 300;
+    color: black;
+}
+
+strong, b {
+    font-weight: 600;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    transition: color 0.2s ease-in-out;
+    -moz-transition: color 0.2s ease-in-out;
+    -webkit-transition: color 0.2s ease-in-out;
+    -o-transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+    color: #444;
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+i {
+    font-size: 1.1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    margin: 0;
+    color: #444;
+}
+
+h1 {
+    font-size: 30px;
+    line-height: 30px;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 28px;
+}
+
+h3 {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+h4 {
+    font-size: 18px;
+    line-height: 22px;
+}
+
+h5 {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+h6 {
+    font-size: 14px;
+    line-height: 18px;
+}
+
+p {
+    color: black;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 26px;
+    font-weight: 400;
+    margin: 5px 0;
+}
+
+p strong {
+    font-weight: 600;
+}
+
+
+
+/*====================Owl Carousel===========================*/
+#owl-hoctienganh .item {
+    margin: 3px;
+}
+
+#owl-hoctienganh .item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+/*====================End Owl Carousel===========================*/
+
+
+
+/********************* Sự Kiện - Trang Chủ *******************************/
+#Sukien .thumbnail {
+    margin-bottom: 0;
+}
+
+#Sukien .carousel-control.left, .carousel-control.right {
+    background-image: none !important;
+}
+
+#Sukien .carousel-control {
+    color: #fff;
+    top: 40%;
+    color: #428BCA;
+    bottom: auto;
+    padding-top: 4px;
+    width: 30px;
+    height: 30px;
+    text-shadow: none;
+    opacity: 1;
+}
+
+#Sukien .carousel-control:hover {
+    color: #d9534f;
+}
+
+#Sukien .carousel-control.left, .carousel-control.right {
+    background-image: none !important;
+}
+
+#Sukien .carousel-control.right {
+    left: auto;
+    right: -32px;
+}
+
+#Sukien .carousel-control.left {
+    right: auto;
+    left: -32px;
+}
+
+#Sukien .carousel-indicators {
+    bottom: -30px;
+}
+
+#Sukien .carousel-indicators li {
+    border-radius: 0;
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    border: 1px solid #ccc;
+}
+
+#Sukien .carousel-indicators .active {
+    width: 12px;
+    height: 12px;
+    background: #3276b1;
+    border-color: #3276b1;
+}
+/********************* End Sự Kiện *******************************/
+
+
+/********************* Tin Tức - Trang Chủ *******************************/
+#Tintuc .carousel-indicators {
+    bottom: -40px;
+    left: 0;
+    width: 100%;
+    background-color: orangered;
+    padding: 6px 0px;
+    margin-left: 0;
+    border-top: 2px solid #fff;
+}
+
+#Tintuc .carousel-indicators li {
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-color: #fff;
+}
+
+#Tintuc .carousel-indicators .active {
+    width: 14px;
+    height: 14px;
+    background-color: yellow;
+    border-color: yellow;
+}
+
+#Tintuc .carousel-inner .thumbnail {
+    margin-bottom: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#Tintuc .carousel-inner .caption {
+    background-color: orangered;
+    padding: 10px;
+}
+
+#Tintuc .carousel-inner .caption h4 {
+    color: white;
+}
+/********************* End Tin Tức *******************************/
+
+
 //.title, .head-line
 .title {
     position: relative;
@@ -194,41 +409,41 @@
 
 /********************** Chuyên Mục - Trang Chủ *************************************/
 .ChuyenMuc {
-    .thumbnail{
-        position:relative;
-        padding:0;
+    .thumbnail {
+        position: relative;
+        padding: 0;
 
-        a{
-            .overlay{
-                position:absolute;
-                top:0;
-                left:0;
-                width:100%;
-                height:100%;
-                background-color:black;
-                z-index:999;
-                opacity:0;
+        a {
+            .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: black;
+                z-index: 999;
+                opacity: 0;
 
-                .fa{
-                    position:absolute;
-                    top:45%;
-                    left:47%;
-                    color:white;
+                .fa {
+                    position: absolute;
+                    top: 45%;
+                    left: 47%;
+                    color: white;
                 }
             }
 
-            .preview{
-                height:260px;
+            .preview {
+                height: 260px;
 
-                img{
-                    width:100%;
-                    height:250px;
+                img {
+                    width: 100%;
+                    height: 250px;
                 }
             }
 
-            &:hover{
-                .overlay{
-                    opacity:0.6;
+            &:hover {
+                .overlay {
+                    opacity: 0.6;
                     .transition(all, 0.2s, linear);
                 }
             }
@@ -242,7 +457,7 @@
 /********************** Chương Trình Học ***********************************/
 .HocTiengAnh {
     .thumbnail {
-        min-height:450px;
+        min-height: 450px;
         padding: 5% 10%;
         .transition(all, 0.3s, linear);
 
@@ -252,26 +467,27 @@
         }
 
         .preview {
-            overflow:hidden;
-            width:100%;
-            height:170px;
+            overflow: hidden;
+            width: 100%;
+            height: 170px;
+
             img {
                 width: 100%;
                 height: 170px;
             }
         }
 
-        .meta{
-            display:-webkit-box;
-            -webkit-line-clamp:4;
-            -webkit-box-orient:vertical;
-            overflow:hidden;
-            height:100px;
+        .meta {
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            height: 100px;
         }
 
-        .tieude{
-            height:50px;
-            color:#0D47A1;
+        .tieude {
+            height: 50px;
+            color: #0D47A1;
         }
     }
 }
@@ -310,7 +526,7 @@ footer {
 
     .copyright {
         color: white;
-        margin-top: 60px;
+        margin-top: 0.25%;
     }
 }
 /*********************** End Footer *************************************/
@@ -548,7 +764,7 @@ footer {
 }
 
 #TrangChu section {
-    margin-bottom: 30px;
+    margin-bottom: 1%;
 }
 
 .notes {
@@ -607,9 +823,7 @@ footer {
 }
 
 /***************** Menu **************************/
-div.navbar.navbar-fixed-top {
-    background-color: white;
-
+div.navbar {
     .navbar-collapse {
         margin-top: 1%;
     }
@@ -656,7 +870,9 @@ div.navbar.navbar-fixed-top {
     }
 }
 
-.navbar {
+div.navbar.navbar-fixed-top {
+    background-color: white;
+
     .navbar-collapse {
         margin-top: 1%;
     }
@@ -729,3 +945,21 @@ a.close img {
     height: 35px;
 }
 /********************** End Pop Up ********************************/
+
+#Nhanqua {
+    .khauhieu {
+        line-height: 150%;
+        font-weight: 500;
+        margin-left: 15%;
+        font-size: 200%;
+    }
+}
+
+/************************** Column Grid Bootstrap ***********************************/
+footer [class^="col"] {
+    margin-bottom: 10%;
+}
+
+footer .widget-fanpage .fb-page{
+    width:300px;
+}

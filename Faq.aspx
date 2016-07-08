@@ -146,7 +146,7 @@
                         <br />
 
                         <div class="row">
-                            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
                                 <h2 class="title">Đặt Câu Hỏi<span class="head-line"></span></h2>
 
                                 <div class="form-group-lg has-error">

@@ -31,7 +31,7 @@
         <section class="content">
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-sm-8 col-lg-8 main">
+                    <div class="col-xs-12 col-sm-8 col-sm-8 col-lg-8 main">
                         <h2 class="bg-sky"><span class="title-part">KẾT QUẢ TÌM KIẾM</span></h2>
                         <h3 class="alert alert-info">Từ khóa: <%=kw %></h3>
                         <span id="NoResult" runat="server"></span>
@@ -87,7 +87,7 @@
 
 
                     </div>
-                    <div class="hidden-xs col-sm-6 col-sm-4 col-lg-4 sidebar">
+                    <div class="hidden-xs col-sm-4 col-md-4 col-lg-4 sidebar">
                         <uc1:SidebarPostHorizontal runat="server" ID="SidebarPostHorizontal" />
                     </div>
                 </div>

@@ -32,7 +32,7 @@
             <div class="container">
                 <div class="row">
                     <%-- Main --%>
-                    <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8 main">
+                    <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8 main">
                         <h2 class="bg-sky"><span class="title-part">XEM NHIỀU</span></h2>
 
                         <div class="row">
@@ -41,7 +41,9 @@
                                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                                         <div class="post-vertical">
                                             <a href="<%# ConvertToUnsign(Eval("PostTitle").ToString()) + "-" + Eval("PostID") %>" title="<%# HomeUrl + Eval("ImagesUrl") %>">
-                                                <img src="<%# HomeUrl + Eval("ImagesUrl") %>" class="img-responsive" />
+                                                <div class="preview">
+                                                    <img src="<%# HomeUrl + Eval("ImagesUrl") %>" class="img-responsive" />
+                                                </div>
                                                 <h3 class="post-title"><%# Eval("PostTitle") %></h3>
                                             </a>
                                             <p class="post-date"><%# Eval("DateOfCreate", "{0: dd-MM-yyyy}") %></p>
@@ -67,7 +69,7 @@
                     <%-- End Main --%>
 
                     <%-- Sidebar --%>
-                    <div class="hidden-xs col-sm-6 col-md-4 col-lg-4 sidebar">
+                    <div class="hidden-xs col-sm-5 col-md-4 col-lg-4 sidebar">
                         <uc1:SidebarPostHorizontal runat="server" ID="SidebarPostHorizontal" />
                     </div>
                     <%-- End Sidebar --%>
