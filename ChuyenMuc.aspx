@@ -34,10 +34,12 @@
                         <div class="row">
                             <asp:Repeater ID="rpSubItemChuyenMuc" runat="server">
                                 <ItemTemplate>
-                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                                         <div class="post-vertical">
                                             <a href="<%# Eval("Permalink") %>" title="What is Lorem Ipsum?">
-                                                <img src="<%# HomeUrl + Eval("ImagesUrl") %>" class="img-responsive" />
+                                                <div class="preview">
+                                                    <img src="<%# HomeUrl + Eval("ImagesUrl") %>" class="img-responsive" />
+                                                </div>
                                                 <h3 class="post-title"><%# Eval("CategoryName") %></h3>
                                             </a>
                                             <p class="post-date"><%# Eval("DateOfStart","{0: dd-MM-yyyy}") %></p>

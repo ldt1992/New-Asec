@@ -3,7 +3,7 @@
 <%@ Register Src="~/user_control/SidebarPostBig.ascx" TagPrefix="uc1" TagName="SidebarPostBig" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <div id="Detail">
+    <div id="ChiTiet">
         <%-- Bg Img --%>
         <section class="bgImg">
             <img src="images/banner/header_bg.jpg" />

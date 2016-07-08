@@ -169,6 +169,15 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="item">
+                                <div class="thumbnail post">
+                                    <a href="#">
+                                        <img class="img-responsive" src="http://placehold.it/250x160" alt="Thumb11" /></a>
+                                    <div class="caption">
+                                        <h3 class="post-title"><a href="#">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</a></h3>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -181,10 +190,12 @@
                                 <asp:Repeater ID="rpTinTuc" runat="server">
                                     <ItemTemplate>
                                         <div class="item">
-                                            <a href="ChiTiet.aspx?post=<%# Eval("PostID") %>">
-                                                <img class="thumbnail" src="<%# HomeUrl + Eval("ImagesUrl") %>" alt="Slide1" />
+                                            <a href="<%# ConvertToUnsign(Eval("PostTitle").ToString()) + "-" + Eval("PostID") %>">
+                                                <div class="preview">
+                                                    <img class="thumbnail" src="<%# HomeUrl + Eval("ImagesUrl") %>" alt="Slide1" />
+                                                </div>
                                                 <div class="caption">
-                                                    <h4><%# Eval("PostTitle") %></h4>
+                                                    <h4 class="post-title"><%# Eval("PostTitle") %></h4>
                                                 </div>
                                             </a>
                                         </div>
@@ -216,6 +227,7 @@
                             <h2 class="title">Thông Tin<span class="head-line"></span></h2>
                             <div class="form-group-lg has-error">
                                 <h3 class="control-label">Họ Tên * 
+                                   
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Bạn vui lòng nhập họ tên"
                                         ControlToValidate="txtHoten" Display="Static" ValidationGroup="Error"></asp:RequiredFieldValidator>
                                 </h3>
@@ -224,6 +236,7 @@
                             <br />
                             <div class="form-group-lg has-error">
                                 <h3 class="control-label">Email * 
+                                   
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Bạn vui lòng nhập email"
                                         ControlToValidate="txtEmail" Display="Static" ValidationGroup="Error"></asp:RequiredFieldValidator>
                                 </h3>
@@ -232,6 +245,7 @@
                             <br />
                             <div class="form-group-lg has-error">
                                 <h3 class="control-label">Điện thoại * 
+                                   
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Bạn vui lòng nhập số điện thoại"
                                         ControlToValidate="txtDienthoai" Display="Static" ValidationGroup="Error"></asp:RequiredFieldValidator>
                                 </h3>

@@ -38,7 +38,7 @@
                         <div class="row">
                             <asp:Repeater ID="rpXemNhieu" runat="server">
                                 <ItemTemplate>
-                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
                                         <div class="post-vertical">
                                             <a href="<%# ConvertToUnsign(Eval("PostTitle").ToString()) + "-" + Eval("PostID") %>" title="<%# HomeUrl + Eval("ImagesUrl") %>">
                                                 <div class="preview">
