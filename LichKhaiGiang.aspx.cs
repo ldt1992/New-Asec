@@ -9,7 +9,7 @@ public partial class LichKhaiGiang : System.Web.UI.Page
 {
     public string CurrentUrl = "";
     public string HomeUrl = "http://inside.kus.edu.vn/";
-    private BLL_Post _post = new BLL_Post();
+    private BLL_LichKhaiGiang _lichkhaigiang = new BLL_LichKhaiGiang();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!Page.IsPostBack)
@@ -22,7 +22,7 @@ public partial class LichKhaiGiang : System.Web.UI.Page
     //Get List Up Coming Soon Class
     private void GetUpComingSoon()
     {
-        rpLichKhaiGiang.DataSource = this._post.GetListKhaiGiang();
+        rpLichKhaiGiang.DataSource = this._lichkhaigiang.GetListKhaiGiang();
         rpLichKhaiGiang.DataBind();
     }
 }

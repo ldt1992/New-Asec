@@ -53,11 +53,11 @@ public class BLL_Post
     }
 
     //Get top 3 Tin tức
-    public DataTable GetTop3TinTuc()
+    public DataTable GetTopTinTuc(int top)
     {
         this.OpenConnect();
 
-        string query = "select top 3 p.PostID, p.PostTitle, p.MetaDescription, p.PostContentVN, p.PostContentEN, p.DateOfCreate, p.ViewCount, img.ImagesUrl, img.ImagesName from POST p join Post_Category_relationships p_ct on p_ct.PostID = p.PostID join Category ct on ct.CategoryID = p_ct.CategoryID join Images img on p.PostImage = img.ImagesID where ct.CategoryName like N'Tin Tức' order by p.DateOfCreate desc";
+        string query = "select top " + top + " p.PostID, p.PostTitle, p.MetaDescription, p.PostContentVN, p.PostContentEN, p.DateOfCreate, p.ViewCount, img.ImagesUrl, img.ImagesName from POST p join Post_Category_relationships p_ct on p_ct.PostID = p.PostID join Category ct on ct.CategoryID = p_ct.CategoryID join Images img on p.PostImage = img.ImagesID where ct.CategoryName like N'Tin Tức' order by p.DateOfCreate desc";
         DataTable result = this._connect.GetDataTable(query);
 
         this.CloseConnect();
@@ -152,12 +152,72 @@ public class BLL_Post
         return result;
     }
 
-    //Get Danh sách khai giảng
-    public DataTable GetListKhaiGiang()
+    //Get Top 3 Post Sự kiện
+    public DataTable GetTop3SuKien()
     {
         this.OpenConnect();
 
-        string query = "select ct.CategoryID, ct.CategoryName, ct.Descriptions, ct.Permalink, img.ImagesName, img.ImagesUrl, img.DateOfStart from Category ct join Images img on ct.CateogryImage = img.ImagesID where Parent = 3121";
+        string query = "select top 3 P.PostID, p.PostTitle, p.MetaDescription, p.DateOfCreate, p.ViewCount, img.ImagesUrl, img.ImagesName from POST p join Post_Category_relationships p_ct on p_ct.PostID = p.PostID join Category ct on ct.CategoryID = p_ct.CategoryID join Images img on p.PostImage = img.ImagesID where ct.CategoryName like N'Sự Kiện' order by p.DateOfCreate desc";
+        DataTable result = this._connect.GetDataTable(query);
+
+        this.CloseConnect();
+        return result;
+    }
+
+    //Get All Post Sự kiện
+    public DataTable GetAllSuKien()
+    {
+        this.OpenConnect();
+
+        string query = "select P.PostID, p.PostTitle, p.MetaDescription, p.DateOfCreate, p.ViewCount, img.ImagesUrl, img.ImagesName from POST p join Post_Category_relationships p_ct on p_ct.PostID = p.PostID join Category ct on ct.CategoryID = p_ct.CategoryID join Images img on p.PostImage = img.ImagesID where ct.CategoryName like N'Sự Kiện' order by p.DateOfCreate desc";
+        DataTable result = this._connect.GetDataTable(query);
+
+        this.CloseConnect();
+        return result;
+    }
+
+    //Get a Post by cate id
+    public DataTable GetPostbyCateID(string cateID)
+    {
+        this.OpenConnect();
+
+        string query = "select p.PostID, p.PostTitle, p.DateOfCreate, p.MetaDescription, p.ViewCount, p.PostContentVN, p.PostContentEN, img.ImagesUrl from POST p join Post_Category_relationships p_ct on p.PostID = p_ct.PostID join Images img on p.PostImage = img.ImagesID where p_ct.CategoryID =" + cateID;
+        DataTable result = this._connect.GetDataTable(query);
+
+        this.CloseConnect();
+        return result;
+    }
+
+    //Get CategoryName by CateID
+    public DataTable GetCategorybyCateID(string cateID)
+    {
+        this.OpenConnect();
+
+        string query = "select * from Category where CategoryID = " + cateID;
+        DataTable result = this._connect.GetDataTable(query);
+
+        this.CloseConnect();
+        return result;
+    }
+
+    //Get Previous Post
+    public DataTable GetPreviousPost(string postID)
+    {
+        this.OpenConnect();
+
+        string query = "SELECT TOP 1 * FROM POST WHERE PostID < " + postID;
+        DataTable result = this._connect.GetDataTable(query);
+
+        this.CloseConnect();
+        return result;
+    }
+
+    //Get Next Post
+    public DataTable GetNextPost(string postID)
+    {
+        this.OpenConnect();
+
+        string query = "SELECT TOP 1 * FROM POST WHERE PostID > " + postID;
         DataTable result = this._connect.GetDataTable(query);
 
         this.CloseConnect();

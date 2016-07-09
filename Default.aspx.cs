@@ -20,6 +20,7 @@ public partial class _Default : System.Web.UI.Page
         {
             GetChuongTrinhHoc();
             GetTopItemsChuyenMuc();
+            GetTopSuKien();
             GetTopTinTuc();
         }
     }
@@ -38,10 +39,17 @@ public partial class _Default : System.Web.UI.Page
         rpChuyenMuc.DataBind();
     }
 
-    //Get Tin Tức
+    //Get Sự Kiện
+    private void GetTopSuKien()
+    {
+        rpSuKien.DataSource = this._post.GetTop3SuKien();
+        rpSuKien.DataBind();
+    }
+
+    //Get top 3 tin tức
     private void GetTopTinTuc()
     {
-        rpTinTuc.DataSource = this._post.GetTop3TinTuc();
+        rpTinTuc.DataSource = this._post.GetTopTinTuc(6);
         rpTinTuc.DataBind();
     }
 

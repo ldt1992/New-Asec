@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data;
-using System.Text.RegularExpressions;
-using System.Text;
 
-public partial class ChiTiet : System.Web.UI.Page
+public partial class OnePost : System.Web.UI.Page
 {
     //For FB Cmt
     public string CurrentUrl = "";
@@ -19,22 +19,22 @@ public partial class ChiTiet : System.Web.UI.Page
     {
         if (!Page.IsPostBack)
         {
-            CurrentUrl = Request.Url.AbsoluteUri;
-            GetDetailPost();
+            DetailPost();
             GetPostRelated();
             IncreaseViewPost();
         }
     }
 
-    //Get Post Detail
-    private void GetDetailPost()
+    //Get Detail Post
+    private void DetailPost()
     {
-        string postId = RouteData.Values["id"].ToString();
+        string cateID = Request.QueryString["cateid"].ToString();
 
-        DataTable result = this._post.GetPostDetail(postId);
-        foreach (DataRow item in result.Rows)
+        DataTable result = this._post.GetPostbyCateID(cateID);
+
+        foreach (DataRow r in result.Rows)
         {
-            postID = item[0].ToString();
+            postID = r[0].ToString();
         }
 
         rpPostDetail.DataSource = result;
@@ -44,8 +44,6 @@ public partial class ChiTiet : System.Web.UI.Page
     //Get Post Related
     private void GetPostRelated()
     {
-        string postId = RouteData.Values["id"].ToString();
-
 
         DataTable result = this._post.GetPostRelated(postID, 3);
 
@@ -55,9 +53,6 @@ public partial class ChiTiet : System.Web.UI.Page
             rpPostRelated.DataSource = this._post.GetPostRelated(postID, 3);
             rpPostRelated.DataBind();
         }
-
-
-
     }
 
     //Get First View
@@ -75,8 +70,7 @@ public partial class ChiTiet : System.Web.UI.Page
     //Increase View
     private void IncreaseViewPost()
     {
-        string postId = RouteData.Values["id"].ToString();
-        this._post.IncreaseView(postId, GetFirstView(postId));
+        this._post.IncreaseView(postID, GetFirstView(postID));
     }
 
     //ConvertToUnsign

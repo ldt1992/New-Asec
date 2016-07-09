@@ -76,9 +76,9 @@
                         <ItemTemplate>
                             <div class="item">
                                 <div class="thumbnail">
-                                    <a href="#">
+                                    <a href="OnePost.aspx?cateid=<%# Eval("cateid") %>">
                                         <div class="preview">
-                                            <img src="<%# HomeUrl + Eval("ImagesUrl") %>" alt="Owl Image" class="img-circle img-responsive" />
+                                            <img src="<%# HomeUrl + Eval("ImagesUrl") %>" alt="<%# Eval("CategoryName") %>" class="img-circle img-responsive" />
                                         </div>
 
                                         <div class="caption">
@@ -138,56 +138,41 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-                        <a href="Events.aspx">
-                            <h1 class="title text-left">Sự Kiện<span class="head-line"></span></h1>
+                        <a href="TinTuc.aspx">
+                            <h1 class="title text-left">Tin Tức<span class="head-line"></span></h1>
                         </a>
+                        <%-- Tin tức --%>
                         <div id="Sukien">
-                            <div class="item">
-                                <div class="thumbnail post">
-                                    <a href="#">
-                                        <img class="img-responsive" src="http://placehold.it/250x160" alt="Thumb11" /></a>
-                                    <div class="caption">
-                                        <h3 class="post-title"><a href="#">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</a></h3>
+                            <asp:Repeater ID="rpTinTuc" runat="server">
+                                <ItemTemplate>
+                                    <div class="item">
+                                        <div class="thumbnail post">
+                                            <a href="<%# ConvertToUnsign(Eval("PostTitle").ToString()) + "-" + Eval("PostID") %>">
+                                                <div class="preview">
+                                                    <img class="img-responsive" src="<%# HomeUrl + Eval("ImagesUrl") %>" alt="Thumb11" />
+                                                </div>
+
+                                                <div class="caption">
+                                                    <h3 class="post-title"><%# Eval("PostTitle") %></h3>
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="thumbnail post">
-                                    <a href="#">
-                                        <img class="img-responsive" src="http://placehold.it/250x160" alt="Thumb11" /></a>
-                                    <div class="caption">
-                                        <h3 class="post-title"><a href="#">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="thumbnail post">
-                                    <a href="#">
-                                        <img class="img-responsive" src="http://placehold.it/250x160" alt="Thumb11" /></a>
-                                    <div class="caption">
-                                        <h3 class="post-title"><a href="#">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="thumbnail post">
-                                    <a href="#">
-                                        <img class="img-responsive" src="http://placehold.it/250x160" alt="Thumb11" /></a>
-                                    <div class="caption">
-                                        <h3 class="post-title"><a href="#">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</a></h3>
-                                    </div>
-                                </div>
-                            </div>
+                                </ItemTemplate>
+                            </asp:Repeater>
+
                         </div>
+                        <%-- End Tin tức --%>
                     </div>
 
                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                        <a href="TinTuc.aspx">
-                            <h1 class="title text-left">Tin Tức <span class="head-line"></span></h1>
+                        <a href="Events.aspx">
+                            <h1 class="title text-left">Sự Kiện <span class="head-line"></span></h1>
                         </a>
+                        <%-- Sự Kiện --%>
                         <div id="Tintuc" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
-                                <asp:Repeater ID="rpTinTuc" runat="server">
+                                <asp:Repeater ID="rpSuKien" runat="server">
                                     <ItemTemplate>
                                         <div class="item">
                                             <a href="<%# ConvertToUnsign(Eval("PostTitle").ToString()) + "-" + Eval("PostID") %>">
@@ -205,10 +190,9 @@
                             <!-- Indicators -->
                             <ol class="carousel-indicators">
                                 <li data-target="#Tintuc" data-slide-to="0" class="active"></li>
-                                <li data-target="#Tintuc" data-slide-to="1"></li>
-                                <li data-target="#Tintuc" data-slide-to="2"></li>
                             </ol>
                         </div>
+                        <%-- End Sự Kiện --%>
                     </div>
                 </div>
             </div>

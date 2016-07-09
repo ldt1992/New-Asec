@@ -44,8 +44,9 @@ public class BLL_Menus
     {
         this.OpenConnect();
 
-        string query = "select menu.MenuID, ct.CategoryID as cateid, ct.CategoryName, ct.Permalink as linkMenuCon from MainMenu menu join Menu_Category m_ct on menu.MenuID = m_ct.MenuID join Category ct on m_ct.CategoryID = ct.CategoryID where menu.MenuID = " + idMenuCha + " and menu.ItemIndex between 8 and 13 order by menu.ItemIndex asc";
-        DataTable result = this._connect.GetDataTable(query);
+        string query = "select ct.CategoryID, ct.CategoryName, ct.Descriptions, ct.Permalink, p.PostID, p.PostTitle, p.DateOfCreate, p.MetaDescription, img.ImagesUrl from POST p join Post_Category_relationships p_ct on p.PostID = p_ct.PostID join Category ct on p_ct.CategoryID = ct.CategoryID join Menu_Category m_ct on ct.CategoryID = m_ct.CategoryID join MainMenu menu on m_ct.MenuID = menu.MenuID join Images img on p.PostImage = img.ImagesID where menu.MenuID = " + idMenuCha;
+        string query2 = "select menu.MenuID, ct.CategoryID as cateid, ct.CategoryName, ct.Permalink as linkMenuCon from MainMenu menu join Menu_Category m_ct on menu.MenuID = m_ct.MenuID join Category ct on m_ct.CategoryID = ct.CategoryID where menu.MenuID = " + idMenuCha + " and menu.ItemIndex between 7 and 13 order by menu.ItemIndex asc";
+        DataTable result = this._connect.GetDataTable(query2);
 
         this.CloseConnect();
         return result;

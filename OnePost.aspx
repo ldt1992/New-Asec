@@ -1,9 +1,10 @@
-﻿<%@ Page Title="Bài Viết" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="ChiTiet.aspx.cs" Inherits="ChiTiet" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="OnePost.aspx.cs" Inherits="OnePost" %>
 
 <%@ Register Src="~/user_control/SidebarPostBig.ascx" TagPrefix="uc1" TagName="SidebarPostBig" %>
 
+
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <div id="ChiTiet">
+    <div id="OnePost">
         <%-- Bg Img --%>
         <section class="bgImg">
             <img src="images/banner/header_bg.jpg" />
@@ -60,12 +61,14 @@
                             </ItemTemplate>
                         </asp:Repeater>
 
+                        
+
                         <br />
                         <br />
                         <%-- Bài viết liên quan --%>
                         <div class="post-related">
                             <span id="TieuDe" runat="server"></span>
-                            
+
                             <div class="row">
                                 <asp:Repeater ID="rpPostRelated" runat="server">
                                     <ItemTemplate>
@@ -85,7 +88,8 @@
                                 </asp:Repeater>
                             </div>
                         </div>
-                        <br /><br />
+                        <br />
+                        <br />
                         <%-- End Bài viết liên quan --%>
                     </div>
                     <%-- End Main --%>

@@ -6,27 +6,39 @@ using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
 
-public partial class Events : System.Web.UI.Page
+public partial class TinTuc2 : System.Web.UI.Page
 {
     private BLL_Post _post = new BLL_Post();
     public string HomeUrl = "http://inside.kus.edu.vn/";
+    public string CateName = "";
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!Page.IsPostBack)
         {
-            GetAllEvent();
+            GetListPosts();
+            GetTitle();
         }
     }
 
-    //Get All Sự kiện
-    private void GetAllEvent()
+    //Get List Post By CateID
+    private void GetListPosts()
     {
-        pager1.PageSize = 9;
-        pager1.DataSource = this._post.GetAllSuKien().DefaultView;
-        pager1.BindToControl = rpSuKien;
+        string cateid = Request.QueryString["cateid"];
+        rpBlogs.DataSource = this._post.GetPostbyCateID(cateid);
+        rpBlogs.DataBind();
+    }
 
-        rpSuKien.DataSource = pager1.DataSourcePaged;
+    //Get CateName
+    private void GetTitle()
+    {
+        string cateid = Request.QueryString["cateid"];
+        DataTable result = this._post.GetCategorybyCateID(cateid);
+        foreach (DataRow item in result.Rows)
+        {
+            CateName = item[1].ToString();
+        }
     }
 
     //ConvertToUnsign

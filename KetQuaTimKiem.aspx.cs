@@ -29,7 +29,7 @@ public partial class KetQuaTimKiem : System.Web.UI.Page
 
         if (result.Rows.Count != 0)
         {
-            pager1.PageSize = 6;
+            pager1.PageSize = 9;
             pager1.DataSource = _post.GetResultSearch(kw).DefaultView;
             pager1.BindToControl = rpKetQuaTimKiem;
             rpKetQuaTimKiem.DataSource = pager1.DataSourcePaged;

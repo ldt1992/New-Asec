@@ -74,7 +74,8 @@
                                             <ul class="dropdown-menu dropdown-menu-left">
                                                 <asp:Repeater ID="rpSubMenu" runat="server" DataSource='<%# GetSubMenu(Eval("MenuID").ToString()) %>'>
                                                     <ItemTemplate>
-                                                        <li><a href="<%# Eval("linkMenuCon") %>"><%# Eval("CategoryName") %></a></li>
+                                                        <li>
+                                                            <asp:LinkButton ID="linkbtnMenuCon" runat="server" OnClick="linkbtnMenuCon_Click" CommandArgument='<%# Eval("cateid") %>'><%# Eval("CategoryName") %></asp:LinkButton></li>
                                                     </ItemTemplate>
                                                 </asp:Repeater>
                                             </ul>
