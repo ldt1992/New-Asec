@@ -44,20 +44,25 @@ public partial class ChiTiet : System.Web.UI.Page
     //Get Post Related
     private void GetPostRelated()
     {
-        string postId = RouteData.Values["id"].ToString();
 
-
-        DataTable result = this._post.GetPostRelated(postID, 3);
-
-        if (result.Rows.Count > 0)
+        try
         {
-            TieuDe.InnerHtml = "<h2 class='bg-orange'><span class='title-part'>BÀI VIẾT LIÊN QUAN</span></h2>";
-            rpPostRelated.DataSource = this._post.GetPostRelated(postID, 3);
-            rpPostRelated.DataBind();
+            string postId = RouteData.Values["id"].ToString();
+
+            DataTable result = this._post.GetPostRelated(postID, 3);
+
+            if (result.Rows.Count > 0)
+            {
+                TieuDe.InnerHtml = "<h2 class='bg-orange'><span class='title-part'>BÀI VIẾT LIÊN QUAN</span></h2>";
+                rpPostRelated.DataSource = this._post.GetPostRelated(postID, 3);
+                rpPostRelated.DataBind();
+            }
         }
+        catch (Exception)
+        {
 
 
-
+        }
     }
 
     //Get First View

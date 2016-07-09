@@ -17,7 +17,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <ol class="breadcrumb">
-                            <li><a href="Default.aspx">Trang Chủ</a></li>
+                            <li><a href="trang-chu">Trang Chủ</a></li>
                             <li><a href="ChuyenMuc.aspx">Chuyên Mục</a></li>
                             <li class="active"><%=CateName %></li>
                         </ol>
@@ -32,7 +32,7 @@
             <div class="container">
                 <div class="row">
                     <%-- Main --%>
-                    <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8 main">
+                    <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8 main">
                         <h2 class="bg-orange"><span class="title-part"><%=CateName %></span></h2>
                         <div class="row">
                             <asp:Repeater ID="rpBlogs" runat="server">
@@ -66,7 +66,7 @@
                     <%-- End Main --%>
 
                     <%-- Sidebar --%>
-                    <div class="hidden-xs col-sm-6 col-md-4 col-lg-4 sidebar">
+                    <div class="hidden-xs col-sm-5 col-md-4 col-lg-4 sidebar">
                         <uc1:SidebarPostBig runat="server" ID="SidebarPostBig" />
                     </div>
                     <%-- End Sidebar --%>

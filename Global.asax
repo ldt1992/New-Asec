@@ -5,7 +5,7 @@
 
     void RegisterRoutes(RouteCollection routes)
     {
-        routes.MapPageRoute("TrangChu", "trang-chu", "~/Default.aspx");
+        routes.MapPageRoute("TrangChu", "trang-chu", "~/Default2.aspx");
         routes.MapPageRoute("GioiThieu", "gioi-thieu", "~/GioiThieu.aspx");
         routes.MapPageRoute("LienHe", "lien-he", "~/LienHe.aspx");
         routes.MapPageRoute("LichKhaiGiang", "lich-khai-giang", "~/LichKhaiGiang.aspx");
@@ -31,22 +31,22 @@
     void Application_Error(object sender, EventArgs e)
     {
         // Code that runs when an unhandled error occurs
-        //Exception ex = HttpContext.Current.Server.GetLastError();
-        //if (ex.InnerException != null)
-        //{
-        //    ex = ex.InnerException;
-        //}
-        //if (ex is HttpException)
-        //{
-        //    if (((HttpException)ex).GetHttpCode() == 404)
-        //    {
-        //        Response.Redirect("~/FileNotFound.aspx");
-        //    }
-        //    else
-        //    {
-        //        Response.Redirect("~/FileNotFound.aspx");
-        //    }
-        //}
+        Exception ex = HttpContext.Current.Server.GetLastError();
+        if (ex.InnerException != null)
+        {
+            ex = ex.InnerException;
+        }
+        if (ex is HttpException)
+        {
+            if (((HttpException)ex).GetHttpCode() == 404)
+            {
+                Response.Redirect("~/FileNotFound.aspx");
+            }
+            else
+            {
+                Response.Redirect("~/FileNotFound.aspx");
+            }
+        }
 
         //HttpContext.Current.Server.ClearError();
     }
