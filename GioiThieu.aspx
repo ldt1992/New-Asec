@@ -14,7 +14,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <ol class="breadcrumb">
-                            <li><a href="Default.aspx">Trang Chủ</a></li>
+                            <li><a href="trang-chu">Trang Chủ</a></li>
                             <li class="active">Giới Thiệu</li>
                         </ol>
                     </div>

@@ -19,6 +19,9 @@
     font-size: 100%;
     line-height: 160%;
   }
+  footer .widget-fanpage .fb-page {
+    width: 100%;
+  }
   /*----------------------------------------------------*/
   /*	Menu & Footer
     /*----------------------------------------------------*/
@@ -138,6 +141,26 @@
   #TrangChu #Tintuc .caption .post-title {
     height: 60px;
   }
+  #TrangChu #Sukien .post .preview {
+    height: 140px;
+  }
+  #TrangChu #Sukien .post .preview img {
+    height: 140px;
+    width: 100%;
+  }
+  #TrangChu #Sukien .post .post-title {
+    font-size: 100%;
+    color: white;
+    height: 60px;
+    line-height: 120%;
+  }
+  #TrangChu #Sukien .post .caption {
+    background-color: #3498db;
+  }
+  #TrangChu #Sukien .item {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
   #TrangChu #Nhanqua .khauhieu {
     font-size: 150%;
   }
@@ -221,6 +244,9 @@
   .post-vertical .post-title {
     font-size: 100%;
     line-height: 160%;
+  }
+  footer .widget-fanpage .fb-page {
+    width: 100%;
   }
   /*----------------------------------------------------*/
   /*	Menu & Footer
@@ -337,6 +363,13 @@
     font-size: 90%;
     line-height: 130%;
   }
+  #TrangChu #Sukien .preview {
+    height: 130px;
+  }
+  #TrangChu #Sukien .preview img {
+    height: 130px;
+    width: 100%;
+  }
   /*----------------------------------------------------*/
   /*	Lịch Khai Giảng
     /*----------------------------------------------------*/
@@ -401,6 +434,9 @@
   .post-vertical .post-title {
     font-size: 100%;
     line-height: 160%;
+  }
+  footer .widget-fanpage .fb-page {
+    width: 100%;
   }
   /*----------------------------------------------------*/
   /*	Menu & Footer
@@ -493,7 +529,17 @@
   /*	Trang Chủ
     /*----------------------------------------------------*/
   #TrangChu #Tintuc .post-title {
-    font-size: 110%;
+    font-size: 120% !important;
+  }
+  #TrangChu .ChuyenMuc .thumbnail .preview {
+    height: 270px !important;
+  }
+  #TrangChu .ChuyenMuc .thumbnail .preview img {
+    height: 270px !important;
+    width: 100%;
+  }
+  #TrangChu .ChuyenMuc .thumbnail .post-title {
+    font-size: 130%;
   }
   /*----------------------------------------------------*/
   /*	Chuyên Mục
@@ -515,14 +561,13 @@
   /*	Lịch Khai Giảng
     /*----------------------------------------------------*/
   #LichKhaiGiang .main .post-vertical {
-    height: 270px !important;
-    border: 1px solid black;
+    height: 300px !important;
   }
   #LichKhaiGiang .main .post-vertical .preview {
-    height: 200px !important;
+    height: 180px !important;
   }
   #LichKhaiGiang .main .post-vertical .preview img {
-    height: 200px !important;
+    height: 180px !important;
     width: 100%;
   }
 }

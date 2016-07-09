@@ -17,7 +17,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <ol class="breadcrumb">
-                            <li><a href="Default.aspx">Trang Chủ</a></li>
+                            <li><a href="trang-chu">Trang Chủ</a></li>
                             <li class="active">Chương Trình Học</li>
                         </ol>
                     </div>
@@ -39,7 +39,7 @@
                                 <ItemTemplate>
                                     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                                         <div class="post-vertical">
-                                            <a href="ChiTiet.aspx" title="<%# Eval("CategoryName") %>">
+                                            <a href="OnePost.aspx?cateid=<%# Eval("cateid") %>" title="<%# Eval("CategoryName") %>">
                                                 <div class="preview">
                                                     <img src="<%# HomeUrl + Eval("ImagesUrl") %>" class="img-responsive" />
                                                 </div>

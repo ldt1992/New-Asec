@@ -132,7 +132,6 @@
         </section>
         <%-- End Chuyên Mục --%>
 
-
         <%-- Sự Kiện & Tin Tức --%>
         <section class="SuKienTinTuc">
             <div class="container">
@@ -200,7 +199,6 @@
         <br />
         <br />
         <%-- End Tin Tức --%>
-
 
         <%-- Lấy Thông Tin & Nhận Quà --%>
         <section class="LayThongTin">
