@@ -36,7 +36,7 @@
                         <asp:Repeater ID="rpPostDetail" runat="server">
                             <ItemTemplate>
                                 <div class="post-detail">
-                                    <h1 class="text-info post-title"><%# Eval("PostTitle") %></h1>
+                                    <h1 class="text-info post-title"><%# Eval("PostTitle").ToString().ToUpper() %></h1>
                                     <span class="pull-left"><i class="fa fa-calendar-check-o"></i>&nbsp; <%# Eval("DateOfCreate","{0: dd-MM-yyyy}") %></span>
                                     <span class="pull-right"><i class="fa fa-eye"></i>&nbsp;<%# string.IsNullOrEmpty(Eval("ViewCount").ToString()) ? 0 : Eval("ViewCount") %></span>
                                     <div class="clearfix"></div>
@@ -60,11 +60,26 @@
                                 </div>
                             </ItemTemplate>
                         </asp:Repeater>
-
-                        
-
                         <br />
+
+                        <%-- Previous & Next Post --%>
+                        <nav>
+                            <ul class="pager">
+                                <asp:Repeater ID="rpPrevious" runat="server">
+                                    <ItemTemplate>
+                                        <li class="previous"><a href="<%# ConvertToUnsign(Eval("PostTitle").ToString()) + "-" + Eval("PostID") %>"><span aria-hidden="true">&larr;</span> Bài viết trước đó</a></li>
+                                    </ItemTemplate>
+                                </asp:Repeater>
+                                <asp:Repeater ID="rpNext" runat="server">
+                                    <ItemTemplate>
+                                        <li class="next"><a href="<%# ConvertToUnsign(Eval("PostTitle").ToString()) + "-" + Eval("PostID") %>">Bài viết kế tiếp <span aria-hidden="true">&rarr;</span></a></li>
+                                    </ItemTemplate>
+                                </asp:Repeater>
+                            </ul>
+                        </nav>
+                        <%-- End Previous & Next Post --%>
                         <br />
+
                         <%-- Bài viết liên quan --%>
                         <div class="post-related">
                             <span id="TieuDe" runat="server"></span>

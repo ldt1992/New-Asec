@@ -200,27 +200,27 @@ public class BLL_Post
         return result;
     }
 
-    ////Get Previous Post
-    //public DataTable GetPreviousPost(string postID)
-    //{
-    //    this.OpenConnect();
+    //Get Previous Post
+    public DataTable GetPreviousPost(string postID)
+    {
+        this.OpenConnect();
 
-    //    string query = "SELECT TOP 1 * FROM POST WHERE PostID < " + postID;
-    //    DataTable result = this._connect.GetDataTable(query);
+        string query = "SELECT TOP 1 * FROM POST WHERE PostID < " + postID;
+        DataTable result = this._connect.GetDataTable(query);
 
-    //    this.CloseConnect();
-    //    return result;
-    //}
+        this.CloseConnect();
+        return result;
+    }
 
-    ////Get Next Post
-    //public DataTable GetNextPost(string postID)
-    //{
-    //    this.OpenConnect();
+    //Get Next Post
+    public DataTable GetNextPost(string postID)
+    {
+        this.OpenConnect();
 
-    //    string query = "SELECT TOP 1 * FROM POST WHERE PostID > " + postID;
-    //    DataTable result = this._connect.GetDataTable(query);
+        string query = "SELECT TOP 1 * FROM POST WHERE PostID > " + postID;
+        DataTable result = this._connect.GetDataTable(query);
 
-    //    this.CloseConnect();
-    //    return result;
-    //}
+        this.CloseConnect();
+        return result;
+    }
 }

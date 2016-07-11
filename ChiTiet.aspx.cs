@@ -23,6 +23,8 @@ public partial class ChiTiet : System.Web.UI.Page
             GetDetailPost();
             GetPostRelated();
             IncreaseViewPost();
+            PreviousPost();
+            NextPost();
         }
     }
 
@@ -101,5 +103,37 @@ public partial class ChiTiet : System.Web.UI.Page
         string temp = str.Normalize(NormalizationForm.FormD);
         title_url = regex.Replace(temp, String.Empty).Replace('\u0111', 'd').Replace('\u0110', 'D');
         return title_url;
+    }
+
+    //Get Previous Post
+    private void PreviousPost()
+    {
+        try
+        {
+            string postId = RouteData.Values["id"].ToString();
+
+            rpPrevious.DataSource = this._post.GetPreviousPost(postId);
+            rpPrevious.DataBind();
+        }
+        catch (Exception)
+        {
+
+        }
+    }
+
+    //Get Next Post
+    private void NextPost()
+    {
+        try
+        {
+            string postId = RouteData.Values["id"].ToString();
+
+            rpNext.DataSource = this._post.GetNextPost(postId);
+            rpNext.DataBind();
+        }
+        catch (Exception)
+        {
+
+        }
     }
 }

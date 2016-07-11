@@ -21,7 +21,7 @@
                         <ol class="breadcrumb">
                             <li><a href="trang-chu">Trang Chủ</a></li>
                             <li><a href="ChuyenMuc.aspx">Chuyên Mục</a></li>
-                            <li class="active">Events</li>
+                            <li class="active">Sự Kiện</li>
                         </ol>
                     </div>
                 </div>
