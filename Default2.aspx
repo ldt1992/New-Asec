@@ -114,7 +114,7 @@
                         <ItemTemplate>
                             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                                 <div class="thumbnail">
-                                    <a href="#">
+                                    <a href="<%# Eval("Permalink") %>">
                                         <div class="overlay"><i class="fa fa-2x fa-arrows"></i></div>
                                         <div class="preview">
                                             <img src="<%# HomeUrl + Eval("ImagesUrl") %>" class="img-responsive" />
@@ -169,27 +169,21 @@
                             <h1 class="title text-left">Sự Kiện <span class="head-line"></span></h1>
                         </a>
                         <%-- Sự Kiện --%>
-                        <div id="Tintuc" class="carousel slide" data-ride="carousel">
-                            <div class="carousel-inner">
-                                <asp:Repeater ID="rpSuKien" runat="server">
-                                    <ItemTemplate>
-                                        <div class="item">
-                                            <a href="<%# ConvertToUnsign(Eval("PostTitle").ToString()) + "-" + Eval("PostID") %>">
-                                                <div class="preview">
-                                                    <img class="thumbnail" src="<%# HomeUrl + Eval("ImagesUrl") %>" alt="Slide1" />
-                                                </div>
-                                                <div class="caption">
-                                                    <h4 class="post-title"><%# Eval("PostTitle") %></h4>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </ItemTemplate>
-                                </asp:Repeater>
-                            </div>
-                            <!-- Indicators -->
-                            <ol class="carousel-indicators">
-                                <li data-target="#Tintuc" data-slide-to="0" class="active"></li>
-                            </ol>
+                        <div id="owl-Tintuc" class="owl-carousel owl-theme">
+                            <asp:Repeater ID="rpSuKien" runat="server">
+                                <ItemTemplate>
+                                    <div class="item">
+                                        <a href="<%# ConvertToUnsign(Eval("PostTitle").ToString()) + "-" + Eval("PostID") %>">
+                                            <div class="preview">
+                                                <img class="thumbnail" src="<%# HomeUrl + Eval("ImagesUrl") %>" alt="Slide1" />
+                                            </div>
+                                            <div class="caption">
+                                                <h4 class="post-title"><%# Eval("PostTitle") %></h4>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </ItemTemplate>
+                            </asp:Repeater>
                         </div>
                         <%-- End Sự Kiện --%>
                     </div>
@@ -210,6 +204,8 @@
                             <div class="form-group-lg has-error">
                                 <h3 class="control-label">Họ Tên * 
                                    
+                                   
+
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Bạn vui lòng nhập họ tên"
                                         ControlToValidate="txtHoten" Display="Static" ValidationGroup="Error"></asp:RequiredFieldValidator>
                                 </h3>
@@ -219,6 +215,8 @@
                             <div class="form-group-lg has-error">
                                 <h3 class="control-label">Email * 
                                    
+                                   
+
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Bạn vui lòng nhập email"
                                         ControlToValidate="txtEmail" Display="Static" ValidationGroup="Error"></asp:RequiredFieldValidator>
                                 </h3>
@@ -228,6 +226,8 @@
                             <div class="form-group-lg has-error">
                                 <h3 class="control-label">Điện thoại * 
                                    
+                                   
+
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Bạn vui lòng nhập số điện thoại"
                                         ControlToValidate="txtDienthoai" Display="Static" ValidationGroup="Error"></asp:RequiredFieldValidator>
                                 </h3>

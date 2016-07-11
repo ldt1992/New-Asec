@@ -85,10 +85,12 @@ p strong {
   font-weight: 600;
 }
 /*====================Owl Carousel===========================*/
-#owl-hoctienganh .item {
+#owl-hoctienganh .item,
+#Tintuc .item {
   margin: 3px;
 }
-#owl-hoctienganh .item img {
+#owl-hoctienganh .item img,
+#Tintuc .item img {
   display: block;
   width: 100%;
   height: auto;
@@ -762,3 +764,37 @@ footer .widget-fanpage .fb-page {
   color: white;
   margin-bottom: 10px;
 }
+/*phan trang*/
+.pager input {
+  color: #fff;
+  background-color: #ee3733;
+  border-color: #d43f3a;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  padding: 10px 13px;
+  font-size: 18px;
+  line-height: 1.3333333;
+  border-radius: 6px;
+}
+.pager input:hover {
+  background-color: #666;
+  transition: all 0.2s linear;
+}
+.pager span a {
+  margin: 0 5px;
+  font-size: 20px;
+}
+/*end phan trang*/

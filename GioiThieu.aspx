@@ -83,7 +83,7 @@
                             <ItemTemplate>
                                 <div class="item">
                                     <div class="thumbnail">
-                                        <a href="#">
+                                        <a href="OnePost.aspx?cateid=<%# Eval("cateid") %>">
                                             <div class="preview">
                                                 <img src="<%# HomeUrl + Eval("ImagesUrl") %>" alt="Owl Image" class="img-circle img-responsive" />
                                             </div>

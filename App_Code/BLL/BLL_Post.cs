@@ -153,11 +153,11 @@ public class BLL_Post
     }
 
     //Get Top 3 Post Sự kiện
-    public DataTable GetTop3SuKien()
+    public DataTable GetTop3SuKien(int top)
     {
         this.OpenConnect();
 
-        string query = "select top 3 P.PostID, p.PostTitle, p.MetaDescription, p.DateOfCreate, p.ViewCount, img.ImagesUrl, img.ImagesName from POST p join Post_Category_relationships p_ct on p_ct.PostID = p.PostID join Category ct on ct.CategoryID = p_ct.CategoryID join Images img on p.PostImage = img.ImagesID where ct.CategoryName like N'Sự Kiện' order by p.DateOfCreate desc";
+        string query = "select top " + top + " P.PostID, p.PostTitle, p.MetaDescription, p.DateOfCreate, p.ViewCount, img.ImagesUrl, img.ImagesName from POST p join Post_Category_relationships p_ct on p_ct.PostID = p.PostID join Category ct on ct.CategoryID = p_ct.CategoryID join Images img on p.PostImage = img.ImagesID where ct.CategoryName like N'Sự Kiện' order by p.DateOfCreate desc";
         DataTable result = this._connect.GetDataTable(query);
 
         this.CloseConnect();
@@ -200,27 +200,27 @@ public class BLL_Post
         return result;
     }
 
-    //Get Previous Post
-    public DataTable GetPreviousPost(string postID)
-    {
-        this.OpenConnect();
+    ////Get Previous Post
+    //public DataTable GetPreviousPost(string postID)
+    //{
+    //    this.OpenConnect();
 
-        string query = "SELECT TOP 1 * FROM POST WHERE PostID < " + postID;
-        DataTable result = this._connect.GetDataTable(query);
+    //    string query = "SELECT TOP 1 * FROM POST WHERE PostID < " + postID;
+    //    DataTable result = this._connect.GetDataTable(query);
 
-        this.CloseConnect();
-        return result;
-    }
+    //    this.CloseConnect();
+    //    return result;
+    //}
 
-    //Get Next Post
-    public DataTable GetNextPost(string postID)
-    {
-        this.OpenConnect();
+    ////Get Next Post
+    //public DataTable GetNextPost(string postID)
+    //{
+    //    this.OpenConnect();
 
-        string query = "SELECT TOP 1 * FROM POST WHERE PostID > " + postID;
-        DataTable result = this._connect.GetDataTable(query);
+    //    string query = "SELECT TOP 1 * FROM POST WHERE PostID > " + postID;
+    //    DataTable result = this._connect.GetDataTable(query);
 
-        this.CloseConnect();
-        return result;
-    }
+    //    this.CloseConnect();
+    //    return result;
+    //}
 }

@@ -22,9 +22,6 @@ public partial class TinTuc : System.Web.UI.Page
     //Get Tin tức
     private void GetTinTuc()
     {
-        //rpTinTuc.DataSource = this._post.GetAllTinTuc();
-        //rpTinTuc.DataBind();
-
         pager1.PageSize = 9;
         pager1.DataSource = this._post.GetAllTinTuc().DefaultView;
         pager1.BindToControl = rpTinTuc;

@@ -3,6 +3,8 @@
 <%@ Register Src="~/user_control/PostBig2Col.ascx" TagPrefix="uc1" TagName="PostBig2Col" %>
 <%@ Register Src="~/user_control/SidebarPostHorizontal.ascx" TagPrefix="uc1" TagName="SidebarPostHorizontal" %>
 
+<%@ Register TagPrefix="phantrang" Namespace="SiteUtils" Assembly="CollectionPager" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div id="XemNhieu">
         <%-- Bg Img --%>
@@ -55,16 +57,22 @@
                         </div>
 
 
-                        <nav>
-                            <ul class="pagination">
-                                <li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
-                                <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
-                            </ul>
-                        </nav>
+                        <!-- Start Pagination -->
+                        <div class="pager">
+                            <phantrang:CollectionPager ID="pager1"
+                                FirstText="First"
+                                BackText="«"
+                                LabelText=""
+                                LastText="Last"
+                                NextText="»"
+                                ShowFirstLast="True"
+                                SliderSize="5" PagingMode="QueryString"
+                                runat="server" BackNextLinkSeparator="" BackNextLocation="Split"
+                                PageNumbersDisplay="Numbers" ResultsLocation="None"
+                                BackNextDisplay="Buttons" QueryStringKey="page">
+                            </phantrang:CollectionPager>
+                        </div>
+                        <!-- End Pagination -->
                     </div>
                     <%-- End Main --%>
 

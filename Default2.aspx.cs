@@ -42,7 +42,7 @@ public partial class _Default2 : System.Web.UI.Page
     //Get Sự Kiện
     private void GetTopSuKien()
     {
-        rpSuKien.DataSource = this._post.GetTop3SuKien();
+        rpSuKien.DataSource = this._post.GetTop3SuKien(3);
         rpSuKien.DataBind();
     }
 
@@ -51,6 +51,14 @@ public partial class _Default2 : System.Web.UI.Page
     {
         rpTinTuc.DataSource = this._post.GetTopTinTuc(6);
         rpTinTuc.DataBind();
+    }
+
+    private void ClearTxt()
+    {
+        txtHoten.Text = "";
+        txtEmail.Text = "";
+        txtDienthoai.Text = "";
+        txtNoidung.Text = "";
     }
 
     protected void btnGui_Click(object sender, EventArgs e)
@@ -69,6 +77,7 @@ public partial class _Default2 : System.Web.UI.Page
         if (result == 1)
         {
             Response.Write("<script>alert('Gửi thông tin thành công. Công ty sẽ cố gắng liên hệ sớm nhất có thể với bạn. Cảm ơn bạn. Chúc bạn một ngày làm việc vui vẻ. Have Fun !')</script>");
+            ClearTxt();
         }
         else
         {

@@ -85,9 +85,12 @@
                             </ul>
                             <%-- Search Form --%>
                             <div class="navbar-form navbar-right">
-                                <div class="input-group input-group-sm has-error">
+                                <div class="input-group input-group-sm">
                                     <asp:TextBox ID="txtSearch" runat="server" CssClass="form-control" OnTextChanged="txtSearch_TextChanged"></asp:TextBox>
-                                    <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                                    <%--<span class="input-group-addon"><i class="fa fa-search"></i></span>--%>
+                                    <span class="input-group-btn">
+                                        <asp:Button ID="btnSearch" runat="server" Text="Tìm" CssClass="btn btn-default" OnClick="txtSearch_TextChanged" />
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -231,7 +234,7 @@
             /*----------------------------------------------------*/
             /*	Sự kiện & Tin tức
             /*----------------------------------------------------*/
-
+            //Tin Tức
             $("#Sukien").owlCarousel({
 
                 autoPlay: 4000, //Set AutoPlay to 3 seconds
@@ -243,10 +246,22 @@
 
             });
 
-            $("#Tintuc").carousel({
-                interval: 3000
-            });
+            //Sự kiện
+            $("#owl-Tintuc").owlCarousel({
 
+                navigation: false, // Show next and prev buttons
+                slideSpeed: 300,
+                paginationSpeed: 400,
+                singleItem: true
+
+                // "singleItem:true" is a shortcut for:
+                // items : 1, 
+                // itemsDesktop : false,
+                // itemsDesktopSmall : false,
+                // itemsTablet: false,
+                // itemsMobile : false
+
+            });
 
             /*----------------------------------------------------*/
             /*	Back Top, Sticky Menu

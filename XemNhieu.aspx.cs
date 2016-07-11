@@ -22,8 +22,11 @@ public partial class XemNhieu : System.Web.UI.Page
     //Get All Xem Nhiều
     private void GetAllXemNhieu()
     {
-        rpXemNhieu.DataSource = this._post.GetAllXemNhieu();
-        rpXemNhieu.DataBind();
+        pager1.PageSize = 9;
+        pager1.DataSource = this._post.GetAllXemNhieu().DefaultView;
+        pager1.BindToControl = rpXemNhieu;
+
+        rpXemNhieu.DataSource = pager1.DataSourcePaged;
     }
 
     //ConvertToUnsign

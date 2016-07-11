@@ -13,6 +13,14 @@ public partial class Faq : System.Web.UI.Page
 
     }
 
+    private void ClearTxt()
+    {
+        txtHoten.Text = "";
+        txtEmail.Text = "";
+        txtDienthoai.Text = "";
+        txtNoidung.Text = "";
+    }
+
     protected void btnGui_Click(object sender, EventArgs e)
     {
         string fname = "";
@@ -29,6 +37,7 @@ public partial class Faq : System.Web.UI.Page
         if (result == 1)
         {
             Response.Write("<script>alert('Gửi thông tin thành công. Công ty sẽ cố gắng liên hệ sớm nhất có thể với bạn. Cảm ơn bạn. Chúc bạn một ngày làm việc vui vẻ. Have Fun !')</script>");
+            ClearTxt();
         }
         else
         {

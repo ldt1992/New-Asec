@@ -26,8 +26,12 @@ public partial class TinTuc2 : System.Web.UI.Page
     private void GetListPosts()
     {
         string cateid = Request.QueryString["cateid"];
-        rpBlogs.DataSource = this._post.GetPostbyCateID(cateid);
-        rpBlogs.DataBind();
+
+        pager1.PageSize = 9;
+        pager1.DataSource = this._post.GetPostbyCateID(cateid).DefaultView;
+        pager1.BindToControl = rpBlogs;
+
+        rpBlogs.DataSource = pager1.DataSourcePaged;
     }
 
     //Get CateName
