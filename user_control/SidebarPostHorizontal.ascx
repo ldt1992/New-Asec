@@ -8,7 +8,7 @@
     <asp:Repeater ID="rpPostViewest" runat="server">
         <ItemTemplate>
             <div class="post-big">
-                <a href="<%# ConvertToUnsign(Eval("PostTitle").ToString()) + "-" + Eval("PostID") %>">
+                <a href="<%# ConvertToUnsign(Eval("PostTitle").ToString().ToLower()) + "-" + Eval("PostID") %>">
                     <img src="<%# HomeUrl + Eval("ImagesUrl") %>" class="img-responsive" />
 
                     <div class="caption">
@@ -24,7 +24,7 @@
         <ItemTemplate>
             <div class="post-horizontal">
                 <div class="post-thumbnail">
-                    <a href="<%# ConvertToUnsign(Eval("PostTitle").ToString()) + "-" + Eval("PostID") %>">
+                    <a href="<%# ConvertToUnsign(Eval("PostTitle").ToString().ToLower()) + "-" + Eval("PostID") %>">
                         <img src="<%# HomeUrl + Eval("ImagesUrl") %>" class="img-responsive" />
                     </a>
                 </div>

@@ -107,7 +107,6 @@ public partial class MasterPage : System.Web.UI.MasterPage
         //danh sách
         else if (result.Rows.Count > 1)
         {
-            //Response.Redirect("danh-sach-" + cateid);
             ListBlog(cateid);
         }
     }

@@ -5,7 +5,7 @@
 <%@ Register TagPrefix="phantrang" Namespace="SiteUtils" Assembly="CollectionPager" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <div id="TinTuc2">
+    <div id="Blogs">
         <%-- Bg Img --%>
         <section class="bgImg">
             <img src="images/banner/header_bg.jpg" />

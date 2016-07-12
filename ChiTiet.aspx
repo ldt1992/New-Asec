@@ -66,12 +66,12 @@
                             <ul class="pager">
                                 <asp:Repeater ID="rpPrevious" runat="server">
                                     <ItemTemplate>
-                                        <li class="previous"><a href="<%# ConvertToUnsign(Eval("PostTitle").ToString()) + "-" + Eval("PostID") %>"><span aria-hidden="true">&larr;</span> Bài viết trước đó</a></li>
+                                        <li class="previous"><a href="<%# ConvertToUnsign(Eval("PostTitle").ToString().ToLower()) + "-" + Eval("PostID") %>"><span aria-hidden="true">&larr;</span> Bài viết trước đó</a></li>
                                     </ItemTemplate>
                                 </asp:Repeater>
                                 <asp:Repeater ID="rpNext" runat="server">
                                     <ItemTemplate>
-                                        <li class="next"><a href="<%# ConvertToUnsign(Eval("PostTitle").ToString()) + "-" + Eval("PostID") %>">Bài viết kế tiếp <span aria-hidden="true">&rarr;</span></a></li>
+                                        <li class="next"><a href="<%# ConvertToUnsign(Eval("PostTitle").ToString().ToLower()) + "-" + Eval("PostID") %>">Bài viết kế tiếp <span aria-hidden="true">&rarr;</span></a></li>
                                     </ItemTemplate>
                                 </asp:Repeater>
                             </ul>

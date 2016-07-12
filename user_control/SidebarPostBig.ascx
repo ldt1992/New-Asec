@@ -32,12 +32,12 @@
         <ItemTemplate>
             <div class="post-horizontal">
                 <div class="post-thumbnail">
-                    <a href="<%# ConvertToUnsign(Eval("PostTitle").ToString()) + "-" + Eval("PostID") %>">
+                    <a href="<%# ConvertToUnsign(Eval("PostTitle").ToString().ToLower()) + "-" + Eval("PostID") %>">
                         <img src="<%# HomeUrl + Eval("ImagesUrl") %>" class="img-responsive media-object" />
                     </a>
                 </div>
                 <div class="post-content">
-                    <h3 class="post-title"><a href="<%# ConvertToUnsign(Eval("PostTitle").ToString()) + "-" + Eval("PostID") %>"><%# Eval("PostTitle") %></a></h3>
+                    <h3 class="post-title"><a href="<%# ConvertToUnsign(Eval("PostTitle").ToString().ToLower()) + "-" + Eval("PostID") %>"><%# Eval("PostTitle") %></a></h3>
                     <p class="post-date"><%# Eval("DateOfCreate","{0: dd-MM-yyyy}") %></p>
                 </div>
                 <div class="clearfix"></div>

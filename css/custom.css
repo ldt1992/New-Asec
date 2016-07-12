@@ -84,109 +84,10 @@ p {
 p strong {
   font-weight: 600;
 }
-/*======================== li.active ====================================*/
-li.active a {
-  background-color: transparent !important;
-  color: orangered;
-}
-/*====================Owl Carousel===========================*/
-#owl-hoctienganh .item,
-#Tintuc .item {
-  margin: 3px;
-}
-#owl-hoctienganh .item img,
-#Tintuc .item img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-/*====================End Owl Carousel===========================*/
-/********************* Sự Kiện - Trang Chủ *******************************/
-#Sukien .thumbnail {
-  margin-bottom: 0;
-}
-#Sukien .carousel-control.left,
-.carousel-control.right {
-  background-image: none !important;
-}
-#Sukien .carousel-control {
-  color: #fff;
-  top: 40%;
-  color: #428BCA;
-  bottom: auto;
-  padding-top: 4px;
-  width: 30px;
-  height: 30px;
-  text-shadow: none;
-  opacity: 1;
-}
-#Sukien .carousel-control:hover {
-  color: #d9534f;
-}
-#Sukien .carousel-control.left,
-.carousel-control.right {
-  background-image: none !important;
-}
-#Sukien .carousel-control.right {
-  left: auto;
-  right: -32px;
-}
-#Sukien .carousel-control.left {
-  right: auto;
-  left: -32px;
-}
-#Sukien .carousel-indicators {
-  bottom: -30px;
-}
-#Sukien .carousel-indicators li {
-  border-radius: 0;
-  width: 10px;
-  height: 10px;
-  background: #ccc;
-  border: 1px solid #ccc;
-}
-#Sukien .carousel-indicators .active {
-  width: 12px;
-  height: 12px;
-  background: #3276b1;
-  border-color: #3276b1;
-}
-/********************* End Sự Kiện *******************************/
-/********************* Tin Tức - Trang Chủ *******************************/
-#Tintuc .carousel-indicators {
-  bottom: -40px;
-  left: 0;
-  width: 100%;
-  background-color: orangered;
-  padding: 6px 0px;
-  margin-left: 0;
-  border-top: 2px solid #fff;
-}
-#Tintuc .carousel-indicators li {
-  width: 12px;
-  height: 12px;
-  background: #fff;
-  border-color: #fff;
-}
-#Tintuc .carousel-indicators .active {
-  width: 14px;
-  height: 14px;
-  background-color: yellow;
-  border-color: yellow;
-}
-#Tintuc .carousel-inner .thumbnail {
-  margin-bottom: 0;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-#Tintuc .carousel-inner .caption {
-  background-color: orangered;
-  padding: 10px;
-}
-#Tintuc .carousel-inner .caption h4 {
-  color: white;
-}
-/********************* End Tin Tức *******************************/
+/*----------------------------------------------------*/
+/*	General Class
+/*----------------------------------------------------*/
+/* Title, head-line */
 .title {
   position: relative;
   text-transform: uppercase;
@@ -204,6 +105,7 @@ li.active a {
   margin: 0;
   background-color: #e74c3c;
 }
+/* Back to top */
 .back-to-top {
   display: none;
   position: fixed;
@@ -222,7 +124,6 @@ li.active a {
   -o-transition: all 0.2s linear;
   -webkit-transition: all 0.2s linear;
 }
-/********************** Post Horizontal & Vertical *******************/
 /* Post Horizontal */
 .post-horizontal {
   width: 100%;
@@ -245,6 +146,7 @@ li.active a {
 .post-horizontal .post-content .post-title a {
   color: black;
   line-height: 26px;
+  text-transform: capitalize;
 }
 .post-horizontal .post-content .post-title a:hover {
   transition: all 0.2s linear;
@@ -268,7 +170,7 @@ li.active a {
 .post-vertical {
   width: 100%;
   height: 300px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 .post-vertical a {
   color: black;
@@ -287,6 +189,7 @@ li.active a {
 }
 .post-vertical a .post-title {
   margin-top: 10px;
+  text-transform: capitalize;
 }
 .post-vertical a:hover .post-title {
   transition: all 0.2s linear;
@@ -308,84 +211,16 @@ li.active a {
   -webkit-box-orient: vertical;
   line-height: 20px;
 }
-/********************** End .post *******************/
-/********************** Chuyên Mục - Trang Chủ *************************************/
-.ChuyenMuc .thumbnail {
-  position: relative;
-  padding: 0;
-}
-.ChuyenMuc .thumbnail a .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  z-index: 999;
-  opacity: 0;
-}
-.ChuyenMuc .thumbnail a .overlay .fa {
-  position: absolute;
-  top: 45%;
-  left: 47%;
-  color: white;
-}
-.ChuyenMuc .thumbnail a .preview {
-  height: 260px;
-}
-.ChuyenMuc .thumbnail a .preview img {
-  width: 100%;
-  height: 250px;
-}
-.ChuyenMuc .thumbnail a:hover .overlay {
-  opacity: 0.6;
-  transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
-  -webkit-transition: all 0.2s linear;
-}
-/********************** End Chuyên Mục - Trang Chủ *************************************/
-/********************** Chương Trình Học ***********************************/
-.HocTiengAnh .thumbnail {
-  min-height: 450px;
-  padding: 5% 10%;
-  transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  -webkit-transition: all 0.3s linear;
-}
-.HocTiengAnh .thumbnail:hover {
-  transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  -webkit-transition: all 0.3s linear;
-  background-color: orange;
-}
-.HocTiengAnh .thumbnail .preview {
-  overflow: hidden;
-  width: 100%;
-  height: 170px;
-}
-.HocTiengAnh .thumbnail .preview img {
-  width: 100%;
-  height: 170px;
-}
-.HocTiengAnh .thumbnail .meta {
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  height: 100px;
-}
-.HocTiengAnh .thumbnail .tieude {
-  height: 50px;
-  color: #0D47A1;
-}
-/********************** End Chương Trình Học ***********************************/
-/*********************** Footer *************************************/
+/* Footer */
 footer {
   background-color: #d10000;
   padding: 60px 0 20px 0;
+}
+footer .widget-fanpage .fb-page {
+  width: 100%;
+}
+footer [class^="col"] {
+  margin-bottom: 10%;
 }
 footer .footer-widgets .title {
   color: white !important;
@@ -403,20 +238,10 @@ footer .copyright {
   color: white;
   margin-top: 0.25%;
 }
-/*********************** End Footer *************************************/
-/*********************** Google Maps **************************/
-#LienHe #Map {
-  height: 350px;
-  margin-bottom: 30px;
+footer .center {
+  color: white;
+  margin-bottom: 10px;
 }
-#LienHe #Map .embed-responsive {
-  height: 350px;
-}
-#LienHe #Map iframe {
-  height: 350px;
-}
-/*********************** End Google Maps **********************/
-/************************ Background Title ***************************/
 /* bg orange */
 .bg-orange {
   border-bottom: 2px solid orangered;
@@ -467,170 +292,59 @@ footer .copyright {
   background-color: #3498db;
   padding: 5px 13px 0 13px;
 }
-/************************ End Background Title ***************************/
-/* Post Big */
-.post-big {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 30px;
+/* Phân trang */
+.pager input {
+  color: #fff;
+  background-color: #ee3733;
+  border-color: #d43f3a;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  padding: 10px 13px;
+  font-size: 18px;
+  line-height: 1.3333333;
+  border-radius: 6px;
 }
-.post-big a {
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-.post-big a .preview {
-  width: 100%;
-  height: 250px;
-}
-.post-big a .caption {
-  position: absolute;
-  z-index: 10;
-  bottom: 10px;
-  left: 20px;
-}
-.post-big a .caption .post-title,
-.post-big a .caption .post-date {
-  color: white;
-}
-.post-big a .caption .post-date {
-  font-size: 14px;
-}
-.post-big a img {
-  transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  -webkit-transition: all 0.3s linear;
-  opacity: 1;
-}
-.post-big a:hover img {
-  transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  -webkit-transition: all 0.3s linear;
-  transform: scale(1.1, 1.1);
-}
-/* End Post Big */
-/* Breadcrums */
-.breadcrumb {
-  background-color: white;
-  padding: 0;
-}
-/* End Breadcrums */
-/* Sidebar */
-.sidebar-widgets {
-  margin-bottom: 60px;
-}
-/* Bài viết chi tiết */
-.post-detail .post-title {
-  margin-bottom: 10px;
-}
-.post-detail .share-buttons {
-  margin: 10px 0;
-}
-.post-detail .post-content {
-  line-height: 26px;
-}
-.post-detail .fb-comments {
-  margin: 30px 0;
-}
-/* Albums */
-#owl-album-1 .item {
-  position: relative;
-  margin: 3px;
-}
-#owl-album-1 .item img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-#owl-album-1 .item a {
-  width: 100%;
-  height: 100%;
-  transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  -webkit-transition: all 0.3s linear;
-}
-#owl-album-1 .item a i {
-  position: absolute;
-  top: 40%;
-  left: 40%;
-  opacity: 0;
-}
-#owl-album-1 .item a:hover i {
+.pager input:hover {
+  background-color: #666;
   transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
-  -webkit-transition: all 0.2s linear;
-  opacity: 1;
-  color: white;
 }
-#owl-album-1 .item a:hover img {
-  transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
-  -webkit-transition: all 0.2s linear;
-  opacity: 0.7;
+.pager span a {
+  margin: 0 5px;
+  font-size: 20px;
 }
-/* error-page */
-.error-page {
-  padding: 180px 0;
+/* Popup Modal */
+.modal-lg {
+  width: 1200px !important;
 }
-.error-page .txt-number {
-  font-size: 160px;
-  line-height: 140px;
-  font-weight: 700;
-  color: #333;
+.modal-content {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 }
-.error-page .txt-notfound {
-  font-size: 64px;
-  line-height: 70px;
-  font-weight: 300;
+.modal-content .img-responsive {
+  padding-right: 50px;
 }
-.error-page .txt-sorry {
-  font-size: 22px;
-  line-height: 28px;
-  color: #666;
-  margin-bottom: 25px;
+a.close img {
+  background-color: black !important;
+  opacity: 1 !important;
+  margin-bottom: 50px;
+  width: 35px;
+  height: 35px;
 }
-#TrangChu section {
-  margin-bottom: 1%;
-}
-.notes {
-  color: red;
-}
-#Tintuc img {
-  width: 100%;
-  height: 200px;
-}
-#Tintuc .caption h4 {
-  height: 50px;
-}
-.text-white {
-  color: white;
-}
-#owl-album-1 .item .preview {
-  width: 100%;
-  height: 130px;
-}
-#owl-album-1 .item .preview img {
-  width: 100%;
-  height: 130px;
-}
-.post-detail .post-content {
-  font-family: 'Roboto', sans-serif;
-}
-.post-related .post-vertical .preview {
-  width: 100%;
-  height: 150px;
-}
-.post-related .post-vertical .preview img {
-  width: 100%;
-  height: 150px;
-}
-/***************** Menu **************************/
+/* Menu */
 div.navbar .navbar-collapse {
   margin-top: 1%;
 }
@@ -669,6 +383,7 @@ div.navbar ul.nav li.dropdown > ul.dropdown-menu li a:hover {
   color: white !important;
   background-color: orangered !important;
 }
+/* Menu Fixed Top */
 div.navbar.navbar-fixed-top {
   background-color: white;
 }
@@ -710,41 +425,166 @@ div.navbar.navbar-fixed-top ul.nav li.dropdown > ul.dropdown-menu li a:hover {
   color: white !important;
   background-color: orangered !important;
 }
-/***************** End Menu **************************/
-/********************** Pop Up ********************************/
-.modal-lg {
-  width: 1200px !important;
+.text-white {
+  color: white;
 }
-.modal-content {
-  background-color: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
+/* Breadcrums */
+.breadcrumb {
+  background-color: white;
+  padding: 0;
 }
-.modal-content .img-responsive {
-  padding-right: 50px;
+/* error-page */
+.error-page {
+  padding: 180px 0;
 }
-a.close img {
-  background-color: black !important;
-  opacity: 1 !important;
-  margin-bottom: 50px;
-  width: 35px;
-  height: 35px;
+.error-page .txt-number {
+  font-size: 160px;
+  line-height: 140px;
+  font-weight: 700;
+  color: #333;
 }
-/********************** End Pop Up ********************************/
-#Nhanqua .khauhieu {
-  line-height: 150%;
-  font-weight: 500;
-  margin-left: 15%;
-  font-size: 200%;
+.error-page .txt-notfound {
+  font-size: 64px;
+  line-height: 70px;
+  font-weight: 300;
 }
-/************************** Column Grid Bootstrap ***********************************/
-footer [class^="col"] {
-  margin-bottom: 10%;
+.error-page .txt-sorry {
+  font-size: 22px;
+  line-height: 28px;
+  color: #666;
+  margin-bottom: 25px;
 }
-footer .widget-fanpage .fb-page {
+.notes {
+  color: red;
+}
+/* Sidebar */
+.sidebar-widgets {
+  margin-bottom: 60px;
+}
+/* Related Posts */
+.post-related .post-vertical .preview {
   width: 100%;
+  height: 150px;
 }
-/*************************** Trang Chủ - Tin Tức **********************************/
+.post-related .post-vertical .preview img {
+  width: 100%;
+  height: 150px;
+}
+/* Post Big */
+.post-big {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+  border: 3px solid red;
+}
+.post-big a {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.post-big a .preview {
+  width: 100%;
+  height: 250px;
+}
+.post-big a .caption {
+  position: absolute;
+  z-index: 10;
+  bottom: 10px;
+  left: 20px;
+}
+.post-big a .caption .post-title,
+.post-big a .caption .post-date {
+  color: white;
+}
+.post-big a .caption .post-date {
+  font-size: 14px;
+}
+.post-big a img {
+  transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  opacity: 1;
+}
+.post-big a:hover img {
+  transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  transform: scale(1.1, 1.1);
+}
+/*----------------------------------------------------*/
+/*	Trang Chủ
+/*----------------------------------------------------*/
+#TrangChu {
+  /* Học tiếng anh, Tin tức */
+  /* Sự kiện */
+  /* Tin tức */
+  /* Chuyên Mục */
+  /* Học tiếng anh */
+  /* Nhận quà */
+}
+#TrangChu #owl-hoctienganh .item,
+#TrangChu #Tintuc .item {
+  margin: 3px;
+}
+#TrangChu #owl-hoctienganh .item img,
+#TrangChu #Tintuc .item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+#TrangChu #Sukien .thumbnail {
+  margin-bottom: 0;
+}
+#TrangChu #Sukien .carousel-control.left,
+#TrangChu .carousel-control.right {
+  background-image: none !important;
+}
+#TrangChu #Sukien .carousel-control {
+  color: #fff;
+  top: 40%;
+  color: #428BCA;
+  bottom: auto;
+  padding-top: 4px;
+  width: 30px;
+  height: 30px;
+  text-shadow: none;
+  opacity: 1;
+}
+#TrangChu #Sukien .carousel-control:hover {
+  color: #d9534f;
+}
+#TrangChu #Sukien .carousel-control.left,
+#TrangChu .carousel-control.right {
+  background-image: none !important;
+}
+#TrangChu #Sukien .carousel-control.right {
+  left: auto;
+  right: -32px;
+}
+#TrangChu #Sukien .carousel-control.left {
+  right: auto;
+  left: -32px;
+}
+#TrangChu #Sukien .carousel-indicators {
+  bottom: -30px;
+}
+#TrangChu #Sukien .carousel-indicators li {
+  border-radius: 0;
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  border: 1px solid #ccc;
+}
+#TrangChu #Sukien .carousel-indicators .active {
+  width: 12px;
+  height: 12px;
+  background: #3276b1;
+  border-color: #3276b1;
+}
 #TrangChu #Sukien .post .preview {
   height: 170px;
 }
@@ -757,6 +597,7 @@ footer .widget-fanpage .fb-page {
   color: white;
   height: 60px;
   line-height: 120%;
+  text-transform: capitalize;
 }
 #TrangChu #Sukien .post .caption {
   background-color: #3498db;
@@ -765,41 +606,237 @@ footer .widget-fanpage .fb-page {
   padding-left: 5px;
   padding-right: 5px;
 }
-.center {
+#TrangChu #Tintuc .carousel-indicators {
+  bottom: -40px;
+  left: 0;
+  width: 100%;
+  background-color: orangered;
+  padding: 6px 0px;
+  margin-left: 0;
+  border-top: 2px solid #fff;
+}
+#TrangChu #Tintuc .carousel-indicators li {
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-color: #fff;
+}
+#TrangChu #Tintuc .carousel-indicators .active {
+  width: 14px;
+  height: 14px;
+  background-color: yellow;
+  border-color: yellow;
+}
+#TrangChu #Tintuc .carousel-inner .thumbnail {
+  margin-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+#TrangChu #Tintuc .carousel-inner .caption {
+  background-color: orangered;
+  padding: 10px;
+}
+#TrangChu #Tintuc .carousel-inner .caption h4 {
   color: white;
+}
+#TrangChu #Tintuc img {
+  width: 100%;
+  height: 200px;
+}
+#TrangChu #Tintuc .caption h4 {
+  height: 50px;
+}
+#TrangChu .ChuyenMuc .thumbnail {
+  position: relative;
+  padding: 0;
+}
+#TrangChu .ChuyenMuc .thumbnail a .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 999;
+  opacity: 0;
+}
+#TrangChu .ChuyenMuc .thumbnail a .overlay .fa {
+  position: absolute;
+  top: 45%;
+  left: 47%;
+  color: white;
+}
+#TrangChu .ChuyenMuc .thumbnail a .preview {
+  height: 260px;
+}
+#TrangChu .ChuyenMuc .thumbnail a .preview img {
+  width: 100%;
+  height: 250px;
+}
+#TrangChu .ChuyenMuc .thumbnail a:hover .overlay {
+  opacity: 0.6;
+  transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+}
+#TrangChu .HocTiengAnh .thumbnail {
+  min-height: 450px;
+  padding: 5% 10%;
+  transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+}
+#TrangChu .HocTiengAnh .thumbnail:hover {
+  transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  background-color: orange;
+}
+#TrangChu .HocTiengAnh .thumbnail .preview {
+  overflow: hidden;
+  width: 100%;
+  height: 170px;
+}
+#TrangChu .HocTiengAnh .thumbnail .preview img {
+  width: 100%;
+  height: 170px;
+}
+#TrangChu .HocTiengAnh .thumbnail .meta {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 100px;
+}
+#TrangChu .HocTiengAnh .thumbnail .tieude {
+  height: 50px;
+  color: #0D47A1;
+}
+#TrangChu #Nhanqua .khauhieu {
+  line-height: 150%;
+  font-weight: 500;
+  margin-left: 15%;
+  font-size: 200%;
+}
+#TrangChu section {
+  margin-bottom: 1%;
+}
+/*----------------------------------------------------*/
+/*	Albums
+/*----------------------------------------------------*/
+#Albums #owl-album-1 .item .preview {
+  width: 100%;
+  height: 130px;
+}
+#Albums #owl-album-1 .item .preview img {
+  width: 100%;
+  height: 130px;
+}
+#Albums #owl-album-1 .item {
+  position: relative;
+  margin: 3px;
+}
+#Albums #owl-album-1 .item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+#Albums #owl-album-1 .item a {
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+}
+#Albums #owl-album-1 .item a i {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  opacity: 0;
+}
+#Albums #owl-album-1 .item a:hover i {
+  transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  opacity: 1;
+  color: white;
+}
+#Albums #owl-album-1 .item a:hover img {
+  transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  opacity: 0.7;
+}
+/*----------------------------------------------------*/
+/*	Blogs
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
+/*	ChiTiet
+/*----------------------------------------------------*/
+#ChiTiet .post-detail .post-content {
+  font-family: 'Roboto', sans-serif;
+}
+#ChiTiet .post-detail .post-title {
   margin-bottom: 10px;
 }
-/*phan trang*/
-.pager input {
-  color: #fff;
-  background-color: #ee3733;
-  border-color: #d43f3a;
-  display: inline-block;
-  margin-bottom: 0;
-  font-weight: 400;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-image: none;
-  border: 1px solid transparent;
-  padding: 10px 13px;
-  font-size: 18px;
-  line-height: 1.3333333;
-  border-radius: 6px;
+#ChiTiet .post-detail .share-buttons {
+  margin: 10px 0;
 }
-.pager input:hover {
-  background-color: #666;
-  transition: all 0.2s linear;
+#ChiTiet .post-detail .post-content {
+  line-height: 26px;
 }
-.pager span a {
-  margin: 0 5px;
-  font-size: 20px;
+#ChiTiet .post-detail .fb-comments {
+  margin: 30px 0;
 }
-/*end phan trang*/
+/*----------------------------------------------------*/
+/*	ChuongTrinhHoc
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
+/*	ChuyenMuc
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
+/*	Events
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
+/*	Faq
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
+/*	GioiThieu
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
+/*	KetQuaTimKiem
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
+/*	LichKhaiGiang
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
+/*	LienHe
+/*----------------------------------------------------*/
+#LienHe #Map {
+  height: 350px;
+  margin-bottom: 30px;
+}
+#LienHe #Map .embed-responsive {
+  height: 350px;
+}
+#LienHe #Map iframe {
+  height: 350px;
+}
+/*----------------------------------------------------*/
+/*	OnePost
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
+/*	TinTuc
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
+/*	TuyenDung
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
+/*	XemNhieu
+/*----------------------------------------------------*/

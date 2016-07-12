@@ -205,7 +205,7 @@ public class BLL_Post
     {
         this.OpenConnect();
 
-        string query = "SELECT TOP 1 * FROM POST WHERE PostID < " + postID;
+        string query = "SELECT TOP 1 * FROM POST WHERE PostID < " + postID + " order by PostID desc";
         DataTable result = this._connect.GetDataTable(query);
 
         this.CloseConnect();
