@@ -36,7 +36,7 @@
                                 <ItemTemplate>
                                     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                                         <div class="post-vertical">
-                                            <a href="<%# Eval("Permalink") %>" title="What is Lorem Ipsum?">
+                                            <a href="<%# Eval("Permalink") %>" title="<%# Eval("CategoryName") %>">
                                                 <div class="preview">
                                                     <img src="<%# HomeUrl + Eval("ImagesUrl") %>" class="img-responsive" />
                                                 </div>

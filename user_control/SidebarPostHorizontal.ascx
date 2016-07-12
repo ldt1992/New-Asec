@@ -9,8 +9,9 @@
         <ItemTemplate>
             <div class="post-big">
                 <a href="<%# ConvertToUnsign(Eval("PostTitle").ToString().ToLower()) + "-" + Eval("PostID") %>">
-                    <img src="<%# HomeUrl + Eval("ImagesUrl") %>" class="img-responsive" />
-
+                    <div class="preview">
+                        <img src="<%# HomeUrl + Eval("ImagesUrl") %>" class="img-responsive" />
+                    </div>
                     <div class="caption">
                         <h3 class="post-title"><%# Eval("PostTitle") %></h3>
                         <p class="post-date"><%# Eval("DateOfCreate","{0: dd-MM-yyyy}") %></p>

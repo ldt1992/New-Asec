@@ -38,12 +38,12 @@
                                 <ItemTemplate>
                                     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                                         <div class="post-vertical">
-                                            <a href="OnePost.aspx?cateid=<%# Eval("cateid") %>" title="<%# Eval("CategoryName") %>">
+                                            <asp:LinkButton ID="linkbtn" runat="server" CommandArgument='<%# Eval("cateid") %>' OnClick="linkbtn_Click">
                                                 <div class="preview">
                                                     <img src="<%# HomeUrl + Eval("ImagesUrl") %>" class="img-responsive" />
                                                 </div>
                                                 <h3 class="post-title"><%# Eval("CategoryName") %></h3>
-                                            </a>
+                                            </asp:LinkButton>
                                             <p class="post-date"><%# Eval("DateOfStart","{0: dd-MM-yyyy}") %></p>
                                             <p class="post-meta"><%# Eval("Descriptions") %></p>
                                         </div>

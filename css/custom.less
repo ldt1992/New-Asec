@@ -254,6 +254,8 @@ p strong {
             img {
                 width: 100%;
                 height: 100%;
+                border: 2px solid #bdc3c7 !important;
+                padding: 2px;
             }
         }
 
@@ -288,6 +290,60 @@ p strong {
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
         line-height: 20px;
+    }
+}
+
+/* Post Big */
+.post-big {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border: 2px solid #bdc3c7;
+
+    a {
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+
+        .preview {
+            width: 100%;
+            height: 100%;
+        }
+
+        .caption {
+            background-color: black;
+            opacity: 0.8;
+            position: absolute;
+            z-index: 10;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 3%;
+
+            .post-title, .post-date {
+                color: white;
+                text-transform: capitalize;
+            }
+
+            .post-date {
+                font-size: 14px;
+            }
+        }
+
+        img {
+            .transition(all, 0.3s, linear);
+            opacity: 1;
+        }
+
+        &:hover {
+
+            img {
+                .transition(all, 0.3s, linear);
+                transform: scale(1.1,1.1);
+            }
+        }
     }
 }
 
@@ -435,29 +491,6 @@ footer {
             font-size: 20px;
         }
     }
-}
-
-/* Popup Modal */
-.modal-lg {
-    width: 1200px !important;
-}
-
-.modal-content {
-    background-color: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-}
-
-.modal-content .img-responsive {
-    padding-right: 50px;
-}
-
-a.close img {
-    background-color: black !important;
-    opacity: 1 !important;
-    margin-bottom: 50px;
-    width: 35px;
-    height: 35px;
 }
 
 /* Menu */
@@ -617,60 +650,35 @@ div.navbar.navbar-fixed-top {
     }
 }
 
-/* Post Big */
-.post-big {
-    width: 100%;
-    height: 250px;
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 30px;
-    border: 3px solid red;
-
-    a {
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-
-        .preview {
-            width: 100%;
-            height: 250px;
-        }
-
-        .caption {
-            position: absolute;
-            z-index: 10;
-            bottom: 10px;
-            left: 20px;
-
-            .post-title, .post-date {
-                color: white;
-            }
-
-            .post-date {
-                font-size: 14px;
-            }
-        }
-
-        img {
-            .transition(all, 0.3s, linear);
-            opacity: 1;
-        }
-
-        &:hover {
-
-            img {
-                .transition(all, 0.3s, linear);
-                transform: scale(1.1,1.1);
-            }
-        }
-    }
-}
-
 
 /*----------------------------------------------------*/
 /*	Trang Chủ
 /*----------------------------------------------------*/
 #TrangChu {
+    /* Popup Modal */
+    #myModal {
+        .modal-lg {
+            width: 1200px !important;
+        }
+
+        .modal-content {
+            background-color: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+
+        .modal-content .img-responsive {
+            padding-right: 50px;
+        }
+
+        a.close img {
+            background-color: black !important;
+            opacity: 1 !important;
+            margin-bottom: 50px;
+            width: 35px;
+            height: 35px;
+        }
+    }
     /* Học tiếng anh, Tin tức */
     #owl-hoctienganh, #Tintuc {
         .item {
@@ -686,63 +694,6 @@ div.navbar.navbar-fixed-top {
         }
     }
     /* Sự kiện */
-    #Sukien .thumbnail {
-        margin-bottom: 0;
-    }
-
-    #Sukien .carousel-control.left, .carousel-control.right {
-        background-image: none !important;
-    }
-
-    #Sukien .carousel-control {
-        color: #fff;
-        top: 40%;
-        color: #428BCA;
-        bottom: auto;
-        padding-top: 4px;
-        width: 30px;
-        height: 30px;
-        text-shadow: none;
-        opacity: 1;
-    }
-
-    #Sukien .carousel-control:hover {
-        color: #d9534f;
-    }
-
-    #Sukien .carousel-control.left, .carousel-control.right {
-        background-image: none !important;
-    }
-
-    #Sukien .carousel-control.right {
-        left: auto;
-        right: -32px;
-    }
-
-    #Sukien .carousel-control.left {
-        right: auto;
-        left: -32px;
-    }
-
-    #Sukien .carousel-indicators {
-        bottom: -30px;
-    }
-
-    #Sukien .carousel-indicators li {
-        border-radius: 0;
-        width: 10px;
-        height: 10px;
-        background: #ccc;
-        border: 1px solid #ccc;
-    }
-
-    #Sukien .carousel-indicators .active {
-        width: 12px;
-        height: 12px;
-        background: #3276b1;
-        border-color: #3276b1;
-    }
-
     #Sukien {
         .post {
             .preview {
@@ -773,55 +724,9 @@ div.navbar.navbar-fixed-top {
         }
     }
     /* Tin tức */
-    #Tintuc .carousel-indicators {
-        bottom: -40px;
-        left: 0;
-        width: 100%;
-        background-color: orangered;
-        padding: 6px 0px;
-        margin-left: 0;
-        border-top: 2px solid #fff;
-    }
-
-    #Tintuc .carousel-indicators li {
-        width: 12px;
-        height: 12px;
-        background: #fff;
-        border-color: #fff;
-    }
-
-    #Tintuc .carousel-indicators .active {
-        width: 14px;
-        height: 14px;
-        background-color: yellow;
-        border-color: yellow;
-    }
-
-    #Tintuc .carousel-inner .thumbnail {
-        margin-bottom: 0;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-    }
-
-    #Tintuc .carousel-inner .caption {
-        background-color: orangered;
-        padding: 10px;
-    }
-
-    #Tintuc .carousel-inner .caption h4 {
-        color: white;
-    }
-
-    #Tintuc {
-        img {
-            width: 100%;
-            height: 200px;
-        }
-
-        .caption {
-            h4 {
-                height: 50px;
-            }
+    #owl-Tintuc{
+        .item{
+            border:1px solid #bdc3c7;
         }
     }
     /* Chuyên Mục */
@@ -829,6 +734,7 @@ div.navbar.navbar-fixed-top {
         .thumbnail {
             position: relative;
             padding: 0;
+            border:1px solid #bdc3c7;
 
             a {
                 .overlay {
@@ -1020,18 +926,28 @@ div.navbar.navbar-fixed-top {
 /*----------------------------------------------------*/
 /*	Events
 /*----------------------------------------------------*/
+#Events {
+}
 /*----------------------------------------------------*/
 /*	Faq
 /*----------------------------------------------------*/
+#Faq {
+}
 /*----------------------------------------------------*/
 /*	GioiThieu
 /*----------------------------------------------------*/
+#GioiThieu {
+}
 /*----------------------------------------------------*/
 /*	KetQuaTimKiem
 /*----------------------------------------------------*/
+#KetQuaTimKiem {
+}
 /*----------------------------------------------------*/
 /*	LichKhaiGiang
 /*----------------------------------------------------*/
+#LichKhaiGiang {
+}
 /*----------------------------------------------------*/
 /*	LienHe
 /*----------------------------------------------------*/
@@ -1052,12 +968,20 @@ div.navbar.navbar-fixed-top {
 /*----------------------------------------------------*/
 /*	OnePost
 /*----------------------------------------------------*/
+#OnePost {
+}
 /*----------------------------------------------------*/
 /*	TinTuc
 /*----------------------------------------------------*/
+#TinTuc {
+}
 /*----------------------------------------------------*/
 /*	TuyenDung
 /*----------------------------------------------------*/
+#TuyenDung {
+}
 /*----------------------------------------------------*/
 /*	XemNhieu
 /*----------------------------------------------------*/
+#XemNhieu {
+}
