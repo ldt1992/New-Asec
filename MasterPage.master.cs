@@ -88,6 +88,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
 
         DataTable result = this._post.GetPostbyCateID(cateid);
         DataTable category = this._post.GetCategorybyCateID(cateid);
+        //single page
         if (result.Rows.Count < 1)
         {
             string Permalink = "";
@@ -98,13 +99,49 @@ public partial class MasterPage : System.Web.UI.MasterPage
 
             Response.Redirect(Permalink);
         }
+        //1 bài viết
         else if (result.Rows.Count == 1)
         {
-            Response.Redirect("OnePost.aspx?cateid=" + cateid);
+            OnePost(result);
         }
+        //danh sách
         else if (result.Rows.Count > 1)
         {
-            Response.Redirect("Blogs.aspx?cateid=" + cateid);
+            //Response.Redirect("danh-sach-" + cateid);
+            ListBlog(cateid);
         }
+    }
+
+    //Get PostID & PostTitle
+    private void OnePost(DataTable table)
+    {
+        string PostTitle = "";
+        string PostID = "";
+        foreach (DataRow item in table.Rows)
+        {
+            PostID = item[0].ToString();
+            PostTitle = item[1].ToString();
+        }
+
+        string link = ConvertToUnsign(PostTitle).ToString().ToLower() + "-" + PostID;
+
+        Response.Redirect(link);
+    }
+
+    //Get List Blog
+    private void ListBlog(string cateid)
+    {
+        DataTable result = this._post.GetCategorybyCateID(cateid);
+        string CateName = "";
+        string CateId = "";
+        foreach (DataRow item in result.Rows)
+        {
+            CateId = item[0].ToString();
+            CateName = item[1].ToString();
+        }
+
+        string link = ConvertToUnsign(CateName).ToString().ToLower();
+
+        Response.Redirect(link);
     }
 }

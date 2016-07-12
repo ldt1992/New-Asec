@@ -65,7 +65,7 @@
                         </div>
                         <div id="navbar-collapse-1" class="navbar-collapse collapse navbar-right">
                             <ul class="nav navbar-nav">
-                                <li><a href="Default2.aspx"><i class="fa fa-2x fa-home"></i></a></li>
+                                <li class="active"><a href="Default2.aspx"><i class="fa fa-2x fa-home"></i></a></li>
                                 <!-- Classic list -->
                                 <asp:Repeater ID="rpMainMenus" runat="server">
                                     <ItemTemplate>
@@ -85,11 +85,10 @@
                             </ul>
                             <%-- Search Form --%>
                             <div class="navbar-form navbar-right">
-                                <div class="input-group input-group-sm">
+                                <div class="input-group input-group-sm has-error">
                                     <asp:TextBox ID="txtSearch" runat="server" CssClass="form-control" OnTextChanged="txtSearch_TextChanged"></asp:TextBox>
-                                    <%--<span class="input-group-addon"><i class="fa fa-search"></i></span>--%>
                                     <span class="input-group-btn">
-                                        <asp:Button ID="btnSearch" runat="server" Text="Tìm" CssClass="btn btn-default" OnClick="txtSearch_TextChanged" />
+                                        <button class="btn btn-danger" id="btnSearch" runat="server" onclick="txtSearch_TextChanged"><i class="fa fa-search"></i></button>
                                     </span>
                                 </div>
                             </div>
@@ -138,7 +137,9 @@
                                 <h4 class="title">HỌC TIẾNG ANH<span class="head-line"></span></h4>
                                 <asp:Repeater ID="rpHocTiengAnh" runat="server">
                                     <ItemTemplate>
-                                        <p><i class="fa fa-check text-white"></i>&nbsp;<a href="<%# Eval("linkMenuCon") %>"><%# Eval("CategoryName") %></a></p>
+                                        <p><i class="fa fa-check text-white"></i>&nbsp;
+                                            <asp:LinkButton ID="linkbtn" runat="server" CommandArgument='<%# Eval("cateid") %>' OnClick="linkbtnMenuCon_Click"><%# Eval("CategoryName") %></asp:LinkButton>
+                                        </p>
                                     </ItemTemplate>
                                 </asp:Repeater>
                             </div>
@@ -309,6 +310,16 @@
             //    };
             //});
             //End Popup
+
+            /*----------------------------------------------------*/
+            /*	Active Menu, vẫn chưa bắt dc sự kiện
+            /*----------------------------------------------------*/
+            $("ul.nav li").click(function () {
+
+                $("ul.nav li").removeClass("active");
+                $(this).addClass("active");
+
+            });
         });
     </script>
 </body>

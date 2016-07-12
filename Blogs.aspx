@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Tin Tức" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Blogs.aspx.cs" Inherits="TinTuc2" %>
+﻿<%@ Page Title="Blogs" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Blogs.aspx.cs" Inherits="TinTuc2" %>
 
 <%@ Register Src="~/user_control/SidebarPostBig.ascx" TagPrefix="uc1" TagName="SidebarPostBig" %>
 
@@ -18,7 +18,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <ol class="breadcrumb">
                             <li><a href="trang-chu">Trang Chủ</a></li>
-                            <li><a href="ChuyenMuc.aspx">Chuyên Mục</a></li>
+                            <li><a href="chuyen-muc">Chuyên Mục</a></li>
                             <li class="active"><%=CateName %></li>
                         </ol>
                     </div>

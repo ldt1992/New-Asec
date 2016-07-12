@@ -17,7 +17,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <ol class="breadcrumb">
                             <li><a href="#">Trang Chủ</a></li>
-                            <li><a href="#">Chuyên Mục</a></li>
+                            <li><a href="chuyen-muc">Chuyên Mục</a></li>
                             <li class="active">Hỏi Đáp</li>
                         </ol>
                     </div>
@@ -32,7 +32,7 @@
                 <div class="row">
                     <%-- Main --%>
                     <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8 main">
-                        <h2 class="bg-orange"><span class="title-part">Hỏi Đáp</span></h2>
+                        <h2 class="bg-orange"><span class="title-part">HỎI ĐÁP</span></h2>
                         <div class="panel-group" id="accordion">
                             <div class="panel panel-info">
                                 <div class="panel-heading">

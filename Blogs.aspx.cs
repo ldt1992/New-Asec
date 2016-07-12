@@ -25,7 +25,7 @@ public partial class TinTuc2 : System.Web.UI.Page
     //Get List Post By CateID
     private void GetListPosts()
     {
-        string cateid = Request.QueryString["cateid"];
+        string cateid = RouteData.Values["cateid"].ToString();
 
         pager1.PageSize = 9;
         pager1.DataSource = this._post.GetPostbyCateID(cateid).DefaultView;
@@ -37,7 +37,7 @@ public partial class TinTuc2 : System.Web.UI.Page
     //Get CateName
     private void GetTitle()
     {
-        string cateid = Request.QueryString["cateid"];
+        string cateid = RouteData.Values["cateid"].ToString();
         DataTable result = this._post.GetCategorybyCateID(cateid);
         foreach (DataRow item in result.Rows)
         {

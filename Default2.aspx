@@ -106,7 +106,7 @@
         <%-- Chuyên Mục --%>
         <section class="ChuyenMuc">
             <div class="container">
-                <a href="ChuyenMuc.aspx">
+                <a href="chuyen-muc">
                     <h1 class="title text-center">Chuyên Mục</h1>
                 </a>
                 <div class="row">

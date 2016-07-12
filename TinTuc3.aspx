@@ -19,7 +19,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <ol class="breadcrumb">
                             <li><a href="trang-chu">Trang Chủ</a></li>
-                            <li><a href="ChuyenMuc.aspx">Chuyên Mục</a></li>
+                            <li><a href="chuyen-muc">Chuyên Mục</a></li>
                             <li class="active">Tin Tức 3</li>
                         </ol>
                     </div>

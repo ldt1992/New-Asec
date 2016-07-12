@@ -84,6 +84,11 @@ p {
 p strong {
   font-weight: 600;
 }
+/*======================== li.active ====================================*/
+li.active a {
+  background-color: transparent !important;
+  color: orangered;
+}
 /*====================Owl Carousel===========================*/
 #owl-hoctienganh .item,
 #Tintuc .item {

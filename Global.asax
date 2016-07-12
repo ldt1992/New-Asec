@@ -12,7 +12,13 @@
         routes.MapPageRoute("ChuyenMuc", "chuyen-muc", "~/ChuyenMuc.aspx");
         routes.MapPageRoute("HocTiengAnh", "hoc-tieng-anh", "~/ChuongTrinhHoc.aspx");
         routes.MapPageRoute("TuyenDung", "tuyen-dung", "~/TuyenDung.aspx");
+        routes.MapPageRoute("HoiDap", "hoi-dap", "~/Faq.aspx");
+        routes.MapPageRoute("Album", "albums", "~/Albums.aspx");
         routes.MapPageRoute("TinTuc", "tin-tuc", "~/TinTuc.aspx");
+        routes.MapPageRoute("SuKien", "su-kien", "~/Events.aspx");
+        routes.MapPageRoute("XemNhieu", "xem-nhieu", "~/XemNhieu.aspx");
+        //routes.MapPageRoute("Single Post", "bai-viet-{cateid}", "~/OnePost.aspx");
+        routes.MapPageRoute("List Blog", "danh-sach-{cateid}", "~/Blogs.aspx");
         routes.MapPageRoute("Detail Post", "{title}-{id}", "~/ChiTiet.aspx");
     }
 
@@ -31,22 +37,22 @@
     void Application_Error(object sender, EventArgs e)
     {
         // Code that runs when an unhandled error occurs
-        Exception ex = HttpContext.Current.Server.GetLastError();
-        if (ex.InnerException != null)
-        {
-            ex = ex.InnerException;
-        }
-        if (ex is HttpException)
-        {
-            if (((HttpException)ex).GetHttpCode() == 404)
-            {
-                Response.Redirect("~/FileNotFound.aspx");
-            }
-            else
-            {
-                Response.Redirect("~/FileNotFound.aspx");
-            }
-        }
+        //Exception ex = HttpContext.Current.Server.GetLastError();
+        //if (ex.InnerException != null)
+        //{
+        //    ex = ex.InnerException;
+        //}
+        //if (ex is HttpException)
+        //{
+        //    if (((HttpException)ex).GetHttpCode() == 404)
+        //    {
+        //        Response.Redirect("~/FileNotFound.aspx");
+        //    }
+        //    else
+        //    {
+        //        Response.Redirect("~/FileNotFound.aspx");
+        //    }
+        //}
 
         //HttpContext.Current.Server.ClearError();
     }

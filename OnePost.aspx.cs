@@ -22,13 +22,15 @@ public partial class OnePost : System.Web.UI.Page
             DetailPost();
             GetPostRelated();
             IncreaseViewPost();
+            PreviousPost();
+            NextPost();
         }
     }
 
     //Get Detail Post
     private void DetailPost()
     {
-        string cateID = Request.QueryString["cateid"].ToString();
+        string cateID = RouteData.Values["cateid"].ToString();
 
         DataTable result = this._post.GetPostbyCateID(cateID);
 
@@ -92,5 +94,31 @@ public partial class OnePost : System.Web.UI.Page
         return title_url;
     }
 
-    
+    //Get Previous Post
+    private void PreviousPost()
+    {
+        try
+        {
+            rpPrevious.DataSource = this._post.GetPreviousPost(postID);
+            rpPrevious.DataBind();
+        }
+        catch (Exception)
+        {
+
+        }
+    }
+
+    //Get Next Post
+    private void NextPost()
+    {
+        try
+        {
+            rpNext.DataSource = this._post.GetNextPost(postID);
+            rpNext.DataBind();
+        }
+        catch (Exception)
+        {
+
+        }
+    }
 }
