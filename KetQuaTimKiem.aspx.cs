@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using System.Text.RegularExpressions;
+using System.Text;
 
 public partial class KetQuaTimKiem : System.Web.UI.Page
 {
@@ -38,5 +40,24 @@ public partial class KetQuaTimKiem : System.Web.UI.Page
         {
             NoResult.InnerHtml = "<h3 class='alert alert-danger'>Không tìm thấy kết quả phù hợp</h3>";
         }
+    }
+
+    //ConvertToUnsign
+    public string ConvertToUnsign(string str)
+    {
+        string title_url = "";
+        str = str.Replace(" ", "-");
+        str = str.Replace(".", "-");
+        str = str.Replace(",", "-");
+        str = str.Replace(";", "-");
+        str = str.Replace(":", "-");
+        str = str.Replace("%", "");
+        str = str.Replace("/", "-");
+        str = str.Replace("(", "-");
+        str = str.Replace(")", "-");
+        Regex regex = new Regex("\\p{IsCombiningDiacriticalMarks}+");
+        string temp = str.Normalize(NormalizationForm.FormD);
+        title_url = regex.Replace(temp, String.Empty).Replace('\u0111', 'd').Replace('\u0110', 'D');
+        return title_url;
     }
 }
