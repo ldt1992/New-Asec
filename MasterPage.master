@@ -140,7 +140,8 @@
                                 <h4 class="title">HỌC TIẾNG ANH<span class="head-line"></span></h4>
                                 <asp:Repeater ID="rpHocTiengAnh" runat="server">
                                     <ItemTemplate>
-                                        <p><i class="fa fa-check text-white"></i>&nbsp;
+                                        <p>
+                                            <i class="fa fa-check text-white"></i>&nbsp;
                                             <asp:LinkButton ID="linkbtn" runat="server" CommandArgument='<%# Eval("cateid") %>' OnClick="linkbtnMenuCon_Click"><%# Eval("CategoryName") %></asp:LinkButton>
                                         </p>
                                     </ItemTemplate>
@@ -226,14 +227,17 @@
             });
 
             /*----------------------------------------------------*/
-            /*	Hover Dropdown Menu
+            /*	Hover Dropdown Menu fadeIn(fadeOut) when Width >= 480px
             /*----------------------------------------------------*/
+            if ($(window).innerWidth() >= 480) {
 
-            $('ul.nav li.dropdown').hover(function () {
-                $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeIn(500);
-            }, function () {
-                $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeOut(500);
-            });
+                $('ul.nav li.dropdown').hover(function () {
+                    $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeIn(500);
+                }, function () {
+                    $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeOut(500);
+                });
+
+            }
 
             /*----------------------------------------------------*/
             /*	Sự kiện & Tin tức
@@ -323,6 +327,11 @@
                 $(this).addClass("active");
 
             });
+
+            /*----------------------------------------------------*/
+            /*	Width < 480px, hide Dropdown-menu
+            /*----------------------------------------------------*/
+            
         });
     </script>
 </body>
