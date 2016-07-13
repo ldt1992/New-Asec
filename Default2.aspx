@@ -76,16 +76,16 @@
                         <ItemTemplate>
                             <div class="item">
                                 <div class="thumbnail">
-                                    <a href="OnePost.aspx?cateid=<%# Eval("cateid") %>">
+                                    <asp:LinkButton ID="linkbtn" runat="server" CommandArgument='<%# Eval("cateid") %>' OnClick="linkbtn_Click">
                                         <div class="preview">
                                             <img src="<%# HomeUrl + Eval("ImagesUrl") %>" alt="<%# Eval("CategoryName") %>" class="img-circle img-responsive" />
                                         </div>
 
                                         <div class="caption">
-                                            <h3 class="tieude"><%# Eval("CategoryName") %></h3>
+                                            <h3 class="tieude"><%# Eval("CategoryName").ToString().ToUpper() %></h3>
                                             <p class="meta"><%# Eval("Descriptions") %></p>
                                         </div>
-                                    </a>
+                                    </asp:LinkButton>
                                 </div>
                             </div>
                         </ItemTemplate>
@@ -136,7 +136,7 @@
         <section class="SuKienTinTuc">
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                    <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
                         <a href="TinTuc.aspx">
                             <h1 class="title text-left">Tin Tức<span class="head-line"></span></h1>
                         </a>
@@ -146,7 +146,7 @@
                                 <ItemTemplate>
                                     <div class="item">
                                         <div class="thumbnail post">
-                                            <a href="<%# ConvertToUnsign(Eval("PostTitle").ToString()) + "-" + Eval("PostID") %>">
+                                            <a href="<%# ConvertToUnsign(Eval("PostTitle").ToString().ToLower()) + "-" + Eval("PostID") %>">
                                                 <div class="preview">
                                                     <img class="img-responsive" src="<%# HomeUrl + Eval("ImagesUrl") %>" alt="Thumb11" />
                                                 </div>
@@ -164,7 +164,7 @@
                         <%-- End Tin tức --%>
                     </div>
 
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <a href="Events.aspx">
                             <h1 class="title text-left">Sự Kiện <span class="head-line"></span></h1>
                         </a>
@@ -172,8 +172,8 @@
                         <div id="owl-Tintuc" class="owl-carousel owl-theme">
                             <asp:Repeater ID="rpSuKien" runat="server">
                                 <ItemTemplate>
-                                    <div class="item">
-                                        <a href="<%# ConvertToUnsign(Eval("PostTitle").ToString()) + "-" + Eval("PostID") %>">
+                                    <div class="item thumbnail">
+                                        <a href="<%# ConvertToUnsign(Eval("PostTitle").ToString().ToLower()) + "-" + Eval("PostID") %>">
                                             <div class="preview">
                                                 <img class="thumbnail" src="<%# HomeUrl + Eval("ImagesUrl") %>" alt="Slide1" />
                                             </div>
@@ -184,6 +184,16 @@
                                     </div>
                                 </ItemTemplate>
                             </asp:Repeater>
+                            <%--<div class="item">
+                                <a href="#">
+                                    <div class="preview">
+                                        <img class="thumbnail" src="images/portfolio-01.jpg" alt="Slide1" />
+                                    </div>
+                                    <div class="caption">
+                                        <h4 class="post-title">Event 2</h4>
+                                    </div>
+                                </a>
+                            </div>--%>
                         </div>
                         <%-- End Sự Kiện --%>
                     </div>

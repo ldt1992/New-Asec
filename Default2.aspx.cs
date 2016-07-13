@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -102,5 +103,34 @@ public partial class _Default2 : System.Web.UI.Page
         string temp = str.Normalize(NormalizationForm.FormD);
         title_url = regex.Replace(temp, String.Empty).Replace('\u0111', 'd').Replace('\u0110', 'D');
         return title_url;
+    }
+
+    protected void linkbtn_Click(object sender, EventArgs e)
+    {
+        LinkButton lnl = (sender as LinkButton);
+        string cateid = lnl.CommandArgument;
+
+        DataTable result = this._post.GetPostbyCateID(cateid);
+
+        if (result.Rows.Count == 1)
+        {
+            OnePost(result);
+        }
+    }
+
+    //Get PostID & PostTitle
+    private void OnePost(DataTable table)
+    {
+        string PostTitle = "";
+        string PostID = "";
+        foreach (DataRow item in table.Rows)
+        {
+            PostID = item[0].ToString();
+            PostTitle = item[1].ToString();
+        }
+
+        string link = ConvertToUnsign(PostTitle).ToString().ToLower() + "-" + PostID;
+
+        Response.Redirect(link);
     }
 }

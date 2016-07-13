@@ -512,8 +512,8 @@ div.navbar.navbar-fixed-top ul.nav li.dropdown > ul.dropdown-menu li a:hover {
 #TrangChu {
   /* Popup Modal */
   /* Học tiếng anh, Tin tức */
-  /* Sự kiện */
-  /* Tin tức */
+  /* Tin Tức */
+  /* Sự Kiện */
   /* Chuyên Mục */
   /* Học tiếng anh */
   /* Nhận quà */
@@ -568,7 +568,23 @@ div.navbar.navbar-fixed-top ul.nav li.dropdown > ul.dropdown-menu li a:hover {
   padding-right: 5px;
 }
 #TrangChu #owl-Tintuc .item {
-  border: 1px solid #bdc3c7;
+  padding: 0;
+  height: 225px !important;
+}
+#TrangChu #owl-Tintuc .item .preview {
+  height: 180px;
+}
+#TrangChu #owl-Tintuc .item .preview img {
+  width: 100%;
+  height: 180px;
+}
+#TrangChu #owl-Tintuc .item .caption {
+  height: 70px;
+  background-color: orangered;
+}
+#TrangChu #owl-Tintuc .item .caption .post-title {
+  text-transform: capitalize;
+  color: white;
 }
 #TrangChu .ChuyenMuc .thumbnail {
   position: relative;

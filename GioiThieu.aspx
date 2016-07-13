@@ -6,7 +6,7 @@
         <section class="bgImg">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="hidden-xs col-sm-12 col-md-12 col-lg-12">
                         <img src="images/banner/header_bg.jpg" class="img-responsive" />
                     </div>
                 </div>
@@ -89,15 +89,15 @@
                             <ItemTemplate>
                                 <div class="item">
                                     <div class="thumbnail">
-                                        <a href="OnePost.aspx?cateid=<%# Eval("cateid") %>">
+                                        <asp:LinkButton ID="linkbtn" runat="server" CommandArgument='<%# Eval("cateid") %>' OnClick="linkbtn_Click">
                                             <div class="preview">
-                                                <img src="<%# HomeUrl + Eval("ImagesUrl") %>" alt="Owl Image" class="img-circle img-responsive" />
+                                                <img src="<%# HomeUrl + Eval("ImagesUrl") %>" alt="<%# Eval("CategoryName") %>" class="img-circle img-responsive" />
                                             </div>
                                             <div class="caption">
-                                                <h3 class="tieude"><%# Eval("CategoryName") %></h3>
+                                                <h3 class="tieude"><%# Eval("CategoryName").ToString().ToUpper() %></h3>
                                                 <p class="meta"><%# Eval("Descriptions") %></p>
                                             </div>
-                                        </a>
+                                        </asp:LinkButton>
                                     </div>
                                 </div>
                             </ItemTemplate>
