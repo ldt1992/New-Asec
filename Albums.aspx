@@ -8,7 +8,9 @@
         <section class="bgImg">
             <div class="container-fluid">
                 <div class="row">
-                    <img src="images/banner/header_bg.jpg" class="img-responsive" />
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <img src="images/banner/header_bg.jpg" class="img-responsive" />
+                    </div>
                 </div>
             </div>
         </section>
