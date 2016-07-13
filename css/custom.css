@@ -390,12 +390,15 @@ div.navbar ul.nav li > a {
   font-weight: 400;
   text-transform: uppercase;
 }
-div.navbar ul.nav li:hover > a {
+div.navbar ul.nav li:hover > a,
+div.navbar ul.nav li:focus > a,
+div.navbar ul.nav li:active > a {
   transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   -webkit-transition: all 0.2s linear;
   color: orangered;
+  background-color: transparent !important;
 }
 div.navbar ul.nav li.dropdown > ul.dropdown-menu li a {
   color: black;

@@ -512,10 +512,11 @@ div.navbar {
                 text-transform: uppercase;
             }
 
-            &:hover {
+            &:hover, &:focus, &:active {
                 > a {
                     .transition(all, 0.2s, linear);
                     color: orangered;
+                    background-color:transparent !important;
                 }
             }
         }
