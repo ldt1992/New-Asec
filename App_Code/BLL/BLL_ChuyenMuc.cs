@@ -50,4 +50,16 @@ public class BLL_ChuyenMuc
         this.CloseConnect();
         return result;
     }
+
+    //Get Category from Post ID
+    public DataTable GetCategoryfromPostID(string postID)
+    {
+        this.OpenConnect();
+
+        string query = "select ct.CategoryID, ct.CategoryName, ct.Permalink from Post_Category_relationships p_ct join Category ct on p_ct.CategoryID = ct.CategoryID join POST p on p_ct.PostID = p.PostID where p.PostID = " + postID;
+        DataTable result = this._connect.GetDataTable(query);
+
+        this.CloseConnect();
+        return result;
+    }
 }

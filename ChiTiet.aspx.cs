@@ -14,7 +14,10 @@ public partial class ChiTiet : System.Web.UI.Page
     public string CurrentUrl = "";
     public string HomeUrl = "http://inside.kus.edu.vn/";
     private BLL_Post _post = new BLL_Post();
+    private BLL_ChuyenMuc _chuyenmuc = new BLL_ChuyenMuc();
     public string postID = "";
+    public string Breadcrumb = "";
+    public string UrlBreadcrumb = "";
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!Page.IsPostBack)
@@ -133,6 +136,26 @@ public partial class ChiTiet : System.Web.UI.Page
         }
         catch (Exception)
         {
+
+        }
+    }
+
+    //Breadcrumb
+    private void BreadcrumbPage()
+    {
+        try
+        {
+            string postID = RouteData.Values["id"].ToString();
+            DataTable result = _chuyenmuc.GetCategoryfromPostID(postID);
+            foreach (DataRow item in result.Rows)
+            {
+                Breadcrumb = item[1].ToString();
+                UrlBreadcrumb = item[2].ToString();
+            }
+        }
+        catch (Exception)
+        {
+
 
         }
     }
