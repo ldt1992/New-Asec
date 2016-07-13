@@ -6,7 +6,11 @@
     <div id="Albums">
         <%-- Bg Img --%>
         <section class="bgImg">
-            <img src="images/banner/header_bg.jpg" />
+            <div class="container-fluid">
+                <div class="row">
+                    <img src="images/banner/header_bg.jpg" class="img-responsive" />
+                </div>
+            </div>
         </section>
         <%-- End Bg Img --%>
 
