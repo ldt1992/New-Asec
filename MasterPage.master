@@ -68,7 +68,7 @@
                         </div>
                         <div id="navbar-collapse-1" class="navbar-collapse collapse navbar-right">
                             <ul class="nav navbar-nav">
-                                <li><a href="Default2.aspx"><i class="fa fa-2x fa-home"></i></a></li>
+                                <li><a href="trang-chu"><i class="fa fa-2x fa-home"></i></a></li>
                                 <!-- Classic list -->
                                 <asp:Repeater ID="rpMainMenus" runat="server">
                                     <ItemTemplate>
@@ -312,7 +312,7 @@
             var urlDefault = url.toString().substr(url.toString().lastIndexOf('/') + 1, url.toString().length);
 
             $(window).load(function () {
-                if (urlDefault == "Default2.aspx") {
+                if (urlDefault == "Default.aspx" || urlDefault == "trang-chu" || urlDefault == "") {
                     $('#myModal').modal('show');
                 };
             });

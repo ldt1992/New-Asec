@@ -5,7 +5,7 @@
 
     void RegisterRoutes(RouteCollection routes)
     {
-        routes.MapPageRoute("TrangChu", "trang-chu", "~/Default2.aspx");
+        routes.MapPageRoute("TrangChu", "trang-chu", "~/Default.aspx");
         routes.MapPageRoute("GioiThieu", "gioi-thieu", "~/GioiThieu.aspx");
         routes.MapPageRoute("LienHe", "lien-he", "~/LienHe.aspx");
         routes.MapPageRoute("LichKhaiGiang", "lich-khai-giang", "~/LichKhaiGiang.aspx");

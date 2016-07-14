@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class _Default2 : System.Web.UI.Page
+public partial class _Default : System.Web.UI.Page
 {
     private BLL_ChuongTrinhHoc _chuongtrinhhoc = new BLL_ChuongTrinhHoc();
     private BLL_ChuyenMuc _chuyenmuc = new BLL_ChuyenMuc();
