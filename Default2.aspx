@@ -34,19 +34,19 @@
                 <!-- Carousel inner -->
                 <div class="carousel-inner">
                     <div class="item active">
-                        <img class="img-responsive" src="images/banner/bg1-min.jpg" alt="slider" />
+                        <img class="img-responsive" src="images/banner/1.jpg" alt="slider" />
                     </div>
                     <!--/ Carousel item end -->
                     <div class="item">
-                        <img class="img-responsive" src="images/banner/bg2-min.jpg" alt="slider" />
+                        <img class="img-responsive" src="images/banner/2.jpg" alt="slider" />
                     </div>
                     <!--/ Carousel item end -->
                     <div class="item">
-                        <img class="img-responsive" src="images/banner/bg3-min.jpg" alt="slider" />
+                        <img class="img-responsive" src="images/banner/3.jpg" alt="slider" />
                     </div>
                     <!--/ Carousel item end -->
                     <div class="item">
-                        <img class="img-responsive" src="images/banner/bg4-min.jpg" alt="slider" />
+                        <img class="img-responsive" src="images/banner/4.jpg" alt="slider" />
                     </div>
                 </div>
                 <!-- Carousel inner end-->
@@ -68,7 +68,7 @@
         <%-- Chương Trình Học --%>
         <section class="HocTiengAnh">
             <div class="container">
-                <a href="ChuongTrinhHoc.aspx">
+                <a href="hoc-tieng-anh">
                     <h2 class="title text-center">Chương Trình Học Tại Anh Ngữ <span class="notes">ASEC</span></h2>
                 </a>
                 <div id="owl-hoctienganh">
@@ -137,7 +137,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
-                        <a href="TinTuc.aspx">
+                        <a href="tin-tuc">
                             <h1 class="title text-left">Tin Tức<span class="head-line"></span></h1>
                         </a>
                         <%-- Tin tức --%>
@@ -165,7 +165,7 @@
                     </div>
 
                     <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
-                        <a href="Events.aspx">
+                        <a href="su-kien">
                             <h1 class="title text-left">Sự Kiện <span class="head-line"></span></h1>
                         </a>
                         <%-- Sự Kiện --%>
