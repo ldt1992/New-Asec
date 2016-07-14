@@ -22,6 +22,12 @@
   footer .widget-fanpage .fb-page {
     width: 100%;
   }
+  .modal-lg {
+    width: 400px;
+  }
+  .modal-lg .popup {
+    width: 400px;
+  }
   /*----------------------------------------------------*/
   /*	Menu & Footer
     /*----------------------------------------------------*/
@@ -111,9 +117,6 @@
   }
   footer .widget-fanpage .fb-page {
     width: 250px;
-  }
-  .modal-lg {
-    width: 900px;
   }
   /*----------------------------------------------------*/
   /*	Trang Chủ
@@ -250,6 +253,12 @@
   }
   footer .widget-fanpage .fb-page {
     width: 100%;
+  }
+  .modal-lg {
+    width: 600px;
+  }
+  .modal-lg .popup {
+    width: 600px;
   }
   /*----------------------------------------------------*/
   /*	Menu & Footer

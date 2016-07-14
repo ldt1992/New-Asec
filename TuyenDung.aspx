@@ -2,20 +2,12 @@
 
 <%@ Register Src="~/user_control/PostBig2Col.ascx" TagPrefix="uc1" TagName="PostBig2Col" %>
 <%@ Register Src="~/user_control/SidebarPostHorizontal.ascx" TagPrefix="uc1" TagName="SidebarPostHorizontal" %>
+<%@ Register Src="~/user_control/HeaderBg.ascx" TagPrefix="uc1" TagName="HeaderBg" %>
+
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div id="TuyenDung">
-        <%-- Bg Img --%>
-        <section class="bgImg">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="hidden-xs col-sm-12 col-md-12 col-lg-12">
-                        <img src="images/banner/header_bg.jpg" class="img-responsive" />
-                    </div>
-                </div>
-            </div>
-        </section>
-        <%-- End Bg Img --%>
+        <uc1:HeaderBg runat="server" ID="HeaderBg" />
 
         <%-- Breadcrumb --%>
         <section class="path">

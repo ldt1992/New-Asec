@@ -1,21 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="OnePost.aspx.cs" Inherits="OnePost" %>
 
 <%@ Register Src="~/user_control/SidebarPostBig.ascx" TagPrefix="uc1" TagName="SidebarPostBig" %>
+<%@ Register Src="~/user_control/HeaderBg.ascx" TagPrefix="uc1" TagName="HeaderBg" %>
+
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div id="OnePost">
-        <%-- Bg Img --%>
-        <section class="bgImg">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="hidden-xs col-sm-12 col-md-12 col-lg-12">
-                        <img src="images/banner/header_bg.jpg" class="img-responsive" />
-                    </div>
-                </div>
-            </div>
-        </section>
-        <%-- End Bg Img --%>
+        <uc1:HeaderBg runat="server" ID="HeaderBg" />
 
         <%-- Breadcrumb --%>
         <section class="path">

@@ -9,7 +9,7 @@
                     <a class="close" data-dismiss="modal">
                         <img src="images/icon/close-button.png" /></a>
                     <a href="#">
-                        <img src="images/banner/TUAN-LE-VANG.png" class="img-responsive" /></a>
+                        <img src="images/banner/popup.png" class="img-responsive popup" /></a>
                 </div>
             </div>
         </div>
@@ -34,19 +34,19 @@
                 <!-- Carousel inner -->
                 <div class="carousel-inner">
                     <div class="item active">
-                        <img class="img-responsive" src="images/banner/1.jpg" alt="slider" />
+                        <img class="img-responsive" src="images/banner/1-min.jpg" alt="slider" />
                     </div>
                     <!--/ Carousel item end -->
                     <div class="item">
-                        <img class="img-responsive" src="images/banner/2.jpg" alt="slider" />
+                        <img class="img-responsive" src="images/banner/2-min.jpg" alt="slider" />
                     </div>
                     <!--/ Carousel item end -->
                     <div class="item">
-                        <img class="img-responsive" src="images/banner/3.jpg" alt="slider" />
+                        <img class="img-responsive" src="images/banner/3-min.jpg" alt="slider" />
                     </div>
                     <!--/ Carousel item end -->
                     <div class="item">
-                        <img class="img-responsive" src="images/banner/4.jpg" alt="slider" />
+                        <img class="img-responsive" src="images/banner/4-min.jpg" alt="slider" />
                     </div>
                 </div>
                 <!-- Carousel inner end-->
@@ -98,7 +98,11 @@
         <%-- Image Background --%>
         <section class="Bg_pallarax">
             <div class="container">
-                <img src="images/default_bg.png" class="img-responsive" />
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <img src="images/index_bg-min.jpg" class="img-responsive" />
+                    </div>
+                </div>
             </div>
         </section>
         <%-- End Image Background --%>
