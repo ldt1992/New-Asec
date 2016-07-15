@@ -143,7 +143,7 @@
                                 <p><strong>Email:</strong> info@americantop.edu.vn</p>
                                 <p><strong>Website:</strong> <a href="asec.edu.vn" style="color: white">www.asec.edu.vn</a></p>
                                 <p><strong>Giờ làm việc:</strong> Thứ 2 - Chủ nhật: Từ 7h30 đến 21h</p>
-                                
+
                             </div>
 
                         </div>
@@ -318,6 +318,13 @@
             var url = window.location;
             var urlDefault = url.toString().substr(url.toString().lastIndexOf('/') + 1, url.toString().length);
 
+            $(window).load(function () {
+                if (urlDefault.toString() == "trang-chu" || urlDefault == "" || urlDefault == "Default.aspx") {
+                    $("#myModal").modal('show');
+                    $(".popup-fixed").fadeOut();
+                };
+            });
+
             $("#myModal").on('hidden.bs.modal', function (e) {
                 $(".popup-fixed").fadeIn(400);
             });
@@ -326,10 +333,10 @@
                 $(".popup-fixed").fadeOut(400);
             });
 
-            $(window).load(function () {
-                $("#myModal").modal('show');
-                $(".popup-fixed").fadeOut();
-            });
+            //$(window).load(function () {
+            //    $("#myModal").modal('show');
+            //    $(".popup-fixed").fadeOut();
+            //});
             //End Popup
 
             /*----------------------------------------------------*/
