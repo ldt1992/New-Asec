@@ -43,7 +43,7 @@ public partial class _Default : System.Web.UI.Page
     //Get Sự Kiện
     private void GetTopSuKien()
     {
-        rpSuKien.DataSource = this._post.GetTop3SuKien(3);
+        rpSuKien.DataSource = this._post.GetTop3SuKien(2);
         rpSuKien.DataBind();
     }
 

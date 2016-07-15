@@ -20,6 +20,11 @@
     -moz-border-radius: @value;
     -webkit-border-radius: @value;
 }
+//Border-radius-top
+.border-radius-top(@value;) {
+    border-top-left-radius: @value;
+    border-top-right-radius: @value;
+}
 
 //Arrow_box
 .arrow_box(@size, @color, @border-width, @border-color) {
@@ -350,7 +355,7 @@ p strong {
 /* Footer */
 footer {
     background-color: #d10000;
-    padding: 20px 0 30px 0;
+    padding: 20px 0 20px 0;
 
     .widget-fanpage .fb-page {
         width: 100%;
@@ -375,7 +380,7 @@ footer {
     .widget-news {
         a {
             color: white !important;
-            font-size: 13px;
+            font-size: 12px;
         }
     }
 
@@ -389,7 +394,7 @@ footer {
 
     .copyright {
         color: white;
-        font-size: 11px;
+        font-size: 10px;
         padding: 0;
     }
 
@@ -710,11 +715,10 @@ a.close img {
     position: fixed;
     right: 0;
     top: 35%;
-    display:none;
 
     .popup {
-        width: 120px;
-        height: 150px;
+        width: 100px;
+        height: 120px;
     }
 }
 /*============ End Popup Fixed ==============*/
@@ -738,7 +742,7 @@ a.close img {
         }
     }
     /* Tin Tức */
-    #Sukien {
+    #owl-TinTuc {
         .post {
             .preview {
                 height: 170px;
@@ -758,7 +762,7 @@ a.close img {
             }
 
             .caption {
-                background-color: #3498db;
+                background-color: #e74c3c;
             }
         }
 
@@ -768,27 +772,50 @@ a.close img {
         }
     }
     /* Sự Kiện */
-    #owl-Tintuc {
-        .item {
-            padding: 0;
-            height: 225px !important;
+    #Sukien {
+        .post-horizontal {
+            .post-thumbnail {
+                width: 10%;
+                border: 1px solid #bdc3c7;
+                .border-radius(4px);
 
-            .preview {
-                height: 180px;
+                .month {
+                    .border-radius-top(4px);
+                    background-color: #e74c3c;
+                    color: white;
+                    text-align: center;
+                    margin-top: 0;
+                    font-size: 15px;
+                    padding-top: 1px;
+                    padding-bottom: 1px;
+                }
 
-                img {
-                    width: 100%;
-                    height: 180px;
+                .day {
+                    text-align: center;
+                    font-size: 15px;
+                    font-weight: bold;
+                    height: 30px;
+                    padding-bottom: 40px;
                 }
             }
 
-            .caption {
-                height: 70px;
-                background-color: orangered;
+            .post-content {
+                width: 90%;
+
+                .post-meta {
+                    font-size: 14px;
+                    line-height: 20px;
+                    text-align: justify;
+                }
 
                 .post-title {
-                    text-transform: capitalize;
-                    color: white;
+                    color: #34495e;
+                    .transition(all, 0.2s, linear);
+
+                    &:hover {
+                        .transition(all, 0.2s, linear);
+                        color: #e74c3c;
+                    }
                 }
             }
         }

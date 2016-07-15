@@ -1,20 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <!-- Popup modal-->
-    <div class="modal fade" id="myModal" tabindex="-1" data-replace="true" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <a class="close" data-dismiss="modal">
-                        <img src="images/icon/close-button.png" /></a>
-                    <a href="#">
-                        <img src="images/banner/popup.png" class="img-responsive popup" /></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Popup Modal-->
+    
 
     <div id="TrangChu">
         <%-- Slider --%>
@@ -140,12 +127,12 @@
         <section class="SuKienTinTuc">
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                         <a href="tin-tuc">
                             <h1 class="title text-left">Tin Tức<span class="head-line"></span></h1>
                         </a>
                         <%-- Tin tức --%>
-                        <div id="Sukien">
+                        <div id="owl-TinTuc">
                             <asp:Repeater ID="rpTinTuc" runat="server">
                                 <ItemTemplate>
                                     <div class="item">
@@ -168,38 +155,45 @@
                         <%-- End Tin tức --%>
                     </div>
 
-                    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                         <a href="su-kien">
                             <h1 class="title text-left">Sự Kiện <span class="head-line"></span></h1>
                         </a>
                         <%-- Sự Kiện --%>
-                        <div id="owl-Tintuc" class="owl-carousel owl-theme">
+                        <div id="Sukien">
                             <asp:Repeater ID="rpSuKien" runat="server">
                                 <ItemTemplate>
-                                    <div class="item thumbnail">
-                                        <a href="<%# ConvertToUnsign(Eval("PostTitle").ToString().ToLower()) + "-" + Eval("PostID") %>">
-                                            <div class="preview">
-                                                <img class="thumbnail" src="<%# HomeUrl + Eval("ImagesUrl") %>" alt="Slide1" />
-                                            </div>
-                                            <div class="caption">
-                                                <h4 class="post-title"><%# Eval("PostTitle") %></h4>
-                                            </div>
-                                        </a>
+                                    <div class="post-horizontal">
+                                        <div class="post-thumbnail">
+                                            <p class="month"><%# Eval("DateOfCreate","{0: MM}") %></p>
+                                            <p class="day"><%# Eval("DateOfCreate","{0: dd}") %></p>
+                                        </div>
+                                        <div class="post-content">
+                                            <a href="<%# ConvertToUnsign(Eval("PostTitle").ToString().ToLower()) + "-" + Eval("PostID") %>">
+                                                <h3 class="post-title"><%# Eval("PostTitle") %></h3>
+                                            </a>
+                                            <p class="post-meta"><%# Eval("MetaDescription") %></p>
+                                        </div>
+                                        <div class="clearfix"></div>
                                     </div>
                                 </ItemTemplate>
                             </asp:Repeater>
-                            <%--<div class="item">
-                                <a href="#">
-                                    <div class="preview">
-                                        <img class="thumbnail" src="images/portfolio-01.jpg" alt="Slide1" />
-                                    </div>
-                                    <div class="caption">
-                                        <h4 class="post-title">Event 2</h4>
-                                    </div>
-                                </a>
-                            </div>--%>
+                            <div class="post-horizontal">
+                                <div class="post-thumbnail">
+                                    <p class="month">07</p>
+                                    <p class="day">08</p>
+                                </div>
+                                <div class="post-content">
+                                    <a href="#">
+                                        <h3 class="post-title">Movie</h3>
+                                    </a>
+                                    <p class="post-meta">Tuần vừa qua là một tuần đang nhớ với các “Hoạt náo viên Nhí” với chương trình Movie day- Học tiếng anh qua phim ảnh do Anh ngữ ASEC tổ chức. Đến với sự kiện hàng tuần là sự tham gia của các bạn kids với nhiều lứa tuổi, </p>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
                         </div>
                         <%-- End Sự Kiện --%>
+                        <p class="text-right"><a href="su-kien" class="btn btn-link">Xem thêm</a></p>
                     </div>
                 </div>
             </div>

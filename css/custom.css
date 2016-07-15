@@ -266,7 +266,7 @@ p strong {
 /* Footer */
 footer {
   background-color: #d10000;
-  padding: 20px 0 30px 0;
+  padding: 20px 0 20px 0;
 }
 footer .widget-fanpage .fb-page {
   width: 100%;
@@ -284,7 +284,7 @@ footer .footer-widgets .head-line {
 }
 footer .widget-news a {
   color: white !important;
-  font-size: 13px;
+  font-size: 12px;
 }
 footer .widget-contact p {
   color: white;
@@ -293,7 +293,7 @@ footer .widget-contact p {
 }
 footer .copyright {
   color: white;
-  font-size: 11px;
+  font-size: 10px;
   padding: 0;
 }
 footer .center {
@@ -555,11 +555,10 @@ a.close img {
   position: fixed;
   right: 0;
   top: 35%;
-  display: none;
 }
 .popup-fixed .popup {
-  width: 120px;
-  height: 150px;
+  width: 100px;
+  height: 120px;
 }
 /*============ End Popup Fixed ==============*/
 /*----------------------------------------------------*/
@@ -583,45 +582,73 @@ a.close img {
   width: 100%;
   height: auto;
 }
-#TrangChu #Sukien .post .preview {
+#TrangChu #owl-TinTuc .post .preview {
   height: 170px;
 }
-#TrangChu #Sukien .post .preview img {
+#TrangChu #owl-TinTuc .post .preview img {
   height: 170px;
   width: 100%;
 }
-#TrangChu #Sukien .post .post-title {
+#TrangChu #owl-TinTuc .post .post-title {
   font-size: 100%;
   color: white;
   height: 60px;
   line-height: 120%;
   text-transform: capitalize;
 }
-#TrangChu #Sukien .post .caption {
-  background-color: #3498db;
+#TrangChu #owl-TinTuc .post .caption {
+  background-color: #e74c3c;
 }
-#TrangChu #Sukien .item {
+#TrangChu #owl-TinTuc .item {
   padding-left: 5px;
   padding-right: 5px;
 }
-#TrangChu #owl-Tintuc .item {
-  padding: 0;
-  height: 225px !important;
+#TrangChu #Sukien .post-horizontal .post-thumbnail {
+  width: 10%;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
 }
-#TrangChu #owl-Tintuc .item .preview {
-  height: 180px;
-}
-#TrangChu #owl-Tintuc .item .preview img {
-  width: 100%;
-  height: 180px;
-}
-#TrangChu #owl-Tintuc .item .caption {
-  height: 70px;
-  background-color: orangered;
-}
-#TrangChu #owl-Tintuc .item .caption .post-title {
-  text-transform: capitalize;
+#TrangChu #Sukien .post-horizontal .post-thumbnail .month {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  background-color: #e74c3c;
   color: white;
+  text-align: center;
+  margin-top: 0;
+  font-size: 15px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+#TrangChu #Sukien .post-horizontal .post-thumbnail .day {
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  height: 30px;
+  padding-bottom: 40px;
+}
+#TrangChu #Sukien .post-horizontal .post-content {
+  width: 90%;
+}
+#TrangChu #Sukien .post-horizontal .post-content .post-meta {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: justify;
+}
+#TrangChu #Sukien .post-horizontal .post-content .post-title {
+  color: #34495e;
+  transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+}
+#TrangChu #Sukien .post-horizontal .post-content .post-title:hover {
+  transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  color: #e74c3c;
 }
 #TrangChu .ChuyenMuc .thumbnail {
   position: relative;
