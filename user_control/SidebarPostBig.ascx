@@ -3,7 +3,7 @@
 <%-- Sidebar Category --%>
 <div class="sidebar-widgets widget-category">
     <a href="chuyen-muc">
-        <h2 class="bg-black"><span class="title-part">CHUYÊN MỤC</span></h2>
+        <h2 class="bg-red"><span class="title-part">CHUYÊN MỤC</span></h2>
     </a>
     <asp:Repeater ID="rpChuyenMuc" runat="server">
         <ItemTemplate>
@@ -26,7 +26,7 @@
 <%-- Sidebar Được Quan Tâm --%>
 <div class="sidebar-widgets widget-viewest">
     <a href="xem-nhieu">
-        <h2 class="bg-green"><span class="title-part">ĐƯỢC QUAN TÂM</span></h2>
+        <h2 class="bg-red"><span class="title-part">ĐƯỢC QUAN TÂM</span></h2>
     </a>
     <asp:Repeater ID="rpXemNhieu" runat="server">
         <ItemTemplate>

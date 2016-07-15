@@ -28,7 +28,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 main">
-                        <h2 class="bg-sky"><span class="title-part">CHUYÊN MỤC</span></h2>
+                        <h2 class="bg-red"><span class="title-part">CHUYÊN MỤC</span></h2>
                         <div class="row">
                             <asp:Repeater ID="rpSubItemChuyenMuc" runat="server">
                                 <ItemTemplate>

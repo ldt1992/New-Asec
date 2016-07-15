@@ -27,7 +27,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
-                        <h1 class="title text-left">Vài nét về Anh Ngữ ASEC<span class="head-line"></span></h1>
+                        <h1 class="bg-red"><span class="title-part">Vài nét về Anh Ngữ ASEC</span></h1>
                         <p>Sau hơn 10 năm kinh doanh trong lĩnh vực tư vấn du học, Công ty Đỉnh Cao Châu Mỹ nhận ra được việc học tiếng Anh đã trở thành một nhu cầu thiết yếu của người dân Việt Nam, đặc biệt là đối với thế hệ trẻ và thiếu nhi. Sau một thời gian tìm hiểu thị trường và tìm ra một hướng đi khác biệt so với rất nhiều các trung tâm Anh ngữ hiện nay, chúng tôi đã quyết định thành lập Trung tâm Anh ngữ ASEC.</p>
                         <p>Đến nay, Trung tâm Anh ngữ Chân Trời Mới - ASEC là một địa chỉ đào tạo ngoại ngữ uy tín, đáp ứng tối đa nhu cầu học tiếng Anh của học viên bằng cách không ngừng nâng cao chất lượng giảng dạy và dịch vụ.</p>
                         <p>Với mục tiêu đạo tạo thế hệ học viên Việt Nam phát triển toàn diện không chỉ về ngôn ngữ mà còn các kĩ năng khác như giao tiếp, thuyết trình, làm việc nhóm… ASEC trang bị cho mình những giáo trình hiện đại theo tiêu chuẩn quốc tế, đội ngũ giáo viên giỏi chuyên môn và cơ sở vật chất hiện đại.</p>

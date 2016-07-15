@@ -145,7 +145,7 @@ p {
     font-family: 'Roboto', sans-serif;
     line-height: 26px;
     font-weight: 400;
-    margin: 5px 0;
+    margin: 1px 0;
 }
 
 p strong {
@@ -350,7 +350,7 @@ p strong {
 /* Footer */
 footer {
     background-color: #d10000;
-    padding: 60px 0 20px 0;
+    padding: 20px 0 30px 0;
 
     .widget-fanpage .fb-page {
         width: 100%;
@@ -363,6 +363,8 @@ footer {
     .footer-widgets {
         .title {
             color: white !important;
+            font-size: 14px;
+            margin-bottom: 8px;
         }
 
         .head-line {
@@ -373,25 +375,30 @@ footer {
     .widget-news {
         a {
             color: white !important;
+            font-size: 13px;
         }
     }
 
     .widget-contact {
         p {
             color: white;
+            font-size: 13px;
+            margin-bottom: 1px 0 !important;
         }
     }
 
     .copyright {
         color: white;
-        margin-top: 0.25%;
+        font-size: 11px;
+        padding: 0;
     }
 
     .center {
         color: white;
-        margin-bottom: 10px;
+        font-size: 13px;
     }
 }
+
 
 /* bg orange */
 .bg-orange {
@@ -652,9 +659,10 @@ div.navbar.navbar-fixed-top {
 }
 
 /*============ Popup Modal =============*/
-.modal{
-    margin-top:-50px;
+.modal {
+    margin-top: -50px;
 }
+
 .modal-lg {
     width: 1200px;
 }
@@ -676,7 +684,40 @@ a.close img {
     width: 35px;
     height: 35px;
 }
+
+.footer-logo {
+    height: 50px;
+    padding-left: 10px;
+    border: 1px solid white;
+
+    img {
+        height: 50px;
+    }
+}
 /*============ End Popup Modal =============*/
+
+
+/*============ Fanpage =============*/
+.fanpage {
+    position: fixed;
+    top: 30%;
+    left: 0;
+}
+/*============ End Fanpage =============*/
+
+/*============ Popup Fixed ==============*/
+.popup-fixed {
+    position: fixed;
+    right: 0;
+    top: 35%;
+    display:none;
+
+    .popup {
+        width: 120px;
+        height: 150px;
+    }
+}
+/*============ End Popup Fixed ==============*/
 
 /*----------------------------------------------------*/
 /*	Trang Chủ

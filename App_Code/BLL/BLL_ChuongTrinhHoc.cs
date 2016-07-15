@@ -32,7 +32,19 @@ public class BLL_ChuongTrinhHoc
     {
         this.OpenConnect();
 
-        string query = "select menu.MenuID, ct.CategoryID as cateid, ct.CategoryName, ct.Permalink as linkMenuCon, ct.Descriptions, img.DateOfStart, img.ImagesUrl from MainMenu menu join Menu_Category m_ct on menu.MenuID = m_ct.MenuID join Category ct on m_ct.CategoryID = ct.CategoryID join Images img on ct.CateogryImage = img.ImagesID where menu.ItemName = N'Học Tiếng Anh' order by menu.ItemIndex asc";
+        string query = "select menu.MenuID, ct.CategoryID as cateid, ct.CategoryName, ct.Permalink as linkMenuCon, ct.Descriptions, img.DateOfStart, img.ImagesUrl from MainMenu menu join Menu_Category m_ct on menu.MenuID = m_ct.MenuID join Category ct on m_ct.CategoryID = ct.CategoryID join Images img on ct.CateogryImage = img.ImagesID where menu.ItemName = N'Học Tiếng Anh' order by m_ct.ItemIndex asc";
+        DataTable result = this._connect.GetDataTable(query);
+
+        this.CloseConnect();
+        return result;
+    }
+
+    //Get Main Menu
+    public DataTable GetTop_ChuongTrinhHoc(int top)
+    {
+        this.OpenConnect();
+
+        string query = "select top " + top + " menu.MenuID, ct.CategoryID as cateid, ct.CategoryName, ct.Permalink as linkMenuCon, ct.Descriptions, img.DateOfStart, img.ImagesUrl from MainMenu menu join Menu_Category m_ct on menu.MenuID = m_ct.MenuID join Category ct on m_ct.CategoryID = ct.CategoryID join Images img on ct.CateogryImage = img.ImagesID where menu.ItemName = N'Học Tiếng Anh' order by m_ct.ItemIndex asc";
         DataTable result = this._connect.GetDataTable(query);
 
         this.CloseConnect();

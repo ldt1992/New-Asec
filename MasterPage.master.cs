@@ -57,9 +57,9 @@ public partial class MasterPage : System.Web.UI.MasterPage
 
     //Get Học Tiếng Anh
     private void GetHocTiengAnh()
-    {
-        rpHocTiengAnh.DataSource = this._chuongtrinhhoc.GetAll_ChuongTrinhHoc();
-        rpHocTiengAnh.DataBind();
+    { 
+        rpHocTiengAnh2.DataSource = this._chuongtrinhhoc.GetAll_ChuongTrinhHoc();
+        rpHocTiengAnh2.DataBind();
     }
 
     //ConvertToUnsign

@@ -30,7 +30,7 @@
                 <div class="row">
                     <%-- Main --%>
                     <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8 main">
-                        <h2 class="bg-sky"><span class="title-part">LỊCH KHAI GIẢNG</span></h2>
+                        <h2 class="bg-red"><span class="title-part">LỊCH KHAI GIẢNG</span></h2>
                         <div class="row">
                             <asp:Repeater ID="rpLichKhaiGiang" runat="server">
                                 <ItemTemplate>

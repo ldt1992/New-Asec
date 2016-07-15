@@ -33,7 +33,7 @@
                         <asp:Repeater ID="rpPostDetail" runat="server">
                             <ItemTemplate>
                                 <div class="post-detail">
-                                    <h1 class="text-info post-title"><%# Eval("PostTitle").ToString().ToUpper() %></h1>
+                                    <h1 class="text-danger post-title"><%# Eval("PostTitle").ToString().ToUpper() %></h1>
                                     <span class="pull-left"><i class="fa fa-calendar-check-o"></i>&nbsp; <%# Eval("DateOfCreate","{0: dd-MM-yyyy}") %></span>
                                     <span class="pull-right"><i class="fa fa-eye"></i>&nbsp;<%# string.IsNullOrEmpty(Eval("ViewCount").ToString()) ? 0 : Eval("ViewCount") %></span>
                                     <div class="clearfix"></div>

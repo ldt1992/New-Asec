@@ -32,7 +32,7 @@
                 <div class="row">
                     <%-- Main --%>
                     <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8 main">
-                        <h2 class="bg-orange"><span class="title-part"><%=CateName.ToString().ToUpper() %></span></h2>
+                        <h2 class="bg-red"><span class="title-part"><%=CateName.ToString().ToUpper() %></span></h2>
                         <div class="row">
                             <asp:Repeater ID="rpBlogs" runat="server">
                                 <ItemTemplate>

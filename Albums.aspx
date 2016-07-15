@@ -30,7 +30,7 @@
                 <div class="row">
                     <%-- Main --%>
                     <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 main">
-                        <h2 class="bg-sky"><span class="title-part">ALBUMS</span></h2>
+                        <h2 class="bg-red"><span class="title-part">ALBUMS</span></h2>
                         <h1 class="title text-left"><%=AlbumName %><span class="head-line"></span></h1>
                         <div id="owl-album-1">
                             <asp:Repeater ID="rpAlbum1" runat="server">
