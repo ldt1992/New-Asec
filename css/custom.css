@@ -88,12 +88,13 @@ p strong {
 /*	General Class
 /*----------------------------------------------------*/
 /* Title, head-line */
+/* Title, head-line */
 .title {
   position: relative;
   text-transform: uppercase;
   padding-bottom: 8px;
   margin-bottom: 20px;
-  color: black;
+  color: red;
 }
 .title .head-line {
   position: absolute;
@@ -103,7 +104,7 @@ p strong {
   width: 50px;
   height: 3px;
   margin: 0;
-  background-color: #e74c3c;
+  background-color: red;
 }
 /* Back to top */
 .back-to-top {
@@ -144,7 +145,7 @@ p strong {
   margin-bottom: 10px;
 }
 .post-horizontal .post-content .post-title a {
-  color: black;
+  color: red;
   line-height: 26px;
   text-transform: capitalize;
 }
@@ -153,7 +154,7 @@ p strong {
   -moz-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   -webkit-transition: all 0.2s linear;
-  color: orangered;
+  color: #FFA726;
 }
 .post-horizontal .post-content .post-date {
   color: gray;
@@ -173,7 +174,6 @@ p strong {
   margin-bottom: 20px;
 }
 .post-vertical a {
-  color: black;
   transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
@@ -186,19 +186,18 @@ p strong {
 .post-vertical a .preview img {
   width: 100%;
   height: 100%;
-  border: 2px solid #bdc3c7 !important;
-  padding: 2px;
 }
 .post-vertical a .post-title {
   margin-top: 10px;
   text-transform: capitalize;
+  color: red;
 }
 .post-vertical a:hover .post-title {
   transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   -webkit-transition: all 0.2s linear;
-  color: orangered;
+  color: #FFA726;
 }
 .post-vertical .post-date {
   color: gray !important;
@@ -220,7 +219,7 @@ p strong {
   position: relative;
   overflow: hidden;
   margin-bottom: 30px;
-  border: 2px solid #bdc3c7;
+  border: 1px solid #BDBDBD;
 }
 .post-big a {
   width: 100%;
@@ -232,8 +231,8 @@ p strong {
   height: 100%;
 }
 .post-big a .caption {
-  background-color: black;
-  opacity: 0.8;
+  background-color: red;
+  opacity: 0.9;
   position: absolute;
   z-index: 10;
   bottom: 0;
@@ -265,14 +264,15 @@ p strong {
 }
 /* Footer */
 footer {
+  /*max-height:500px !important;*/
   background-color: #d10000;
-  padding: 20px 0 20px 0;
+  padding: 20px 0 10px 0;
 }
 footer .widget-fanpage .fb-page {
   width: 100%;
 }
 footer [class^="col"] {
-  margin-bottom: 10%;
+  margin-bottom: 0.5%;
 }
 footer .footer-widgets .title {
   color: white !important;
@@ -332,12 +332,12 @@ footer .center {
 }
 /* bg red */
 .bg-red {
-  border-bottom: 2px solid #e74c3c;
+  border-bottom: 2px solid red;
   margin-bottom: 20px;
 }
 .bg-red .title-part {
   color: white;
-  background-color: #e74c3c;
+  background-color: red;
   padding: 5px 13px 0 13px;
 }
 /* bg sky */
@@ -637,7 +637,7 @@ a.close img {
   text-align: justify;
 }
 #TrangChu #Sukien .post-horizontal .post-content .post-title {
-  color: #34495e;
+  color: #f44336;
   transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
@@ -648,12 +648,12 @@ a.close img {
   -moz-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   -webkit-transition: all 0.2s linear;
-  color: #e74c3c;
+  color: #FFA726;
 }
 #TrangChu .ChuyenMuc .thumbnail {
   position: relative;
   padding: 0;
-  border: 1px solid #bdc3c7;
+  /*border: 3px solid red;*/
 }
 #TrangChu .ChuyenMuc .thumbnail a .overlay {
   position: absolute;
@@ -672,11 +672,12 @@ a.close img {
   color: white;
 }
 #TrangChu .ChuyenMuc .thumbnail a .preview {
-  height: 260px;
+  height: 150px;
+  overflow: hidden;
 }
 #TrangChu .ChuyenMuc .thumbnail a .preview img {
+  height: 150px;
   width: 100%;
-  height: 250px;
 }
 #TrangChu .ChuyenMuc .thumbnail a:hover .overlay {
   opacity: 0.6;
@@ -684,6 +685,9 @@ a.close img {
   -moz-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   -webkit-transition: all 0.2s linear;
+}
+#TrangChu .ChuyenMuc .thumbnail a .post-title {
+  color: red;
 }
 #TrangChu .HocTiengAnh .thumbnail {
   min-height: 450px;
@@ -699,6 +703,9 @@ a.close img {
   -o-transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
   background-color: orange;
+}
+#TrangChu .HocTiengAnh .thumbnail:hover .tieude {
+  color: white;
 }
 #TrangChu .HocTiengAnh .thumbnail .preview {
   overflow: hidden;
@@ -718,7 +725,7 @@ a.close img {
 }
 #TrangChu .HocTiengAnh .thumbnail .tieude {
   height: 70px;
-  color: #0D47A1;
+  color: red;
 }
 #TrangChu #Nhanqua .khauhieu {
   line-height: 150%;
@@ -814,6 +821,44 @@ a.close img {
 /*----------------------------------------------------*/
 /*	GioiThieu
 /*----------------------------------------------------*/
+#GioiThieu .HocTiengAnh .thumbnail {
+  min-height: 450px;
+  padding: 5% 10%;
+  transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+}
+#GioiThieu .HocTiengAnh .thumbnail:hover {
+  transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  background-color: orange;
+}
+#GioiThieu .HocTiengAnh .thumbnail:hover .tieude {
+  color: white;
+}
+#GioiThieu .HocTiengAnh .thumbnail .preview {
+  overflow: hidden;
+  width: 100%;
+  height: 170px;
+}
+#GioiThieu .HocTiengAnh .thumbnail .preview img {
+  width: 100%;
+  height: 170px;
+}
+#GioiThieu .HocTiengAnh .thumbnail .meta {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 100px;
+}
+#GioiThieu .HocTiengAnh .thumbnail .tieude {
+  height: 70px;
+  color: red;
+}
 /*----------------------------------------------------*/
 /*	KetQuaTimKiem
 /*----------------------------------------------------*/

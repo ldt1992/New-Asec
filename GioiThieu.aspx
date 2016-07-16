@@ -45,18 +45,18 @@
                             <!-- Wrapper for slides -->
                             <div class="carousel-inner" role="listbox">
                                 <div class="item active">
-                                    <a rel="prettyPhoto[intro]" href="images/hoatdong/hinh-cong-ty-1.jpg">
-                                        <img src="images/hoatdong/hinh-cong-ty-1.jpg" />
+                                    <a rel="prettyPhoto[intro]" href="images/hoatdong/hoat-dong-1.jpg">
+                                        <img src="images/hoatdong/hoat-dong-1.jpg" />
                                     </a>
                                 </div>
                                 <div class="item">
-                                    <a rel="prettyPhoto[intro]" href="images/hoatdong/hinh-cong-ty-2.jpg">
-                                        <img src="images/hoatdong/hinh-cong-ty-2.jpg" />
+                                    <a rel="prettyPhoto[intro]" href="images/hoatdong/hoat-dong-2.jpg">
+                                        <img src="images/hoatdong/hoat-dong-2.jpg" />
                                     </a>
                                 </div>
                                 <div class="item">
-                                    <a rel="prettyPhoto[intro]" href="images/hoatdong/hinh-cong-ty-4.jpg">
-                                        <img src="images/hoatdong/hinh-cong-ty-4.jpg" />
+                                    <a rel="prettyPhoto[intro]" href="images/hoatdong/hoat-dong-2.jpg">
+                                        <img src="images/hoatdong/hoat-dong-3.jpg" />
                                     </a>
                                 </div>
                             </div>

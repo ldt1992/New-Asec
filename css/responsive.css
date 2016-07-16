@@ -125,14 +125,14 @@
     min-height: 200%;
   }
   #TrangChu .ChuyenMuc .thumbnail .preview {
-    height: 80% !important;
+    height: 80%;
   }
   #TrangChu .ChuyenMuc .thumbnail .preview img {
-    height: 200px !important;
+    height: 200px;
     width: 100%;
   }
   #TrangChu .ChuyenMuc .thumbnail .fa {
-    left: 45% !important;
+    left: 45%;
   }
   #TrangChu .ChuyenMuc .thumbnail .post-title {
     font-size: 120%;
@@ -185,7 +185,6 @@
   }
   #GioiThieu .HocTiengAnh .thumbnail .tieude {
     height: 50px;
-    color: #0D47A1;
   }
   #GioiThieu .HocTiengAnh .thumbnail .meta {
     display: -webkit-box;
@@ -223,10 +222,10 @@
   /*	Chuyên Mục
     /*----------------------------------------------------*/
   #ChuyenMuc .post-vertical {
-    max-height: 100% !important;
+    max-height: 100%;
   }
   #ChuyenMuc .post-vertical img {
-    height: 50% !important;
+    height: 50%;
     width: 100%;
   }
 }
@@ -358,7 +357,7 @@
     width: 100%;
   }
   #TrangChu .ChuyenMuc .thumbnail .fa {
-    left: 45% !important;
+    left: 45%;
   }
   #TrangChu .ChuyenMuc .thumbnail .post-title {
     font-size: 120%;
@@ -386,17 +385,17 @@
   /*	Lịch Khai Giảng
     /*----------------------------------------------------*/
   #LichKhaiGiang .post-vertical .preview {
-    height: 40% !important;
+    height: 40%;
   }
   #LichKhaiGiang .post-vertical .preview img {
-    height: 120px !important;
+    height: 120px;
     width: 100%;
   }
   /*----------------------------------------------------*/
   /*	Tin Tức
     /*----------------------------------------------------*/
   #TinTuc .post-vertical {
-    height: 320px !important;
+    height: 320px;
   }
   #TinTuc .post-vertical .post-title {
     font-size: 90%;
@@ -412,7 +411,7 @@
   /*	Kết Quả Tìm Kiếm
     /*----------------------------------------------------*/
   #KetQuaTimKiem .post-vertical {
-    height: 320px !important;
+    height: 320px;
   }
   #KetQuaTimKiem .post-vertical .post-title {
     font-size: 90%;
@@ -541,13 +540,13 @@
   /*	Trang Chủ
     /*----------------------------------------------------*/
   #TrangChu #Tintuc .post-title {
-    font-size: 120% !important;
+    font-size: 120%;
   }
   #TrangChu .ChuyenMuc .thumbnail .preview {
-    height: 270px !important;
+    height: 270px;
   }
   #TrangChu .ChuyenMuc .thumbnail .preview img {
-    height: 270px !important;
+    height: 270px;
     width: 100%;
   }
   #TrangChu .ChuyenMuc .thumbnail .post-title {
@@ -557,10 +556,10 @@
   /*	Chuyên Mục
     /*----------------------------------------------------*/
   #ChuyenMuc .main .post-vertical .preview {
-    height: 200px !important;
+    height: 170px;
   }
   #ChuyenMuc .main .post-vertical .preview img {
-    height: 200px !important;
+    height: 170px;
     width: 100%;
   }
   #ChuyenMuc .main .post-vertical .post-title {
@@ -573,13 +572,40 @@
   /*	Lịch Khai Giảng
     /*----------------------------------------------------*/
   #LichKhaiGiang .main .post-vertical {
-    height: 300px !important;
+    height: 300px;
   }
   #LichKhaiGiang .main .post-vertical .preview {
-    height: 180px !important;
+    height: 150px;
+    overflow: hidden;
   }
   #LichKhaiGiang .main .post-vertical .preview img {
-    height: 180px !important;
+    height: 150px;
     width: 100%;
+  }
+  /*----------------------------------------------------*/
+  /*	Giới Thiệu
+    /*----------------------------------------------------*/
+  #GioiThieu [class^="col"] {
+    margin-bottom: 1%;
+  }
+  #GioiThieu .HocTiengAnh {
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+  #GioiThieu .HocTiengAnh .item {
+    padding: 0 2%;
+  }
+  #GioiThieu .HocTiengAnh .thumbnail {
+    min-height: 400px;
+  }
+  #GioiThieu .HocTiengAnh .thumbnail .tieude {
+    height: 80px;
+  }
+  #GioiThieu .HocTiengAnh .thumbnail .meta {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 100px;
   }
 }

@@ -161,12 +161,15 @@ p strong {
 /*	General Class
 /*----------------------------------------------------*/
 /* Title, head-line */
+
+
+/* Title, head-line */
 .title {
     position: relative;
     text-transform: uppercase;
     padding-bottom: 8px;
     margin-bottom: 20px;
-    color: black;
+    color: red;
 
     .head-line {
         position: absolute;
@@ -176,7 +179,7 @@ p strong {
         width: 50px;
         height: 3px;
         margin: 0;
-        background-color: #e74c3c;
+        background-color: red;
     }
 }
 
@@ -219,13 +222,13 @@ p strong {
             margin-bottom: 10px;
 
             a {
-                color: black;
+                color: red;
                 line-height: 26px;
                 text-transform: capitalize;
 
                 &:hover {
                     .transition(all, 0.2s, linear);
-                    color: orangered;
+                    color: #FFA726;
                 }
             }
         }
@@ -259,28 +262,24 @@ p strong {
             img {
                 width: 100%;
                 height: 100%;
-                border: 2px solid #bdc3c7 !important;
-                padding: 2px;
             }
         }
 
         .post-title {
             margin-top: 10px;
             text-transform: capitalize;
+            color: red;
         }
 
-        color: black;
         .transition(all, 0.2s, linear);
 
         &:hover {
             .post-title {
                 .transition(all, 0.2s, linear);
-                color: orangered;
+                color: #FFA726;
             }
         }
     }
-
-
 
     .post-date {
         color: gray !important;
@@ -305,7 +304,7 @@ p strong {
     position: relative;
     overflow: hidden;
     margin-bottom: 30px;
-    border: 2px solid #bdc3c7;
+    border: 1px solid #BDBDBD;
 
     a {
         width: 100%;
@@ -318,8 +317,8 @@ p strong {
         }
 
         .caption {
-            background-color: black;
-            opacity: 0.8;
+            background-color: red;
+            opacity: 0.9;
             position: absolute;
             z-index: 10;
             bottom: 0;
@@ -354,15 +353,16 @@ p strong {
 
 /* Footer */
 footer {
+    /*max-height:500px !important;*/
     background-color: #d10000;
-    padding: 20px 0 20px 0;
+    padding: 20px 0 10px 0;
 
     .widget-fanpage .fb-page {
         width: 100%;
     }
 
     [class^="col"] {
-        margin-bottom: 10%;
+        margin-bottom: 0.5%;
     }
 
     .footer-widgets {
@@ -443,12 +443,12 @@ footer {
 
 /* bg red */
 .bg-red {
-    border-bottom: 2px solid #e74c3c;
+    border-bottom: 2px solid red;
     margin-bottom: 20px;
 
     .title-part {
         color: white;
-        background-color: #e74c3c;
+        background-color: red;
         padding: 5px 13px 0 13px;
     }
 }
@@ -809,12 +809,12 @@ a.close img {
                 }
 
                 .post-title {
-                    color: #34495e;
+                    color: #f44336;
                     .transition(all, 0.2s, linear);
 
                     &:hover {
                         .transition(all, 0.2s, linear);
-                        color: #e74c3c;
+                        color: #FFA726;
                     }
                 }
             }
@@ -825,8 +825,7 @@ a.close img {
         .thumbnail {
             position: relative;
             padding: 0;
-            border: 1px solid #bdc3c7;
-
+            /*border: 3px solid red;*/
             a {
                 .overlay {
                     position: absolute;
@@ -847,11 +846,12 @@ a.close img {
                 }
 
                 .preview {
-                    height: 260px;
+                    height: 150px;
+                    overflow: hidden;
 
                     img {
+                        height: 150px;
                         width: 100%;
-                        height: 250px;
                     }
                 }
 
@@ -860,6 +860,10 @@ a.close img {
                         opacity: 0.6;
                         .transition(all, 0.2s, linear);
                     }
+                }
+
+                .post-title {
+                    color: red;
                 }
             }
         }
@@ -874,6 +878,10 @@ a.close img {
             &:hover {
                 .transition(all, 0.3s, linear);
                 background-color: orange;
+
+                .tieude {
+                    color: white;
+                }
             }
 
             .preview {
@@ -897,7 +905,7 @@ a.close img {
 
             .tieude {
                 height: 70px;
-                color: #0D47A1;
+                color: red;
             }
         }
     }
@@ -1028,6 +1036,46 @@ a.close img {
 /*	GioiThieu
 /*----------------------------------------------------*/
 #GioiThieu {
+    .HocTiengAnh {
+        .thumbnail {
+            min-height: 450px;
+            padding: 5% 10%;
+            .transition(all, 0.3s, linear);
+
+            &:hover {
+                .transition(all, 0.3s, linear);
+                background-color: orange;
+
+                .tieude {
+                    color: white;
+                }
+            }
+
+            .preview {
+                overflow: hidden;
+                width: 100%;
+                height: 170px;
+
+                img {
+                    width: 100%;
+                    height: 170px;
+                }
+            }
+
+            .meta {
+                display: -webkit-box;
+                -webkit-line-clamp: 4;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                height: 100px;
+            }
+
+            .tieude {
+                height: 70px;
+                color: red;
+            }
+        }
+    }
 }
 /*----------------------------------------------------*/
 /*	KetQuaTimKiem

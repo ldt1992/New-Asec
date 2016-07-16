@@ -235,16 +235,16 @@
         .ChuyenMuc {
             .thumbnail {
                 .preview {
-                    height: 80% !important;
+                    height: 80%;
 
                     img {
-                        height: 200px !important;
+                        height: 200px;
                         width: 100%;
                     }
                 }
 
                 .fa {
-                    left: 45% !important;
+                    left: 45%;
                 }
 
                 .post-title {
@@ -325,7 +325,6 @@
 
                 .tieude {
                     height: 50px;
-                    color: #0D47A1;
                 }
 
                 .meta {
@@ -386,10 +385,10 @@
     /*----------------------------------------------------*/
     #ChuyenMuc {
         .post-vertical {
-            max-height: 100% !important;
+            max-height: 100%;
 
             img {
-                height: 50% !important;
+                height: 50%;
                 width: 100%;
             }
         }
@@ -631,7 +630,7 @@
                 }
 
                 .fa {
-                    left: 45% !important;
+                    left: 45%;
                 }
 
                 .post-title {
@@ -679,10 +678,10 @@
         .post-vertical {
 
             .preview {
-                height: 40% !important;
+                height: 40%;
 
                 img {
-                    height: 120px !important;
+                    height: 120px;
                     width: 100%;
                 }
             }
@@ -694,7 +693,7 @@
     /*----------------------------------------------------*/
     #TinTuc {
         .post-vertical {
-            height: 320px !important;
+            height: 320px;
 
             .post-title {
                 font-size: 90%;
@@ -719,7 +718,7 @@
     /*----------------------------------------------------*/
     #KetQuaTimKiem {
         .post-vertical {
-            height: 320px !important;
+            height: 320px;
 
             .post-title {
                 font-size: 90%;
@@ -958,17 +957,17 @@
         //Sự kiện
         #Tintuc {
             .post-title {
-                font-size: 120% !important;
+                font-size: 120%;
             }
         }
         //Chuyên Mục
         .ChuyenMuc {
             .thumbnail {
                 .preview {
-                    height: 270px !important;
+                    height: 270px;
 
                     img {
-                        height: 270px !important;
+                        height: 270px;
                         width: 100%;
                     }
                 }
@@ -988,10 +987,10 @@
             .post-vertical {
 
                 .preview {
-                    height: 200px !important;
+                    height: 170px;
 
                     img {
-                        height: 200px !important;
+                        height: 170px;
                         width: 100%;
                     }
                 }
@@ -1013,15 +1012,50 @@
     #LichKhaiGiang {
         .main {
             .post-vertical {
-                height: 300px !important;
+                height: 300px;
 
                 .preview {
-                    height: 180px !important;
+                    height: 150px;
+                    overflow: hidden;
 
                     img {
-                        height: 180px !important;
+                        height: 150px;
                         width: 100%;
                     }
+                }
+            }
+        }
+    }
+
+    /*----------------------------------------------------*/
+    /*	Giới Thiệu
+    /*----------------------------------------------------*/
+    #GioiThieu {
+        [class^="col"] {
+            margin-bottom: 1%;
+        }
+
+        .HocTiengAnh {
+            margin-top: 2%;
+            margin-bottom: 2%;
+
+            .item {
+                padding: 0 2%;
+            }
+
+            .thumbnail {
+                min-height: 400px;
+
+                .tieude {
+                    height: 80px;
+                }
+
+                .meta {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 4;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    height: 100px;
                 }
             }
         }

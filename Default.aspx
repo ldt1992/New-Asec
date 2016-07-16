@@ -1,8 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    
-
     <div id="TrangChu">
         <%-- Slider --%>
         <section class="Slider">
@@ -56,7 +54,7 @@
         <section class="HocTiengAnh">
             <div class="container">
                 <a href="hoc-tieng-anh">
-                    <h2 class="title text-center">Chương Trình Học Tại Anh Ngữ <span class="notes">ASEC</span></h2>
+                    <h2 class="title text-center" style="color:black">Chương Trình Học Tại Anh Ngữ <span class="notes">ASEC</span></h2>
                 </a>
                 <div id="owl-hoctienganh">
                     <asp:Repeater ID="rpChuongTrinhHoc" runat="server">
@@ -101,9 +99,14 @@
                     <h1 class="title text-center">Chuyên Mục</h1>
                 </a>
                 <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <p class="text-muted">
+                            Tìm hiểu những thông tin khác của ASEC, biết đâu bạn sẽ tìm được thông tin mình cần. Cùng xem nhé !
+                        </p>
+                    </div>
                     <asp:Repeater ID="rpChuyenMuc" runat="server">
                         <ItemTemplate>
-                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
                                 <div class="thumbnail">
                                     <a href="<%# Eval("Permalink") %>">
                                         <div class="overlay"><i class="fa fa-2x fa-arrows"></i></div>
@@ -178,7 +181,7 @@
                                     </div>
                                 </ItemTemplate>
                             </asp:Repeater>
-                            <div class="post-horizontal">
+                            <%--<div class="post-horizontal">
                                 <div class="post-thumbnail">
                                     <p class="month">07</p>
                                     <p class="day">08</p>
@@ -190,7 +193,7 @@
                                     <p class="post-meta">Tuần vừa qua là một tuần đang nhớ với các “Hoạt náo viên Nhí” với chương trình Movie day- Học tiếng anh qua phim ảnh do Anh ngữ ASEC tổ chức. Đến với sự kiện hàng tuần là sự tham gia của các bạn kids với nhiều lứa tuổi, </p>
                                 </div>
                                 <div class="clearfix"></div>
-                            </div>
+                            </div>--%>
                         </div>
                         <%-- End Sự Kiện --%>
                         <p class="text-right"><a href="su-kien" class="btn btn-link">Xem thêm</a></p>
@@ -212,8 +215,6 @@
                             <div class="form-group-lg has-error">
                                 <h3 class="control-label">Họ Tên * 
                                    
-                                   
-
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Bạn vui lòng nhập họ tên"
                                         ControlToValidate="txtHoten" Display="Static" ValidationGroup="Error"></asp:RequiredFieldValidator>
                                 </h3>
@@ -223,8 +224,6 @@
                             <div class="form-group-lg has-error">
                                 <h3 class="control-label">Email * 
                                    
-                                   
-
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Bạn vui lòng nhập email"
                                         ControlToValidate="txtEmail" Display="Static" ValidationGroup="Error"></asp:RequiredFieldValidator>
                                 </h3>
@@ -234,8 +233,6 @@
                             <div class="form-group-lg has-error">
                                 <h3 class="control-label">Điện thoại * 
                                    
-                                   
-
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Bạn vui lòng nhập số điện thoại"
                                         ControlToValidate="txtDienthoai" Display="Static" ValidationGroup="Error"></asp:RequiredFieldValidator>
                                 </h3>
