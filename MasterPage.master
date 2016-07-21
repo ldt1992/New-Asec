@@ -7,21 +7,25 @@
     <title>ASEC | Trung Tâm Ngoại Ngữ Chân Trời Mới</title>
     <!-- Define Charset -->
     <meta charset="utf-8" />
+
     <!-- Responsive Metatag -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
     <!-- Page Description and Author -->
-    <meta name="description" content="ASEC | Trung Tâm Ngoại Ngữ Chân Trời Mới" />
+    <meta name="description" content="ASEC | Trung Tâm Anh Ngữ ASEC" />
     <meta name="author" content="Tai" />
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/favicon.ico" />
 
-    <!-- Normalize CSS -->
+    <!-- Main -->
+    <link href="css/main.min.css" rel="stylesheet" />
+
+    <%--<!-- Normalize CSS -->
     <link href="css/normalize.css" rel="stylesheet" />
 
     <!-- Bootstrap CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" media="screen" />
@@ -45,11 +49,10 @@
     <link href="css/reset.css" rel="stylesheet" />
 
     <!-- Styles CSS -->
-    <%--<link href="css/style.css" rel="stylesheet" />--%>
-    <link href="css/custom.css" rel="stylesheet" />
+    <link href="css/custom.min.css" rel="stylesheet" />
 
     <!-- Responsive -->
-    <link href="css/responsive.css" rel="stylesheet" />
+    <link href="css/responsive.min.css" rel="stylesheet" />--%>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -188,8 +191,11 @@
                     <div class="modal-body">
                         <a class="close" data-dismiss="modal">
                             <img src="images/icon/close-button.png" /></a>
-                        <a href="#">
-                            <img src="images/banner/popup.png" class="img-responsive popup" /></a>
+
+                        <span id="LinkPost" runat="server"></span>
+
+                        <%--<a href="<%# ConvertToUnsign(PostTitle.ToString()) + "-" + PostID %>">
+                            <img src="<%# HomeUrl + PopupUrl %>" class="img-responsive popup" /></a>--%>
                     </div>
                 </div>
             </div>
@@ -318,8 +324,15 @@
             var url = window.location;
             var urlDefault = url.toString().substr(url.toString().lastIndexOf('/') + 1, url.toString().length);
 
+            //$(window).load(function () {
+            //    if (urlDefault.toString() == "trang-chu" || urlDefault == "" || urlDefault == "Default.aspx") {
+            //        $("#myModal").modal('show');
+            //        $(".popup-fixed").fadeOut();
+            //    };
+            //});
+
             $(window).load(function () {
-                if (urlDefault.toString() == "trang-chu" || urlDefault == "" || urlDefault == "Default.aspx") {
+                if (url.toString() == "<%=ViewOnPage.ToString() %>" || url.toString() == "http://asec.edu.vn/Default.aspx") {
                     $("#myModal").modal('show');
                     $(".popup-fixed").fadeOut();
                 };

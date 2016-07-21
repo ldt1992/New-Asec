@@ -14,6 +14,15 @@ public partial class MasterPage : System.Web.UI.MasterPage
     private BLL_ChuyenMuc _chuyenmuc = new BLL_ChuyenMuc();
     private BLL_ChuongTrinhHoc _chuongtrinhhoc = new BLL_ChuongTrinhHoc();
     private BLL_Post _post = new BLL_Post();
+    private BLL_Popup _popup = new BLL_Popup();
+    //For popup
+    public string UrlCurrent = "";
+    public string HomeUrl = "http://inside.kus.edu.vn/";
+    public string PopupUrl = "";
+    public string ViewOnPage = "";
+    public string PostID = "";
+    public string PostTitle = "";
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!Page.IsPostBack)
@@ -21,7 +30,16 @@ public partial class MasterPage : System.Web.UI.MasterPage
             GetMainMenu();
             GetChuyenMuc();
             GetHocTiengAnh();
+            UrlCurrent = Request.Url.AbsoluteUri;
+            GetPopup(UrlCurrent);
+            Alert(UrlCurrent);
         }
+    }
+
+    //Get Alert
+    private void Alert(string str)
+    {
+        Response.Write("<script>alert('" + str + "')</script>");
     }
 
     //Get Main menu
@@ -57,7 +75,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
 
     //Get Học Tiếng Anh
     private void GetHocTiengAnh()
-    { 
+    {
         rpHocTiengAnh2.DataSource = this._chuongtrinhhoc.GetAll_ChuongTrinhHoc();
         rpHocTiengAnh2.DataBind();
     }
@@ -142,5 +160,23 @@ public partial class MasterPage : System.Web.UI.MasterPage
         string link = ConvertToUnsign(CateName).ToString().ToLower();
 
         Response.Redirect(link);
+    }
+
+    //Get popup
+    public void GetPopup(string viewonpage)
+    {
+        DataTable popup = this._popup.GetPopup(viewonpage);
+        foreach (DataRow item in popup.Rows)
+        {
+            PopupUrl = item[3].ToString();
+            ViewOnPage = item[4].ToString();
+            PostID = item[5].ToString();
+            PostTitle = item[6].ToString();
+        }
+
+        string str = "";
+        str = "<a href='"+ConvertToUnsign(PostTitle).ToString().ToLower()+"-"+PostID+"'><img src='"+HomeUrl+PopupUrl+"' class='img-responsive popup' /></a>";
+
+        LinkPost.InnerHtml = str;
     }
 }
